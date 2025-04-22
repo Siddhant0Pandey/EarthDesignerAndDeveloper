@@ -9,21 +9,21 @@ function Testimonial() {
       id: 1,
       name: "Rasalina De Willam",
       position: "Founder & Co",
-      image: "img/testimonial/testi-01.jpg",
+      image: "/src/assets/img/testimonial/testi-01.jpg",
       text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     },
     {
       id: 2,
       name: "John Doe",
       position: "CEO, Company XYZ",
-      image: "img/testimonial/testi-02.jpg",
+      image: "/src/assets/img/testimonial/testi-02.jpg",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Aenean nonummy hendrerit mauris. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis viverra diam non justo.",
     },
     {
       id: 3,
       name: "Jane Smith",
       position: "Marketing Director",
-      image: "img/testimonial/testi-03.jpg",
+      image: "/src/assets/img/testimonial/testi-03.jpg",
       text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
     }
   ];
@@ -48,7 +48,7 @@ function Testimonial() {
           <div className="col-xl-6">
             <div
               className="counter-left counter-height pt-125 pb-125"
-              style={{ backgroundImage: "url('img/bg/counter-bg.jpg')" }}
+              style={{ backgroundImage: "url('./src/assets/img/bg/counter-bg.jpg')" }}
             >
               <div className="counter-content">
                 <ul>
@@ -113,7 +113,7 @@ function Testimonial() {
           <div className="col-xl-6">
             <div
               className="testimonial-right testimonial-height"
-              style={{ backgroundImage: "url('img/bg/testimonial-bg.jpg')" }}
+              style={{ backgroundImage: "url('./src/assets/img/bg/testimonial-bg.jpg')" }}
             >
               <Slider {...settings} className="testimonial-active">
                 {testimonials.map((testimonial) => (
