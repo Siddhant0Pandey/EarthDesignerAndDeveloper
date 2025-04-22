@@ -15,9 +15,9 @@ function Navbar() {
                             <ul className="right">
                                 <li><Link to="#"><i className="fab fa-facebook-messenger"></i></Link></li>
                                 <li><Link to="#"><i className="fab fa-twitter"></i></Link></li>
-                                <li><Link to="#"><i className="fab fa-vimeo-v"></i></Link></li>
-                                <li><Link to="#"><i className="fab fa-skype"></i></Link></li>
-                                <li><Link to="#"><i className="fas fa-rss"></i></Link></li>
+                                <li><Link to="#"><i className="fab fa-instagram"></i></Link></li>
+                                <li><Link to="#"><i className="fab fa-facebook"></i></Link></li>
+                                <li><Link to="#"><i className="fas fa-whatsapp"></i></Link></li>
                             </ul>
                         </div>
                     </div>
