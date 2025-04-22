@@ -31,6 +31,11 @@ import './assets/css/slick.css';
 import './assets/css/default.css';
 import './assets/css/style.css';
 import './assets/css/responsive.css';
+// 
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 
 
 
