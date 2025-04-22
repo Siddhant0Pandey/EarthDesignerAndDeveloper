@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <header>
-      {/* Header Top */}
       <div className="header-top d-none d-lg-block">
         <div className="container">
           <div className="row">
-            <div className="col-12 d-flex justify-content-between">
+            <div className="col-12">
               <ul className="left">
                 <li>
                   <span>
@@ -41,17 +40,17 @@ function Navbar() {
                 </li>
                 <li>
                   <Link to="#">
-                    <i className="fab fa-instagram"></i>
+                    <i className="fab fa-vimeo-v"></i>
                   </Link>
                 </li>
                 <li>
                   <Link to="#">
-                    <i className="fab fa-facebook"></i>
+                    <i className="fab fa-skype"></i>
                   </Link>
                 </li>
                 <li>
                   <Link to="#">
-                    <i className="fas fa-whatsapp"></i>
+                    <i className="fas fa-rss"></i>
                   </Link>
                 </li>
               </ul>
@@ -85,13 +84,34 @@ function Navbar() {
                       <Link to="/about">About</Link>
                     </li>
                     <li>
-                      <Link to="/services">Services</Link>
-                      {/* Uncomment if submenu needed
-                      <ul className="submenu">
-                        <li><Link to="/services">Service</Link></li>
-                        <li><Link to="/services-details">Service Details</Link></li>
-                      </ul>
-                      */}
+                      <Link to="/services">Services </Link>
+                      {/* <ul className="submenu">
+=======
+            <div className="header-bottom-area">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-xl-2 col-lg-2">
+                            <div className="logo logo-2">
+                                <Link to="/"><img src="./src/assets/img/logo/logo.png" alt="logo_not_found"/></Link>
+                            </div>
+                        </div>
+                        <div className="col-xl-10 col-lg-10">
+                            <div className="header-button d-none d-lg-block f-right">
+                                <Link className="thm-btn" href="#">Get a quote</Link>
+                            </div>
+                            <div className="main-menu f-right">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li><Link to="/">Home</Link>
+                                            
+                                        </li>
+                                        <li><Link to="/about">About</Link></li>
+                                        <li><Link to="/services">Services +</Link>
+                                            <ul className="submenu">
+
+                                                <li><Link to="/services">Service</Link></li>
+                                                <li><Link to="/services-details">Service Details</Link></li>
+                                            </ul> */}
                     </li>
                     <li>
                       <Link to="/project">Project</Link>
