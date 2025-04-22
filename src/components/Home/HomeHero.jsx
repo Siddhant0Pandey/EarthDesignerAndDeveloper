@@ -2,10 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 
-
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
 const sliderImages = [
   { id: 1, imgSrc: 'src/assets/img/bg/slider-bg-01.jpg', title: 'General Contracting', subtitle: 'Build everything you need.' },
   { id: 2, imgSrc: 'src/assets/img/bg/slider-bg-03.jpg', title: 'General Contracting', subtitle: 'Build everything you need.' },
