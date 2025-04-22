@@ -3,58 +3,27 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <header>
-      <div className="header-top d-none d-lg-block">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <ul className="left">
-                <li>
-                  <span>
-                    <i className="far fa-clock"></i>
-                  </span>{" "}
-                  9:30am - 6:30pm Mon - Sun
-                </li>
-                <li>
-                  <span>
-                    <i className="fas fa-phone-alt"></i>
-                  </span>{" "}
-                  +800-123-4567 6587
-                </li>
-                <li>
-                  <span>
-                    <i className="fas fa-map-marker-alt"></i>
-                  </span>{" "}
-                  Anmoore Road Brooklyn, NY 230
-                </li>
-              </ul>
-              <ul className="right">
-                <li>
-                  <Link to="#">
-                    <i className="fab fa-facebook-messenger"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#">
-                    <i className="fab fa-twitter"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#">
-                    <i className="fab fa-vimeo-v"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#">
-                    <i className="fab fa-skype"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#">
-                    <i className="fas fa-rss"></i>
-                  </Link>
-                </li>
-              </ul>
-            </div>
+
+            <div className="header-top d-none d-lg-block">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <ul className="left">
+                                <li><span><i className="far fa-clock"></i></span> 9:30am - 6:30pm Mon - Sun</li>
+                                <li><span><i className="fas fa-phone-alt"></i></span> +800-123-4567 6587</li>
+                                <li><span><i className="fas fa-map-marker-alt"></i></span> Anmoore Road Brooklyn, NY 230</li>
+                            </ul>
+                            <ul className="right">
+                                <li><Link to="#"><i className="fab fa-facebook-messenger"></i></Link></li>
+                                <li><Link to="#"><i className="fab fa-twitter"></i></Link></li>
+                                <li><Link to="#"><i className="fab fa-instagram"></i></Link></li>
+                                <li><Link to="#"><i className="fab fa-facebook"></i></Link></li>
+                                <li><Link to="#"><i className="fas fa-whatsapp"></i></Link></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
 
           </div>
         </div>
@@ -71,6 +40,7 @@ function Navbar() {
                   />
                 </Link>
               </div>
+
             </div>
             <div className="col-xl-10 col-lg-10">
               <div className="header-button d-none d-lg-block f-right">
@@ -112,7 +82,7 @@ function Navbar() {
                                         <li><Link to="/about">About</Link></li>
                                         <li><Link to="/services">Services +</Link>
                                             <ul className="submenu">
->>>>>>> main
+
                                                 <li><Link to="/services">Service</Link></li>
                                                 <li><Link to="/services-details">Service Details</Link></li>
                                             </ul> */}

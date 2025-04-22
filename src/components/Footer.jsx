@@ -10,14 +10,14 @@ function Footer() {
                 <div className="col-xl-4 col-lg-6 col-md-6">
                     <div className="footer-left-widget mb-40">
                         <div className="footer-logo">
-                            <img src="img/logo/logo-02.png" alt="logo_not_found"/>
+                            <img src="src/assets/img/logo/logo-02.png" alt="logo_not_found"/>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labori Excepteur.</p>
                         <div className="footer-social mt-40">
                             <Link to="#"><i className="fab fa-twitter"></i></Link>
                             <Link to="#"><i className="fas fa-rss"></i></Link>
-                            <Link to="#"><i className="fab fa-dribbble"></i></Link>
-                            <Link to="#"><i className="fab fa-behance"></i></Link>
+                            <Link to="#"><i className="fab fa-whatsapp"></i></Link>
+                            <Link to="#"><i className="fab fa-facebook"></i></Link>
                             <Link to="#"><i className="fab fa-instagram"></i></Link>
                         </div>
                     </div>
@@ -67,50 +67,50 @@ function Footer() {
                         <h3>Work Gallery</h3>
                         <div className="footer-gallery-item">
                             <div className="footer-gallery-thumb">
-                                <img src="img/footer/footer-gallery/fg-01.jpg" alt="image_not_found"/>
+                                <img src="src/assets/img/footer/footer-gallery/fg-01.jpg" alt="image_not_found"/>
                             </div>
                             <div className="link-img">
-                                <Link className="popup-image" to="img/footer/footer-gallery/fg-big-01.jpg"></Link>
+                                <Link className="popup-image" to="src/assets/img/footer/footer-gallery/fg-big-01.jpg"></Link>
                             </div>
                         </div>
                         <div className="footer-gallery-item">
                             <div className="footer-gallery-thumb">
-                                <img src="img/footer/footer-gallery/fg-02.jpg" alt="image_not_found"/>
+                                <img src="src/assets/img/footer/footer-gallery/fg-02.jpg" alt="image_not_found"/>
                             </div>
                             <div className="link-img">
-                                <Link className="popup-image" to="img/footer/footer-gallery/fg-big-02.jpg"></Link>
+                                <Link className="popup-image" to="src/assets/img/footer/footer-gallery/fg-big-02.jpg"></Link>
                             </div>
                         </div>
                         <div className="footer-gallery-item">
                             <div className="footer-gallery-thumb">
-                                <img src="img/footer/footer-gallery/fg-03.jpg" alt="image_not_found"/>
+                                <img src="src/assets/img/footer/footer-gallery/fg-03.jpg" alt="image_not_found"/>
                             </div>
                             <div className="link-img">
-                                <Link className="popup-image" to="img/footer/footer-gallery/fg-big-03.jpg"></Link>
+                                <Link className="popup-image" to="src/assets/img/footer/footer-gallery/fg-big-03.jpg"></Link>
                             </div>
                         </div>
                         <div className="footer-gallery-item">
                             <div className="footer-gallery-thumb">
-                                <img src="img/footer/footer-gallery/fg-04.jpg" alt="image_not_found"/>
+                                <img src="src/assets/img/footer/footer-gallery/fg-04.jpg" alt="image_not_found"/>
                             </div>
                             <div className="link-img">
-                                <Link className="popup-image" to="img/footer/footer-gallery/fg-big-04.jpg"></Link>
+                                <Link className="popup-image" to="src/assets/img/footer/footer-gallery/fg-big-04.jpg"></Link>
                             </div>
                         </div>
                         <div className="footer-gallery-item">
                             <div className="footer-gallery-thumb">
-                                <img src="img/footer/footer-gallery/fg-05.jpg" alt="image_not_found"/>
+                                <img src="src/assets/img/footer/footer-gallery/fg-05.jpg" alt="image_not_found"/>
                             </div>
                             <div className="link-img">
-                                <Link className="popup-image" to="img/footer/footer-gallery/fg-big-05.jpg"></Link>
+                                <Link className="popup-image" to="src/assets/img/footer/footer-gallery/fg-big-05.jpg"></Link>
                             </div>
                         </div>
                         <div className="footer-gallery-item">
                             <div className="footer-gallery-thumb">
-                                <img src="img/footer/footer-gallery/fg-06.jpg" alt="image_not_found"/>
+                                <img src="src/assets/img/footer/footer-gallery/fg-06.jpg" alt="image_not_found"/>
                             </div>
                             <div className="link-img">
-                                <Link className="popup-image" to="img/footer/footer-gallery/fg-big-06.jpg"></Link>
+                                <Link className="popup-image" to="src/assets/img/footer/footer-gallery/fg-big-06.jpg"></Link>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@ function Footer() {
             <div className="row">
                 <div className="col-12">
                     <div className="copyright-text text-center">
-                        <p>Copyright by @ Bildhub - 2021.</p>
+                        <p>Copyright by @ Earth Designer and Builders - 2021.</p>
                     </div>
                 </div>
             </div>
