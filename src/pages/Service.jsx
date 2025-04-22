@@ -1,12 +1,20 @@
-import React from 'react'
-import ServiceHero from '../components/Service/ServiceHero'
+import React from "react";
+import ServiceNav from "../components/Service/ServiceNav";
+import ServicesCard from "../components/Service/ServicesCard";
+import ServiceAbout from "../components/Service/ServiceAbout";
+import ServiceCount from "../components/Service/ServiceCount";
+// import ServiceHero from "../components/Service/ServiceHero";
 
 function Service() {
   return (
     <>
-    <ServiceHero/>
+      {/* <ServiceHero /> */}
+      <ServiceNav />
+      <ServicesCard />
+      <ServiceAbout />
+      <ServiceCount />
     </>
-  )
+  );
 }
 
-export default Service
+export default Service;

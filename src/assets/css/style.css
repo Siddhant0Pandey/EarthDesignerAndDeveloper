@@ -1029,6 +1029,40 @@ label {
 .brand-area .single-brand .partner-logo:hover > img.after-image {
 	top: 50%;
 }
+
+.single-brand img {
+	width: 100%;
+	height: auto;
+	display: block;
+  }
+  
+  /* Add some spacing for the logos */
+  .partner-logo {
+	display: block;
+	text-align: center;
+  }
+  
+  .before-image, .after-image {
+	width: 100%;
+	transition: opacity 0.3s ease-in-out;
+  }
+  
+  .before-image {
+	opacity: 1;
+  }
+  
+  .after-image {
+	opacity: 0;
+  }
+  
+  .single-brand:hover .before-image {
+	opacity: 0;
+  }
+  
+  .single-brand:hover .after-image {
+	opacity: 1;
+  }
+
 /* 8. feature */
 .feature-area {
 	position: relative;
