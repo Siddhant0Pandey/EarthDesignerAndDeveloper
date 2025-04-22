@@ -1,12 +1,12 @@
-import React from 'react'
-import ProjectHero from '../components/Project/ProjectHero'
+import React from "react";
+import ProjectHero from "../components/Project/ProjectHero";
 
 function Project() {
   return (
     <>
-    <ProjectHero/>
-    </>    
-  )
+      <ProjectHero />
+    </>
+  );
 }
 
-export default Project
+export default Project;
