@@ -1,63 +1,69 @@
-import React from 'react'
-import Slider from "react-slick";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
+
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+const sliderImages = [
+  { id: 1, imgSrc: 'src/assets/img/bg/slider-bg-01.jpg', title: 'General Contracting', subtitle: 'Build everything you need.' },
+  { id: 2, imgSrc: 'src/assets/img/bg/slider-bg-03.jpg', title: 'General Contracting', subtitle: 'Build everything you need.' },
+];
+
+const sliderSettings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  arrows: false,
+};
 
 function HomeHero() {
-      const settings = {
-        dots: true, 
-        infinite: true, 
-        speed: 500, 
-        slidesToShow: 1, 
-        slidesToScroll: 1, 
-        autoplay: true,
-        autoplaySpeed: 2000, 
-        arrows: true, 
-      };
-    
   return (
-    <section className="slider-area">
-    <Slider {...settings}>
-      {/* First slide */}
-      <div className="single-slider slider-height pos-rel d-flex align-items-center" style={{ backgroundImage: "url('src/assets/img/bg/slider-bg-01.jpg')" }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-7 col-lg-8">
-              <div className="slider-content">
-                <h5>General Contracting</h5>
-                <h1>Build everything you need<span>.</span></h1>
-                <p>Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div className="slider-btn">
-                  <Link className="thm-btn" to="#">Contact us</Link>
-                  <Link className="thm-btn border-btn" to="#">Free Quote</Link>
+    <main>
+      <section className="slider-area">
+        <div className="slider-active">
+          <Slider {...sliderSettings}>
+            {sliderImages.map((slide) => (
+              <div
+                key={slide.id}
+                className="single-slider slider-height pos-rel d-flex align-items-center"
+                style={{ backgroundImage: `url(${slide.imgSrc})` }}
+              >
+                <div className="container">
+                  <div className="row">
+                    <div className="col-xl-7 col-lg-8">
+                      <div className="slider-content">
+                        <h5 data-animation="fadeInUp" data-delay=".2s">{slide.title}</h5>
+                        <h1 data-animation="fadeInUp" data-delay=".4s">
+                          {slide.subtitle} <span>.</span>
+                        </h1>
+                        <p data-animation="fadeInUp" data-delay=".6s">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                        <div className="slider-btn">
+                          <Link data-animation="fadeInLeft" data-delay=".6s" className="thm-btn" to="#">
+                            Contact us
+                          </Link>
+                          <Link data-animation="fadeInRight" data-delay=".6s" className="thm-btn border-btn" to="#">
+                            Free Quote
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            ))}
+          </Slider>
         </div>
-      </div>
-
-      {/* Second slide */}
-      <div className="single-slider slider-height pos-rel d-flex align-items-center" style={{ backgroundImage: "url('src/assets/img/bg/slider-bg-03.jpg')" }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-7 col-lg-8">
-              <div className="slider-content">
-                <h5>General Contracting</h5>
-                <h1>Build everything you need<span>.</span></h1>
-                <p>Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div className="slider-btn">
-                  <Link className="thm-btn" to="#">Contact us</Link>
-                  <Link className="thm-btn border-btn" to="#">Free Quote</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </Slider>
-  </section>
-  )
+      </section>
+    </main>
+  );
 }
 
-export default HomeHero
+export default HomeHero;
