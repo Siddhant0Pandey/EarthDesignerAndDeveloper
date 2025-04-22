@@ -6,7 +6,9 @@ import App from './App.jsx'
 // js bundles
 // import './assets/js/vendor/modernizr-3.8.0.min.js';
 // import $ from 'jquery';
-// window.$ = $; 
+// window.$ = $;  
+
+
 // import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 // import './assets/js/owl.carousel.min.js';
 // import './assets/js/waypoints.min.js';
