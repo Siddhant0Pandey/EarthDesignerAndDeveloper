@@ -10,7 +10,6 @@ import Feature from "../components/Feature/Feature";
 import ContactForm from "../components/Contact/ContactForm";
 
 const Home = () => {
-
   return (
     <>
    <HomeHero/>
