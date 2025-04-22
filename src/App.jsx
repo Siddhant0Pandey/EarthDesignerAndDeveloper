@@ -4,6 +4,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Layout from './Layout/Layout';
 import Service from './pages/Service';
+import Blog from './pages/Blog';
 
 
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="service" element={<Service />} />
+          <Route path="blog" element = {<Blog />} />
         </Route>
       </Routes>
     </Router>

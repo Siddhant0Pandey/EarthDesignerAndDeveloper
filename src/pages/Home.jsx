@@ -9,17 +9,16 @@ import Testimonial from "../components/Testimonial/Testimonial";
 import Feature from "../components/Feature/Feature";
 
 const Home = () => {
-
   return (
     <>
-   <HomeHero/>
-   <AboutHero/>
-   <ServiceHero/>
-   <ProjectHero/>
-   <Brand/>
-   <Feature/>
-   <Testimonial/>
-   </>
+      <HomeHero />
+      <AboutHero />
+      <ServiceHero />
+      <ProjectHero />
+      <Brand />
+      <Feature />
+      <Testimonial />
+    </>
   );
 };
 
