@@ -28,7 +28,7 @@ function Navbar() {
                     <div className="row align-items-center">
                         <div className="col-xl-2 col-lg-2">
                             <div className="logo logo-2">
-                                <Link to="/"><img src="./src/Linkssets/img/logo/logo.png" alt="logo_not_found"/></Link>
+                                <Link to="/"><img src="./src/assets/img/logo/logo.png" alt="logo_not_found"/></Link>
                             </div>
                         </div>
                         <div className="col-xl-10 col-lg-10">
