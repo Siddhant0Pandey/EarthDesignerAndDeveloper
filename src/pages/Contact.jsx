@@ -1,10 +1,11 @@
 import ContactForm from "../components/Contact/ContactForm";
+import MapLocation from "../components/Contact/MapLocation";
 
 function Contact() {
     return(
     <>
     <ContactForm/>
-    <Map/>
+    <MapLocation/>
     </>
     );
   }

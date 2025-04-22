@@ -1,48 +1,69 @@
-import React from 'react'
+import React from 'react';
+import Slider from 'react-slick';
+
+const brandLogos = [
+  { id: 1, src: "src/assets/img/brand/brand-01.png" },
+  { id: 2, src: "src/assets/img/brand/brand-02.png" },
+  { id: 3, src: "src/assets/img/brand/brand-03.png" },
+  { id: 4, src: "src/assets/img/brand/brand-04.png" },
+  { id: 5, src: "src/assets/img/brand/brand-05.png" },
+];
+
+
+const slickSettings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
 
 function Brand() {
   return (
     <section className="brand-area gray-bg pt-90 pb-90">
-    <div className="container-fluid">
+      <div className="container-fluid">
         <div className="row">
-            <div className="col-12">
-                <div className="brand-active owl-carousel">
-                    <div className="single-brand">
-                        <a className="partner-logo" href="#">
-                            <img className="before-image" src="img/brand/brand-01.png" alt="image_not_found"/>
-                            <img className="after-image" src="img/brand/brand-01.png" alt="image_not_found"/>
-                        </a>
-                    </div>
-                    <div className="single-brand">
-                        <a className="partner-logo" href="#">
-                            <img className="before-image" src="img/brand/brand-02.png" alt="image_not_found"/>
-                            <img className="after-image" src="img/brand/brand-02.png" alt="image_not_found"/>
-                        </a>
-                    </div>
-                    <div className="single-brand">
-                        <a className="partner-logo" href="#">
-                            <img className="before-image" src="img/brand/brand-03.png" alt="image_not_found"/>
-                            <img className="after-image" src="img/brand/brand-03.png" alt="image_not_found"/>
-                        </a>
-                    </div>
-                    <div className="single-brand">
-                        <a className="partner-logo" href="#">
-                            <img className="before-image" src="img/brand/brand-04.png" alt="image_not_found"/>
-                            <img className="after-image" src="img/brand/brand-04.png" alt="image_not_found"/>
-                        </a>
-                    </div>
-                    <div className="single-brand">
-                        <a className="partner-logo" href="#">
-                            <img className="before-image" src="img/brand/brand-05.png" alt="image_not_found"/>
-                            <img className="after-image" src="img/brand/brand-05.png" alt="image_not_found"/>
-                        </a>
-                    </div>
-                </div>
+          <div className="col-12">
+            <div className="brand-active">
+              <Slider {...slickSettings}>
+                {brandLogos.map((brand) => (
+                  <div key={brand.id} className="single-brand">
+                    <a className="partner-logo" href="#">
+                      <img className="before-image" src={brand.src} alt="Brand Logo" />
+                      <img className="after-image" src={brand.src} alt="Brand Logo" />
+                    </a>
+                  </div>
+                ))}
+              </Slider>
             </div>
+          </div>
         </div>
-    </div>
-</section>
-  )
+      </div>
+    </section>
+  );
 }
 
-export default Brand
+export default Brand;

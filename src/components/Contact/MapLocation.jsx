@@ -1,5 +1,5 @@
 
-function Map() {
+function MapLocation() {
   return (
     <section className="gmaps-area">
                 <div className="contact-map">
@@ -9,4 +9,4 @@ function Map() {
   )
 }
 
-export default Map
+export default MapLocation

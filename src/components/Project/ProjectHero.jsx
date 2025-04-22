@@ -16,21 +16,21 @@ const projects = [
     title: "Rasalina De Wily Resort",
     category: "architecture",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    img: "img/project/project-02.jpg"
+    img: "assets/src/img/project/project-02.jpg"
   },
   {
     id: 3,
     title: "Rasalina De Wily Resort",
     category: "renovation",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    img: "img/project/project-03.jpg"
+    img: "assets/src/img/project/project-03.jpg"
   },
   {
     id: 4,
     title: "Rasalina De Wily Resort",
     category: "renovation",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    img: "img/project/project-02.jpg"
+    img: "assets/src/img/project/project-02.jpg"
   }
 ];
 

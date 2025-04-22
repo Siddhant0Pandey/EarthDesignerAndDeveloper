@@ -18,7 +18,7 @@ function HomeHero() {
     <section className="slider-area">
     <Slider {...settings}>
       {/* First slide */}
-      <div className="single-slider slider-height pos-rel d-flex align-items-center" style={{ backgroundImage: "url('img/bg/slider-bg-01.jpg')" }}>
+      <div className="single-slider slider-height pos-rel d-flex align-items-center" style={{ backgroundImage: "url('src/assets/img/bg/slider-bg-01.jpg')" }}>
         <div className="container">
           <div className="row">
             <div className="col-xl-7 col-lg-8">
@@ -37,7 +37,7 @@ function HomeHero() {
       </div>
 
       {/* Second slide */}
-      <div className="single-slider slider-height pos-rel d-flex align-items-center" style={{ backgroundImage: "url('img/bg/slider-bg-03.jpg')" }}>
+      <div className="single-slider slider-height pos-rel d-flex align-items-center" style={{ backgroundImage: "url('src/assets/img/bg/slider-bg-03.jpg')" }}>
         <div className="container">
           <div className="row">
             <div className="col-xl-7 col-lg-8">
