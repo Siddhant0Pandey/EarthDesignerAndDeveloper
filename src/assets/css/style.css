@@ -459,103 +459,72 @@ label {
 	margin-left: 23px;
 }
 /* 3. slider */
-.slider-height {
-	min-height: 800px;
-	background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.slider-content h5 {
-	font-size: 18px;
-	font-weight: 700;
-	color: #ff5e15;
-	text-transform: uppercase;
-	line-height: 1.2;
+/* Add this to your CSS file (e.g., style.css) */
+.slider-area {
+	position: relative;
+	overflow: hidden;
+  }
+  
+  .single-slider {
+	position: relative;
+	height: 100vh; /* Full height of the viewport */
+	display: flex;
+	align-items: center;
+	background-size: cover;
+	background-position: center;
+  }
+  
+  .slider-content {
+	color: #fff;
+	z-index: 10;
+  }
+  
+  .slider-content h5 {
+	font-size: 2rem;
+	margin-bottom: 10px;
+  }
+  
+  .slider-content h1 {
+	font-size: 4rem;
+	font-weight: bold;
 	margin-bottom: 20px;
-	font-family: 'Roboto', sans-serif;
-}
-.slider-content h1 {
-	font-size: 65px;
-	font-weight: 700;
-	color: #002052;
-	line-height: 75px;
-	margin-bottom: 15px;
-	text-transform: uppercase;
-}
-.slider-content h1 span {
-	text-transform: uppercase;
+  }
+  
+  .slider-content p {
+	font-size: 1.25rem;
+	margin-bottom: 30px;
+  }
+  
+  .slider-btn a {
+	padding: 10px 20px;
+	font-size: 1.125rem;
+	margin-right: 15px;
+  }
+  
+  .thm-btn {
+	background-color: #ff5e15;
+	color: white;
+	border: none;
+  }
+  
+  .border-btn {
+	background-color: transparent;
+	border: 2px solid #ff5e15;
 	color: #ff5e15;
-}
-.slider-content p {
-	font-size: 15px;
-	color: #002359;
-	font-weight: 500;
-	line-height: 27px;
-	padding-right: 80px;
-}
-.slider-btn a {
-	margin-top: 22px;
-	margin-right: 25px;
-}
-.slider-active button.slick-arrow {
-	position: absolute;
-	height: 80px;
-	width: 80px;
-	top: 45%;
-	left: 0;
-	transform: translateY(-50%);
-	background: none;
-	border: 0;
-	font-size: 18px;
-	padding: 0;
-	color: #10111e;
-	z-index: 2;
-	cursor: pointer;
-	background: #fff;
-	line-height: 73px;
-	transition: .3s;
-	box-shadow: 0px 5px 27px 0px rgba(220, 220, 220, 0.69);
-}
-.slider-active button.slick-next {
-	left: auto;
-	right: 0;
-}
-.slider-active button.slick-arrow:hover {
-	background: #ff5e15;
-	color: #fff;
-}
-.header-transparent {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	background: transparent;
-	z-index: 1;
-}
-.slider-height-2 {
-	height: 100vh;
-}
-.banner-overlay {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	left: 0;
-	top: 0;
-	background-color: #020d1e;
-	opacity: .5;
-}
-.slider-2 .slider-content h1 {
-	color: #fff;
-}
-.slider-2 .slider-content p {
-	color: #fff;
-}
-.slider-2 .slider-content {
-	margin-top: 230px;
-}
-.slider-2 .slider-active button.slick-arrow {
-	top: 54%;
-	box-shadow: 0px 5px 27px 0px rgba(220, 220, 220, 0.32);
-}
+  }
+  
+  .slick-dots {
+	bottom: 30px;
+  }
+  
+  .slick-dots li button:before {
+	color: white;
+  }
+  
+  .slick-dots li.slick-active button:before {
+	color: #ff5e15;
+  }
+  
 /* 4. about */
 .about-tab .nav-tabs {
 	border-bottom: none;
