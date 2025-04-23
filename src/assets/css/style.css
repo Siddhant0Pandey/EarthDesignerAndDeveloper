@@ -232,6 +232,48 @@ label {
 	width: 100%;
 	right: auto;
 }
+
+.thm-btn2 {
+	z-index: 1;
+	font-size: 15px;
+	line-height: 24px;
+	padding: 16px 40px;
+	text-align: center;
+	position: relative;
+	letter-spacing: 1px;
+	color: #002052;
+	text-transform: uppercase;
+	background-color: transparent;
+	font-weight: 700;
+	border: 2px solid #002052;
+	display: inline-block;
+}
+.thm-btn2:hover {
+	color: #ffff;
+}
+.thm-btn2::before {
+	top: 0px;
+	width: 0px;
+	left: auto;	
+	right: 0px;
+	z-index: -1;
+	bottom: 0px;
+	content: "";
+	position: absolute;
+	background-color: #002052;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+.thm-btn2:hover::before {
+	left: 0px;
+	width: 100%;
+	right: auto;
+}
+
+
 .border-btn {
 	border: 2px solid #002052;
 	background: transparent;

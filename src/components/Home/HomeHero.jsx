@@ -109,7 +109,7 @@ function HomeHero() {
                             Get in Touch
                           </Link>
                           <Link 
-                            className="thm-btn border-btn animated" 
+                            className="thm-btn2 animated" 
                             data-animation="fadeInRight" 
                             data-delay=".6s" 
                             to="/quote"
