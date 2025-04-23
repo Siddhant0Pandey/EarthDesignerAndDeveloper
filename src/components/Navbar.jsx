@@ -144,15 +144,15 @@ function Navbar() {
                                             </ul>
                                         </li> */}
                     <li>
-                      <Link to="/blog">Blog +</Link>
-                      <ul className="submenu">
+                      <Link to="/blog">Blog </Link>
+                      {/* <ul className="submenu">
                         <li>
                           <Link to="/blog">Blog</Link>
                         </li>
                         <li>
                           <Link to="/blog-details">Blog Details</Link>
                         </li>
-                      </ul>
+                      </ul> */}
                     </li>
                     <li>
                       <Link to="/contact">Contact</Link>
