@@ -73,7 +73,7 @@ function Navbar() {
             </div>
             <div className="col-xl-10 col-lg-10">
               <div className="header-button d-none d-lg-block f-right">
-                <Link className="thm-btn" href="#">
+                <Link className="thm-btn" to="/contact">
                   Get a quote
                 </Link>
               </div>
