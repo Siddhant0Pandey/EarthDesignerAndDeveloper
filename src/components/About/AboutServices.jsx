@@ -24,8 +24,9 @@ function AboutServices() {
                 <div className="services-box-text">
                   <h2>Architeture</h2>
                   <p>
-                    Rorem ipsum dolor sit ameto dey teyeryconsecteadipisicing
-                    elit, sed do.
+                    Thoughtfully planned designs that combine modern aesthetics
+                    with practical space utilization—tailored to suit your
+                    lifestyle or business needs.
                   </p>
                   <a className="sevices-btn" href="#">
                     Read More <i className="fas fa-chevron-right"></i>
@@ -44,8 +45,9 @@ function AboutServices() {
                 <div className="services-box-text">
                   <h2>construction</h2>
                   <p>
-                    Rorem ipsum dolor sit ameto dey teyeryconsecteadipisicing
-                    elit, sed do.
+                    From the ground up, we deliver robust and enduring
+                    builds—executed with engineering precision and strict
+                    quality control.
                   </p>
                   <a className="sevices-btn" href="#">
                     Read More <i className="fas fa-chevron-right"></i>
@@ -64,8 +66,8 @@ function AboutServices() {
                 <div className="services-box-text">
                   <h2>Equipment</h2>
                   <p>
-                    Rorem ipsum dolor sit ameto dey teyeryconsecteadipisicing
-                    elit, sed do.
+                    Equipped with modern tools and technology, we ensure speed,
+                    safety, and superior finish in every project.
                   </p>
                   <a className="sevices-btn" href="#">
                     Read More <i className="fas fa-chevron-right"></i>
@@ -84,8 +86,9 @@ function AboutServices() {
                 <div className="services-box-text">
                   <h2>Renovation</h2>
                   <p>
-                    Rorem ipsum dolor sit ameto dey teyeryconsecteadipisicing
-                    elit, sed do.
+                    Give your space a second life. We manage everything from
+                    structural upgrades to style enhancements with a fresh,
+                    forward-thinking approach.
                   </p>
                   <a className="sevices-btn" href="#">
                     Read More <i className="fas fa-chevron-right"></i>
@@ -104,8 +107,9 @@ function AboutServices() {
                 <div className="services-box-text">
                   <h2>Sanitary</h2>
                   <p>
-                    Rorem ipsum dolor sit ameto dey teyeryconsecteadipisicing
-                    elit, sed do.
+                    Our sanitary works combine functionality and
+                    hygiene—ensuring your plumbing and water systems meet the
+                    highest standards.
                   </p>
                   <a className="sevices-btn" href="#">
                     Read More <i className="fas fa-chevron-right"></i>
@@ -124,8 +128,9 @@ function AboutServices() {
                 <div className="services-box-text">
                   <h2>Isalation</h2>
                   <p>
-                    Rorem ipsum dolor sit ameto dey teyeryconsecteadipisicing
-                    elit, sed do.
+                    Keep your spaces comfortable and energy-efficient with our
+                    high-performance insulation that protects against weather
+                    and reduces energy waste.
                   </p>
                   <a className="sevices-btn" href="#">
                     Read More <i className="fas fa-chevron-right"></i>
