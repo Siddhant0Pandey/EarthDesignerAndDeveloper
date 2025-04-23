@@ -37,6 +37,7 @@
 	font-weight: normal;
 	font-style: normal;
 	font-size: 15px;
+	overflow-x:hidden ;
 }
 .img {
 	max-width: 100%;
@@ -459,19 +460,23 @@ label {
 	margin-left: 23px;
 }
 /* 3. slider */
-/* Add this to your CSS file (e.g., style.css) */
+
+
 .slider-area {
 	position: relative;
 	overflow: hidden;
+	width: 100vw;
   }
   
   .single-slider {
 	position: relative;
-	height: 100vh; /* Full height of the viewport */
+	height: 100vh;
 	display: flex;
 	align-items: center;
 	background-size: cover;
 	background-position: center;
+	overflow: hidden;
+	width: 100vw;
   }
   
   .slider-content {
