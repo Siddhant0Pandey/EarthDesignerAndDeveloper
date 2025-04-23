@@ -29,8 +29,9 @@ function AboutFeature() {
                     <a href="#">Interior Design</a>
                   </h2>
                   <p>
-                    Rorem ipsum dolor sit amet, consectetur adip isicing elit,
-                    sed do eiusmod tempor incutey.
+                    Our architects blend creativity with functionality to craft
+                    designs that are both beautiful and practical—laying the
+                    foundation for spaces that inspire.
                   </p>
                 </div>
               </div>
@@ -46,8 +47,9 @@ function AboutFeature() {
                     <a href="#">construction</a>
                   </h2>
                   <p>
-                    Rorem ipsum dolor sit amet, consectetur adip isicing elit,
-                    sed do eiusmod tempor incutey.
+                    We specialize in residential, commercial, and industrial
+                    construction—executing each project with precision,
+                    top-grade materials, and a commitment to on-time delivery.
                   </p>
                 </div>
               </div>
@@ -63,8 +65,9 @@ function AboutFeature() {
                     <a href="#">building repair</a>
                   </h2>
                   <p>
-                    Rorem ipsum dolor sit amet, consectetur adip isicing elit,
-                    sed do eiusmod tempor incutey.
+                    Restore safety, function, and beauty to your property. Our
+                    skilled repair team handles structural fixes, damage
+                    restoration, and modern upgrades with care and efficiency.
                   </p>
                 </div>
               </div>
