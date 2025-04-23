@@ -1,52 +1,54 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Slider from 'react-slick';
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-// Sample project data
 const projects = [
   {
-    id: 1,
-    title: "Rasalina De Wily Resort",
-    category: "construction",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    img: "img/project/project-01.jpg"
+    img: "src/assets/img/project/project-01.jpg",
+    tag: "construction",
+    title: "Baibhav Nepal Resort",
+    description:
+      "Rorem ipsum dolor sit amet, consectetur adipisic ing elit, sed do eiusmod tempor.",
   },
   {
-    id: 2,
+    img: "img/project/project-02.jpg",
+    tag: "architecture",
     title: "Rasalina De Wily Resort",
-    category: "architecture",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    img: "assets/src/img/project/project-02.jpg"
+    description:
+      "Rorem ipsum dolor sit amet, consectetur adipisic ing elit, sed do eiusmod tempor.",
   },
   {
-    id: 3,
+    img: "img/project/project-03.jpg",
+    tag: "renovation",
     title: "Rasalina De Wily Resort",
-    category: "renovation",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    img: "assets/src/img/project/project-03.jpg"
+    description:
+      "Rorem ipsum dolor sit amet, consectetur adipisic ing elit, sed do eiusmod tempor.",
   },
   {
-    id: 4,
+    img: "img/project/project-02.jpg",
+    tag: "renovation",
     title: "Rasalina De Wily Resort",
-    category: "renovation",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    img: "assets/src/img/project/project-02.jpg"
-  }
+    description:
+      "Rorem ipsum dolor sit amet, consectetur adipisic ing elit, sed do eiusmod tempor.",
+  },
 ];
 
-// Slick settings for the carousel
-const slickSettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  arrows: false,
-};
+const ProjectSection = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      { breakpoint: 1200, settings: { slidesToShow: 3 } },
+      { breakpoint: 992, settings: { slidesToShow: 2 } },
+      { breakpoint: 768, settings: { slidesToShow: 1 } },
+    ],
+    arrows: true,
+  };
 
-function ProjectHero() {
   return (
     <section className="project-area pos-rel pt-120 pb-120">
       <div className="container-fluid">
@@ -55,32 +57,35 @@ function ProjectHero() {
             <h1>Project</h1>
           </div>
           <h5>Our Project</h5>
-          <h2>Projects that we complete<span>.</span></h2>
+          <h2>
+            project that we complete<span>.</span>
+          </h2>
         </div>
-
-        <div className="project-active">
-          <Slider {...slickSettings}>
-            {projects.map((project) => (
-              <div key={project.id} className="single-project">
-                <div className="project-thumb">
-                  <img src={project.img} alt={project.title} />
+        <Slider {...settings} className="project-active">
+          {projects.map((project, index) => (
+            <div className="single-project" key={index}>
+              <div className="project-thumb">
+                <img src={project.img} alt="image_not_found" />
+              </div>
+              <div className="project-text" style={{ width: 400 }}>
+                <div className="project-tag">
+                  <h4>
+                    <a href="#">{project.tag}</a>
+                  </h4>
                 </div>
-                <div className="project-text">
-                  <div className="project-tag">
-                    <h4><Link to="#">{project.category}</Link></h4>
-                  </div>
-                  <div className="project-text-box">
-                    <h3><Link to="#">{project.title}</Link></h3>
-                    <p>{project.description}</p>
-                  </div>
+                <div className="project-text-box">
+                  <h3>
+                    <a href="#">{project.title}</a>
+                  </h3>
+                  <p>{project.description}</p>
                 </div>
               </div>
-            ))}
-          </Slider>
-        </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </section>
   );
-}
+};
 
-export default ProjectHero;
+export default ProjectSection;
