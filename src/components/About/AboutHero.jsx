@@ -18,7 +18,7 @@ function AboutHero() {
                                                 </div>
                                                 <div className="about-tab-content">
                                                     <h4>architecture Design</h4>
-                                                    <p>Rorem ipsoum doler sitey.Rorem psoum doler siteyoly.</p>
+                                                    <p>This is architecture design section.</p>
                                                 </div>
                                             </div>
                                         </Link>
@@ -107,7 +107,7 @@ function AboutHero() {
                                     <div className="tab-pane fade show active" id="nav-02" role="tabpanel" aria-labelledby="nav-02-tab">
                                         <div className="about-wrapper pt-120">
                                             <div className="row">
-                                                <div className="col-lg-6">
+                                                <div className="col-lg-6">  
                                                     <div className="about-left pos-rel">
                                                         <div className="border-title-2">
                                                             <h1>About</h1>
@@ -116,7 +116,7 @@ function AboutHero() {
                                                             <h5>About us !</h5>
                                                             <h2>We believe in the power of great ideas<span>.</span></h2>
                                                         </div>
-                                                        <p>Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed doklyeiusm tempor incididunt ut labore etry of the siely.</p>
+                                                        <p>Rorem ipthis is only for test elit, sed doklyeiusm tempor incididunt ut labore etry of the siely.</p>
                                                         <p>Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et Royality of the best sede..</p>
                                                         <ul className="about-info mt-30 mb-30">
                                                             <li>
