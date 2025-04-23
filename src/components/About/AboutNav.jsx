@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function AboutNav() {
   return (
@@ -19,7 +20,8 @@ function AboutNav() {
                 <nav aria-label="breadcrumb">
                   <ol className="breadcrumb justify-content-center">
                     <li className="breadcrumb-item">
-                      <a href="index.html">Home</a>
+                      {/* <a href="index.html">Home</a> */}
+                      <Link to="/">Home</Link>
                     </li>
                     <li className="breadcrumb-item active" aria-current="page">
                       About us
