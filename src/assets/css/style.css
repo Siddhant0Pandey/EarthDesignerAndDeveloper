@@ -460,8 +460,74 @@ label {
 	margin-left: 23px;
 }
 /* 3. slider */
+.slider-height {
+	min-height: 800px;
+	background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slider-content h5 {
+	font-size: 18px;
+	font-weight: 700;
+	color: #ff5e15;
+	text-transform: uppercase;
+	line-height: 1.2;
+	margin-bottom: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+.slider-content h1 {
+	font-size: 65px;
+	font-weight: 700;
+	color: #002052;
+	line-height: 75px;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+.slider-content h1 span {
+	text-transform: uppercase;
+	color: #ff5e15;
+}
+.slider-content p {
+	font-size: 15px;
+	color: #002359;
+	font-weight: 500;
+	line-height: 27px;
+	padding-right: 80px;
+}
+.slider-btn a {
+	margin-top: 22px;
+	margin-right: 25px;
+}
+/* .slider-active button.slick-arrow {
+	position: absolute;
+	height: 80px;
+	width: 80px;
+	top: 45%;
+	left: 0;
+	transform: translateY(-50%);
+	background: none;
+	border: 0;
+	font-size: 18px;
+	padding: 0;
+	color: #10111e;
+	z-index: 2;
+	cursor: pointer;
+	background: #fff;
+	line-height: 73px;
+	transition: .3s;
+	box-shadow: 0px 5px 27px 0px rgba(220, 220, 220, 0.69);
+} */
+.slider-active button.slick-next {
+	left: auto;
+	right: 0;
+}
+.slider-active button.slick-arrow:hover {
+	background: #ff5e15;
+	color: #fff;
+}
 
-
+/*  */
+/* 
 .slider-area {
 	position: relative;
 	overflow: hidden;
@@ -505,7 +571,7 @@ label {
 	font-size: 1.125rem;
 	margin-right: 15px;
   }
-  
+   */
   .thm-btn {
 	background-color: #ff5e15;
 	color: white;

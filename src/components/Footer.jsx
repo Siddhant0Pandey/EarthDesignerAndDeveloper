@@ -12,7 +12,7 @@ function Footer() {
                         <div className="footer-logo">
                             <img src="src/assets/img/logo/logo-02.png" alt="logo_not_found"/>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labori Excepteur.</p>
+                        <p>We are a dedicated team of civil engineers, designers, and developers with over 20 years of experience delivering high-quality construction projects.</p>
                         <div className="footer-social mt-40">
                             <Link to="#"><i className="fab fa-twitter"></i></Link>
                             <Link to="#"><i className="fas fa-rss"></i></Link>
@@ -53,12 +53,12 @@ function Footer() {
                     <div className="footer-widget footer-link">
                         <h3>Quick links</h3>
                         <ul>
-                            <li><Link to="#">About us</Link></li>
-                            <li><Link to="#">Our process</Link></li>
-                            <li><Link to="#">Contact us</Link></li>
-                            <li><Link to="#">Our Clients</Link></li>
+                            <li><Link to="/about">About us</Link></li>
+                            <li><Link to="/process">Our process</Link></li>
+                            <li><Link to="/contact">Contact us</Link></li>
+                            <li><Link to="/">Our Clients</Link></li>
                             <li><Link to="#">Our Team</Link></li>
-                            <li><Link to="#">Latest News</Link></li>
+                            <li><Link to="/blog">Latest News</Link></li>
                         </ul>
                     </div>
                 </div>
