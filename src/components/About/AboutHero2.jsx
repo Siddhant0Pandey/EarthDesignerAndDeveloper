@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import aboutBg from "../../assets/img/bg/about-bg.png"; // relative path based on component location
+import aboutBg from "../../assets/img/bg/about-bg.jpeg";
 
 function AboutHero2() {
   const [activeTab] = useState("nav-01");
@@ -51,7 +51,10 @@ function AboutHero2() {
                       <span>
                         <i className="fas fa-check"></i>
                       </span>
-                      <h5>End-to-end construction solutions tailored to your vision</h5>
+                      <h5>
+                        End-to-end construction solutions tailored to your
+                        vision
+                      </h5>
                     </div>
                   </li>
                   <li>
@@ -59,7 +62,9 @@ function AboutHero2() {
                       <span>
                         <i className="fas fa-check"></i>
                       </span>
-                      <h5>Timely project delivery with uncompromising quality</h5>
+                      <h5>
+                        Timely project delivery with uncompromising quality
+                      </h5>
                     </div>
                   </li>
                   <li>
@@ -67,7 +72,9 @@ function AboutHero2() {
                       <span>
                         <i className="fas fa-check"></i>
                       </span>
-                      <h5>Sustainable practices that support long-term growth</h5>
+                      <h5>
+                        Sustainable practices that support long-term growth
+                      </h5>
                     </div>
                   </li>
                 </ul>
