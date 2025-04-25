@@ -24,7 +24,7 @@ function StatusMessage({ status }) {
   const styles = {
     padding: '15px 25px',
     borderRadius: '4px',
-    backgroundColor: isError ? '#ff5e15' : isSuccess ? '#ff5e15' : isPending ? '#ff5e15' : '#ff5e15',
+    backgroundColor: isError ? '#F57C00' : isSuccess ? '#F57C00' : isPending ? '#F57C00' : '#F57C00',
     color: '#ffffff',
     fontWeight: '500',
     marginTop: '20px',
