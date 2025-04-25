@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import aboutBg from "../../assets/img/bg/about-bg.jpeg";
 
 function AboutHero2() {
   const [activeTab] = useState("nav-01");
@@ -28,27 +29,6 @@ function AboutHero2() {
   return (
     <section className="about-area pb-90">
       <div className="container">
-        {/* <div className="tab-buttons mb-4 flex gap-3">
-          <button
-            onClick={() => setActiveTab("nav-01")}
-            className={activeTab === "nav-01" ? "active" : ""}
-          >
-            Tab 1
-          </button>
-          <button
-            onClick={() => setActiveTab("nav-02")}
-            className={activeTab === "nav-02" ? "active" : ""}
-          >
-            Tab 2
-          </button>
-          <button
-            onClick={() => setActiveTab("nav-03")}
-            className={activeTab === "nav-03" ? "active" : ""}
-          >
-            Tab 3
-          </button>
-        </div> */}
-
         <div className="about-wrapper pt-120">
           <div className="row">
             <div className="col-lg-6">
@@ -118,9 +98,17 @@ function AboutHero2() {
                   <h5>Years</h5>
                   <h3>of Experience</h3>
                 </div>
-                <div className="about-right-thumb">
-                  <img src="img/bg/about-bg.png" alt="about" />
-                </div>
+                <div
+                  className="about-right-thumb"
+                  style={{
+                    backgroundImage: `url(${aboutBg})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    width: "100%",
+                    height: "400px",
+                    borderRadius: "10px",
+                  }}
+                ></div>
               </div>
             </div>
           </div>

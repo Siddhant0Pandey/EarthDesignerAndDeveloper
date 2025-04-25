@@ -2,19 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function AboutNav() {
+  const backgroundImage = "url(src/assets/img/bg/page-title-bg.jpg)";
   return (
     <>
       <section
         className="page-title-area pt-160 pb-160"
         data-overlay="8"
-        data-background="img/bg/page-title-bg.jpg"
+        data-background="src/assets/img/bg/page-title-bg.jpg"
+        style={{ backgroundImage: backgroundImage, backgroundSize: "cover" }}
       >
         <div className="container">
           <div className="row">
             <div className="col-xl-12">
               <div className="page-title text-center">
                 <div className="border-title">
-                  <h1>Services</h1>
+                  <h1>About</h1>
                 </div>
                 <h1>About us</h1>
                 <nav aria-label="breadcrumb">

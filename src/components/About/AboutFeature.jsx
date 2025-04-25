@@ -21,7 +21,10 @@ function AboutFeature() {
             <div class="col-xl-4 col-lg-4 col-md-6">
               <div class="feature-single mb-30">
                 <div class="feature-thumb">
-                  <img src="img/feature/feature-01.jpg" alt="image_not_found" />
+                  <img
+                    src="src/assets/img/feature/feature-01.jpg"
+                    alt="image_not_found"
+                  />
                 </div>
                 <div class="feature-text">
                   <h4>explore the features</h4>
@@ -39,7 +42,10 @@ function AboutFeature() {
             <div class="col-xl-4 col-lg-4 col-md-6">
               <div class="feature-single mb-30">
                 <div class="feature-thumb">
-                  <img src="img/feature/feature-02.jpg" alt="image_not_found" />
+                  <img
+                    src="src/assets/img/feature/feature-02.jpg"
+                    alt="image_not_found"
+                  />
                 </div>
                 <div class="feature-text">
                   <h4>explore the features</h4>
@@ -57,7 +63,10 @@ function AboutFeature() {
             <div class="col-xl-4 col-lg-4 col-md-6">
               <div class="feature-single mb-30">
                 <div class="feature-thumb">
-                  <img src="img/feature/feature-03.jpg" alt="image_not_found" />
+                  <img
+                    src="src/assets/img/feature/feature-03.jpg"
+                    alt="image_not_found"
+                  />
                 </div>
                 <div class="feature-text">
                   <h4>explore the features</h4>
