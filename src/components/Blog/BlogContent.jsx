@@ -6,7 +6,7 @@ const blogPosts = [
     title: "Why Integrated Design & Construction Saves You Time & Money",
     date: "April 23, 2025",
     author: "Admin",
-    image: "img/blog/blog01.jpg",
+    image: "src/assets/img/blog/blog01.jpg",
     link: "blog-details.html",
   },
   {
@@ -14,7 +14,7 @@ const blogPosts = [
     title: "Top 5 Architectural Design Trends in 2025",
     date: "April 10, 2025",
     author: "Admin",
-    image: "img/blog/blog02.jpg",
+    image: "src/assets/img/blog/blog02.jpg",
     link: "blog-details.html",
   },
   {
@@ -22,7 +22,7 @@ const blogPosts = [
     title: "How to Plan a Successful Construction Project",
     date: "March 30, 2025",
     author: "Admin",
-    image: "img/blog/blog03.jpg",
+    image: "src/assets/img/blog/blog03.jpg",
     link: "blog-details.html",
   },
   {
@@ -30,7 +30,7 @@ const blogPosts = [
     title: "Sustainable Building: What You Need to Know",
     date: "March 15, 2025",
     author: "Admin",
-    image: "img/blog/blog04.jpg",
+    image: "src/assets/img/blog/blog04.jpg",
     link: "blog-details.html",
   },
   {
@@ -38,7 +38,7 @@ const blogPosts = [
     title: "Why Good Design Adds Real Value to Property",
     date: "February 28, 2025",
     author: "Admin",
-    image: "img/blog/blog05.jpg",
+    image: "src/assets/img/blog/blog05.jpg",
     link: "blog-details.html",
   },
   {
@@ -46,7 +46,7 @@ const blogPosts = [
     title: "Commercial vs Residential Construction Explained",
     date: "February 10, 2025",
     author: "Admin",
-    image: "img/blog/blog06.jpg",
+    image: "src/assets/img/blog/blog06.jpg",
     link: "blog-details.html",
   },
 ];
