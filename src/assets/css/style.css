@@ -1898,9 +1898,11 @@ label {
 }
 .blog-thumb img {
 	width: 100%;
+	height: 30vh;
 }
 .b-content {
 	padding: 30px 20px;
+	height: 25vh;
 }
 .b-content .b-meta span a {
 	font-size: 14px;
