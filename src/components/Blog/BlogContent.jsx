@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
@@ -7,7 +8,7 @@ const blogPosts = [
     date: "April 23, 2025",
     author: "Admin",
     image: "src/assets/img/blog/blog01.jpeg",
-    link: "blog-details.html",
+    link: "/blog-details/1",
   },
   {
     id: 2,
@@ -15,7 +16,7 @@ const blogPosts = [
     date: "April 10, 2025",
     author: "Admin",
     image: "src/assets/img/blog/blog02.jpg",
-    link: "blog-details.html",
+    link: "/blog-details/2",
   },
   {
     id: 3,
@@ -23,7 +24,7 @@ const blogPosts = [
     date: "March 30, 2025",
     author: "Admin",
     image: "src/assets/img/blog/blog03.jpeg",
-    link: "blog-details.html",
+    link: "/blog-details/3",
   },
   {
     id: 4,
@@ -31,7 +32,7 @@ const blogPosts = [
     date: "March 15, 2025",
     author: "Admin",
     image: "src/assets/img/blog/blog04.jpg",
-    link: "blog-details.html",
+    link: "/blog-details/4",
   },
   {
     id: 5,
@@ -39,7 +40,7 @@ const blogPosts = [
     date: "February 28, 2025",
     author: "Admin",
     image: "src/assets/img/blog/blog05.jpg",
-    link: "blog-details.html",
+    link: "/blog-details/5",
   },
   {
     id: 6,
@@ -47,7 +48,7 @@ const blogPosts = [
     date: "February 10, 2025",
     author: "Admin",
     image: "src/assets/img/blog/blog06.jpg",
-    link: "blog-details.html",
+    link: "/blog-details/6",
   },
 ];
 
@@ -69,25 +70,25 @@ function BlogContent() {
                 <div className="b-content">
                   <div className="b-meta mb-10">
                     <span>
-                      <a href="#">
+                      <Link to="#">
                         <i className="fas fa-user"></i> {post.author}
-                      </a>
+                      </Link>
                     </span>
                     <span>
-                      <a href="#">
+                      <Link to="#">
                         <i className="far fa-calendar-alt"></i> {post.date}
-                      </a>
+                      </Link>
                     </span>
                   </div>
                   <div className="b-text mb-15">
                     <h3>
-                      <a href={post.link}>{post.title}</a>
+                      <Link to={post.link}>{post.title}</Link>
                     </h3>
                   </div>
                   <div className="b-btn">
-                    <a href={post.link}>
+                    <Link to={post.link}>
                       Read More <i className="ti-angle-right"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -101,28 +102,28 @@ function BlogContent() {
             <div className="basic-pagination text-center mt-35">
               <ul>
                 <li>
-                  <a href="#">
+                  <Link to="#">
                     <i className="fas fa-angle-double-left"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li className="active">
-                  <a href="#">01</a>
+                  <Link to="#">01</Link>
                 </li>
                 <li>
-                  <a href="#">02</a>
+                  <Link to="#">02</Link>
                 </li>
                 <li>
-                  <a href="#">03</a>
+                  <Link to="#">03</Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link to="#">
                     <i className="fas fa-ellipsis-h"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link to="#">
                     <i className="fas fa-angle-double-right"></i>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

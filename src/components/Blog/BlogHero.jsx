@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import bgImage from "../../assets/img/bg/page-title-bg.jpg"; // ✅ Corrected path
+import bgImage from "../../assets/img/bg/page-title-bg.jpg"; 
 
 function BlogHero() {
   const backgroundImage = `url(${bgImage})`;
