@@ -36,7 +36,7 @@ function HomeHero() {
         settings: {
           arrows: false
         }
-      }
+      } 
     ]
   };
 
