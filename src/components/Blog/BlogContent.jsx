@@ -6,7 +6,7 @@ const blogPosts = [
     title: "Why Integrated Design & Construction Saves You Time & Money",
     date: "April 23, 2025",
     author: "Admin",
-    image: "src/assets/img/blog/blog01.jpg",
+    image: "src/assets/img/blog/blog01.jpeg",
     link: "blog-details.html",
   },
   {
@@ -22,7 +22,7 @@ const blogPosts = [
     title: "How to Plan a Successful Construction Project",
     date: "March 30, 2025",
     author: "Admin",
-    image: "src/assets/img/blog/blog03.jpg",
+    image: "src/assets/img/blog/blog03.jpeg",
     link: "blog-details.html",
   },
   {
@@ -60,7 +60,11 @@ function BlogContent() {
             <div className="col-xl-4 col-lg-4 col-md-6" key={post.id}>
               <div className="single-blog mb-30">
                 <div className="blog-thumb">
-                  <img src={post.image} alt={post.title} />
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="uniform-img"
+                  />
                 </div>
                 <div className="b-content">
                   <div className="b-meta mb-10">
