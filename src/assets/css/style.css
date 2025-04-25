@@ -241,11 +241,11 @@ label {
 	text-align: center;
 	position: relative;
 	letter-spacing: 1px;
-	color: #002052;
+	color: #fff;
 	text-transform: uppercase;
 	background-color: transparent;
 	font-weight: 700;
-	border: 2px solid #002052;
+	border: 2px solid #fff;
 	display: inline-block;
 }
 .thm-btn2:hover {
@@ -504,42 +504,66 @@ label {
 /* 3. slider */
 .slider-height {
 	min-height: 800px;
-	background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.slider-content h5 {
+	display: flex;
+	align-items: center;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+  }
+  
+  .slider-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.6); 
+	z-index: 1;
+  }
+  
+  .slider-content {
+	position: relative;
+	z-index: 2;
+  }
+  
+  .slider-content h5 {
 	font-size: 18px;
 	font-weight: 700;
 	color: #ff5e15;
 	text-transform: uppercase;
-	line-height: 1.2;
 	margin-bottom: 20px;
 	font-family: 'Roboto', sans-serif;
-}
-.slider-content h1 {
+  }
+  
+  .slider-content h1 {
 	font-size: 65px;
 	font-weight: 700;
-	color: #002052;
+	color: #fff;
 	line-height: 75px;
 	margin-bottom: 15px;
 	text-transform: uppercase;
-}
-.slider-content h1 span {
-	text-transform: uppercase;
+  }
+  
+  .slider-content h1 span {
 	color: #ff5e15;
-}
-.slider-content p {
+  }
+  
+  .slider-content p {
 	font-size: 15px;
-	color: #002359;
+	color: #fff;
 	font-weight: 500;
 	line-height: 27px;
 	padding-right: 80px;
-}
-.slider-btn a {
+  }
+  
+  .slider-btn a {
 	margin-top: 22px;
 	margin-right: 25px;
-}
+  }
+  
+  
 /* .slider-active button.slick-arrow {
 	position: absolute;
 	height: 80px;
