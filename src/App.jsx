@@ -7,6 +7,7 @@ import Service from "./pages/Service";
 import Blog from "./pages/Blog";
 import Project from "./pages/Project";
 import Architecture from "./components/Service/Servicesdetail/Architecture";
+import Construction from "./components/Service/Servicesdetail/construction";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="project" element={<Project />} />
           <Route path="blog" element={<Blog />} />
           <Route path="services/architecture" element={<Architecture />} />
+          <Route path="services/construction" element={<Construction />} />
         </Route>
       </Routes>
     </Router>
