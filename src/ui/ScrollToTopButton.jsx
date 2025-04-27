@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show button when page is scrolled down
+ 
   const toggleVisibility = () => {
     if (window.scrollY > 300) {
       setIsVisible(true);
@@ -12,7 +12,7 @@ export default function ScrollToTopButton() {
     }
   };
 
-  // Scroll to top when button is clicked
+ 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -23,7 +23,7 @@ export default function ScrollToTopButton() {
   useEffect(() => {
     window.addEventListener('scroll', toggleVisibility);
     
-    // Clean up the event listener on component unmount
+    
     return () => {
       window.removeEventListener('scroll', toggleVisibility);
     };
