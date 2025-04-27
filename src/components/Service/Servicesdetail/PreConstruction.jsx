@@ -5,8 +5,8 @@ import { IoDocumentsOutline } from "react-icons/io5";
 import ArchitectureImg from "../../../assets/img/services/Architecture.jpg";
 import Meet from "../../../assets/img/services/meet.jpg";
 
-const Architecture = () => {
-  const backgroundImage = "url(../src/assets/img/services/services02.jpg)";
+const PreConstruction = () => {
+  const backgroundImage = "url(../src/assets/img/services/services02.jpg)"; // Consider importing this if needed
 
   return (
     <div>
@@ -23,14 +23,14 @@ const Architecture = () => {
                 <div className="border-title">
                   <h1>Services</h1>
                 </div>
-                <h1>Architecture</h1>
+                <h1>Construction</h1>
                 <nav aria-label="breadcrumb">
                   <ol className="breadcrumb justify-content-center">
                     <li className="breadcrumb-item">
                       <Link to="/">Home</Link>
                     </li>
                     <li className="breadcrumb-item active" aria-current="page">
-                      Architecture
+                      Construction
                     </li>
                   </ol>
                 </nav>
@@ -47,24 +47,26 @@ const Architecture = () => {
             <div className="col-xl-8 col-lg-8 pr-25">
               <div className="s-details-single mb-40">
                 <div className="s-details-thumb">
-                  <img src={ArchitectureImg} alt="Architecture" />
+                  <img src={ArchitectureImg} alt="Construction" />
                 </div>
                 <div className="s-details-text">
-                  <h2>High Quality Construction</h2>
+                  <h2>Building Strong Foundations</h2>
                   <p>
-                    We provide innovative architectural design and planning
-                    services to meet our clients' needs for residential,
-                    commercial, and mixed-use spaces. Our team ensures design
-                    integrity and sustainability across all projects.
+                    At Earth Designer and Developer, we turn architectural
+                    visions into reality with expert construction services
+                    tailored for residential, commercial, and industrial
+                    projects. Our commitment is simple: deliver quality
+                    craftsmanship, ensure safety, and complete projects on time
+                    and within budget.
                   </p>
 
                   <div className="s-box-wrapper pt-30 pb-15">
                     <div className="row">
                       {[
-                        { icon: "sh01.png", title: "Project Analysis" },
-                        { icon: "sh02.png", title: "Project Costing" },
-                        { icon: "sh03.png", title: "Project Planning" },
-                        { icon: "sh04.png", title: "Project Strategy" },
+                        { icon: "sh01.png", title: "Site Preparation" },
+                        { icon: "sh02.png", title: "Structural Engineering" },
+                        { icon: "sh03.png", title: "Quality Control" },
+                        { icon: "sh04.png", title: "Project Management" },
                       ].map((item, index) => (
                         <div key={index} className="col-xl-6 col-lg-6 col-md-6">
                           <div className="s-details-box mb-45">
@@ -79,8 +81,10 @@ const Architecture = () => {
                             </div>
                             <div className="s-dtls-box-text">
                               <p>
-                                Our approach involves meticulous planning and
-                                strategic execution to deliver superior results.
+                                Our construction process is guided by precision
+                                planning, robust materials, and a highly skilled
+                                team to ensure every project stands the test of
+                                time.
                               </p>
                             </div>
                           </div>
@@ -90,32 +94,27 @@ const Architecture = () => {
                   </div>
 
                   <div className="s-details-thumb mb-30">
-                    <img src={Meet} alt="Team Meeting" />
+                    <img src={Meet} alt="Construction Teamwork" />
                   </div>
                   <p>
-                    At <strong>Earth Designer and Developer</strong>, we believe
-                    that architecture is more than just creating structures —
-                    it's about shaping environments that inspire, endure, and
-                    elevate the way people live and work. Our architectural
-                    services are rooted in creativity, precision, and a deep
-                    respect for sustainability. Every project begins with a
-                    thorough understanding of our clients' needs, dreams, and
-                    the unique context of the site. From concept development and
-                    spatial planning to final execution, we focus on delivering
-                    designs that balance aesthetics, function, and environmental
-                    responsibility. Our team of experienced architects and
-                    designers bring a collaborative approach to each project,
-                    ensuring a seamless process from vision to reality. Whether
-                    it's a modern residential home, a dynamic commercial hub, or
-                    a large-scale community development, we bring innovative
-                    ideas and practical solutions to the table. At Earth
-                    Designer and Developer, we are committed to using
-                    eco-friendly materials, incorporating natural elements, and
-                    designing with future generations in mind. We don't just
-                    design buildings — we craft spaces that tell stories, foster
-                    connection, and stand the test of time. Trust us to
-                    transform your space into a signature piece of architecture
-                    that reflects your values and enhances your lifestyle.
+                    At <strong>Earth Designer and Developer</strong>,
+                    construction is not just about assembling bricks and mortar
+                    — it's about building spaces where life thrives and
+                    businesses grow. We specialize in full-spectrum construction
+                    services including excavation, concrete work, steel
+                    framework, roofing, and finishing works. Our team adheres
+                    strictly to engineering standards and safety regulations,
+                    ensuring durability and peace of mind for our clients.
+                  </p>
+                  <p>
+                    We also prioritize the use of sustainable construction
+                    practices, leveraging energy-efficient materials and smart
+                    technologies to reduce environmental impact. Every project
+                    we undertake is a reflection of our passion for excellence,
+                    innovation, and craftsmanship. Whether it's constructing a
+                    family home, a corporate office, or an industrial warehouse,
+                    we are your trusted partner from groundbreaking to grand
+                    opening.
                   </p>
                 </div>
               </div>
@@ -126,14 +125,14 @@ const Architecture = () => {
               <div className="s-detls-right">
                 <div className="services-sidebar mb-40">
                   <div className="services-title">
-                    <h2>Our Services</h2>
+                    <h2>Construction Services</h2>
                   </div>
                   <ul>
                     {[
-                      "Consultation & Briefing",
-                      "Concept Design & 3D Visualization",
-                      "On-site Supervision & Coordination",
-                      "Design Development",
+                      "Residential Construction",
+                      "Commercial Building",
+                      "Industrial Facilities",
+                      "Renovation & Remodeling",
                     ].map((service, index) => (
                       <li key={index}>
                         <div className="services-link">
@@ -159,7 +158,8 @@ const Architecture = () => {
         </div>
       </section>
 
-      {/* === Brand Section === */}
+      {/* === Brand Section (Optional) === */}
+      {/* Uncomment if you want */}
       {/* <section className="brand-area gray-bg pt-90 pb-90">
         <div className="container-fluid">
           <div className="row">
@@ -190,4 +190,4 @@ const Architecture = () => {
   );
 };
 
-export default Architecture;
+export default PreConstruction;
