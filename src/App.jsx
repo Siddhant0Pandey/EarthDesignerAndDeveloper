@@ -33,7 +33,7 @@ function App() {
           <Route path="/blog/:slug" element={<BlogDetails />} />
           
 
-          <Route path="services/construction" element={<Construction />} />
+          {/* <Route path="services/construction" element={<Construction />} /> */}
         </Route>
       </Routes>
     </Router>
