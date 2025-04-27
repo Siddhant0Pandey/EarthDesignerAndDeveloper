@@ -45,6 +45,15 @@ function Brand() {
   return (
     <section className="brand-area gray-bg pt-90 pb-90">
       <div className="container-fluid">
+      <div className="section-title text-center mb-100">
+          <div className="border-title">
+            {/* <h1>Associated Brands-Partner</h1> */}
+          </div>
+          <h5>Our Partners </h5>
+          <h2>
+          Associated Brands<span>.</span>
+          </h2>
+        </div>
         <div className="row">
           <div className="col-12">
             <div className="brand-active">
