@@ -5,14 +5,11 @@ import Contact from "./pages/Contact";
 import Layout from "./Layout/Layout";
 import Service from "./pages/Service";
 import Blog from "./pages/Blog";
-import Project from "./pages/Project";
-
-
+import Project from "./pages/Project"
 
 import BlogDetails from "./components/Blog/BlogDetails";
 
-
-import Construction from "./components/Service/Servicesdetail/construction";
+// import Construction from "./components/Service/Servicesdetail/construction";
 import PreConstruction from "./components/Service/Servicesdetail/PreConstruction";
 
 
