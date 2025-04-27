@@ -15,7 +15,7 @@ function Footer() {
                         <p>We are a dedicated team of civil engineers, designers, and developers with over 20 years of experience delivering high-quality construction projects.</p>
                         <div className="footer-social mt-40">
                             <Link to="#"><i className="fab fa-twitter"></i></Link>
-                            <Link to="#"><i className="fas fa-rss"></i></Link>
+                        
                             <Link to="#"><i className="fab fa-whatsapp"></i></Link>
                             <Link to="#"><i className="fab fa-facebook"></i></Link>
                             <Link to="#"><i className="fab fa-instagram"></i></Link>
