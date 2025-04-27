@@ -7,6 +7,7 @@ import Service from "./pages/Service";
 import Blog from "./pages/Blog";
 import Project from "./pages/Project";
 import Architecture from "./components/Service/Servicesdetail/Architecture";
+import BlogDetails from "./components/Blog/BlogDetails";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="services" element={<Service />} />
           <Route path="project" element={<Project />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogDetails />} />
           <Route path="services/architecture" element={<Architecture />} />
         </Route>
       </Routes>

@@ -93,7 +93,7 @@ function AboutHero2() {
               <div className="about-right pos-rel">
                 <div className="about-right-content">
                   <h1>
-                    29<span>+</span>
+                    10<span></span>
                   </h1>
                   <h5>Years</h5>
                   <h3>of Experience</h3>
