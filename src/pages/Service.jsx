@@ -1,8 +1,9 @@
 import React from "react";
 import ServiceNav from "../components/Service/ServiceNav";
 import ServicesCard from "../components/Service/ServicesCard";
-import ServiceAbout from "../components/Service/ServiceAbout";
+// import ServiceAbout from "../components/Service/ServiceAbout";
 import ServiceCount from "../components/Service/ServiceCount";
+import AboutHero2 from "../components/About/AboutHero2";
 // import ServiceHero from "../components/Service/ServiceHero";
 
 function Service() {
@@ -11,7 +12,8 @@ function Service() {
       {/* <ServiceHero /> */}
       <ServiceNav />
       <ServicesCard />
-      <ServiceAbout />
+      {/* <ServiceAbout /> */}
+      <AboutHero2 />
       <ServiceCount />
     </>
   );
