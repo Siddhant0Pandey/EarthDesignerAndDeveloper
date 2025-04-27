@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 const servicesData = [
   {
     icon: "src/assets/img/icon/s01.png",
@@ -7,6 +8,7 @@ const servicesData = [
     title: "Architecture",
     description:
       "Thoughtfully planned designs that combine modern aesthetics with practical space utilization—tailored to suit your lifestyle or business needs.",
+    ReadMore: "services/architecture",
   },
   {
     icon: "src/assets/img/icon/s02.png",
@@ -14,6 +16,7 @@ const servicesData = [
     title: "Construction",
     description:
       "From the ground up, we deliver robust and enduring builds—executed with engineering precision and strict quality control.",
+    ReadMore: "services/construction",
   },
   {
     icon: "src/assets/img/icon/s03.png",
@@ -21,6 +24,7 @@ const servicesData = [
     title: "Equipment",
     description:
       "Equipped with modern tools and technology, we ensure speed, safety, and superior finish in every project.",
+    ReadMore: "equipment",
   },
   {
     icon: "src/assets/img/icon/s04.png",
@@ -28,6 +32,7 @@ const servicesData = [
     title: "Renovation",
     description:
       "Give your space a second life. We manage everything from structural upgrades to style enhancements with a fresh, forward-thinking approach.",
+    ReadMore: "renovation",
   },
   {
     icon: "src/assets/img/icon/s05.png",
@@ -35,6 +40,7 @@ const servicesData = [
     title: "Sanitary",
     description:
       "Our sanitary works combine functionality and hygiene—ensuring your plumbing and water systems meet the highest standards.",
+    ReadMore: "sanitary",
   },
   {
     icon: "src/assets/img/icon/s06.png",
@@ -42,44 +48,44 @@ const servicesData = [
     title: "Insulation",
     description:
       "Keep your spaces comfortable and energy-efficient with our high-performance insulation that protects against weather and reduces energy waste.",
+    ReadMore: "insulation",
   },
 ];
 
 const ServicesCard = () => {
   return (
-    <div>
-      <section className="services-area gray-bg pt-120 pb-90">
-        <div className="container">
-          <div className="section-title text-center">
-            <div className="border-title">
-              <h1>Services</h1>
-            </div>
-            <h5>Our Services</h5>
-            <h2>we are expert in</h2>
+    <section className="services-area gray-bg pt-120 pb-90">
+      <div className="container">
+        <div className="section-title text-center">
+          <div className="border-title">
+            <h1>Services</h1>
           </div>
-          <div className="row">
-            {servicesData.map((service, index) => (
-              <div className="col-xl-4 col-lg-6 col-md-6" key={index}>
-                <div className="services-box text-center mb-30">
-                  <div className="services-box-thumb mb-25">
-                    <img src={service.icon} alt="icon" />
-                    <div className="box-thumb-bg">
-                      <img src={service.bgIcon} alt="background icon" />
-                    </div>
-                  </div>
-                  <div className="services-box-text">
-                    <h2>{service.title}</h2>
-                    <p>{service.description}</p>
-                    <Link to={"architecture"}>Read More</Link>
+          <h5>Our Services</h5>
+          <h2>We are expert in</h2>
+        </div>
+        <div className="row">
+          {servicesData.map((service, index) => (
+            <div className="col-xl-4 col-lg-6 col-md-6" key={index}>
+              <div className="services-box text-center mb-30">
+                <div className="services-box-thumb mb-25">
+                  <img src={service.icon} alt="icon" />
+                  <div className="box-thumb-bg">
+                    <img src={service.bgIcon} alt="background icon" />
                   </div>
                 </div>
+                <div className="services-box-text">
+                  <h2>{service.title}</h2>
+                  <p>{service.description}</p>
+                  {service.ReadMore && (
+                    <Link to={`/${service.ReadMore}`}>Read More</Link>
+                  )}
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
-      );
-    </div>
+      </div>
+    </section>
   );
 };
 
