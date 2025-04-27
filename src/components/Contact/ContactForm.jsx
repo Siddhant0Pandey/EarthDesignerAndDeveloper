@@ -66,6 +66,7 @@ function ContactForm() {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
 
+   
     if (errors[name]) {
       setErrors({ ...errors, [name]: '' });
     }
@@ -75,12 +76,15 @@ function ContactForm() {
     const newErrors = {};
     let isValid = true;
     
-    // Validate each field
+   
     Object.keys(formData).forEach(field => {
       const errorMessage = validateField(field, formData[field]);
       if (errorMessage) {
         newErrors[field] = errorMessage;
         isValid = false;
+      } else {
+  
+        newErrors[field] = '';
       }
     });
     
@@ -114,6 +118,13 @@ function ContactForm() {
       if (response.ok) {
         setStatus('Message sent successfully!');
         setFormData({ name: '', phone: '', subject: '', message: '' });
+ 
+        setErrors({
+          name: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
       } else {
         setStatus(result.message || 'Failed to send message.');
       }
@@ -125,8 +136,7 @@ function ContactForm() {
     }
   };
 
-  
-  const hasError = (field) => errors[field] !== '';
+  const hasError = (field) => errors[field] && errors[field].trim() !== '';
 
   return (
     <section className="contact-area pt-120 pb-120">
@@ -155,63 +165,99 @@ function ContactForm() {
               <form onSubmit={handleSubmit} noValidate>
                 <div className="row">
                   <div className="col-xl-6 col-lg-12">
-                    <div className={`text-box ${hasError('name') ? 'error' : ''}`}>
-                      <span><i className="far fa-user"></i></span>
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder="Enter full name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        onBlur={() => setErrors({...errors, name: validateField('name', formData.name)})}
-                      />
-                      {hasError('name') && <div className="error-message">{errors.name}</div>}
+                    <div className="field-wrapper">
+                      {hasError('name') && (
+                        <div className="error-message-top">
+                          <i className="fas fa-exclamation-circle"></i> {errors.name}
+                        </div>
+                      )}
+                      <div className={`text-box ${hasError('name') ? 'error-border' : ''}`}>
+                        <span><i className="far fa-user"></i></span>
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Enter full name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          onBlur={() => {
+                            const errorMsg = validateField('name', formData.name);
+                            setErrors(prev => ({...prev, name: errorMsg}));
+                          }}
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="col-xl-6 col-lg-12">
-                    <div className={`text-box ${hasError('phone') ? 'error' : ''}`}>
-                      <span><i className="fas fa-phone"></i></span>
-                      <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Your phone number"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        onBlur={() => setErrors({...errors, phone: validateField('phone', formData.phone)})}
-                      />
-                      {hasError('phone') && <div className="error-message">{errors.phone}</div>}
+                    <div className="field-wrapper">
+                      {hasError('phone') && (
+                        <div className="error-message-top">
+                          <i className="fas fa-exclamation-circle"></i> {errors.phone}
+                        </div>
+                      )}
+                      <div className={`text-box ${hasError('phone') ? 'error-border' : ''}`}>
+                        <span><i className="fas fa-phone"></i></span>
+                        <input
+                          type="tel"
+                          name="phone"
+                          placeholder="Your phone number"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          onBlur={() => {
+                            const errorMsg = validateField('phone', formData.phone);
+                            setErrors(prev => ({...prev, phone: errorMsg}));
+                          }}
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="col-xl-12 col-lg-12">
-                    <div className={`text-box ${hasError('subject') ? 'error' : ''}`}>
-                      <span><i className="fas fa-arrow-right"></i></span>
-                      <input
-                        type="text"
-                        name="subject"
-                        placeholder="Your Subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        onBlur={() => setErrors({...errors, subject: validateField('subject', formData.subject)})}
-                      />
-                      {hasError('subject') && <div className="error-message">{errors.subject}</div>}
+                    <div className="field-wrapper">
+                      {hasError('subject') && (
+                        <div className="error-message-top">
+                          <i className="fas fa-exclamation-circle"></i> {errors.subject}
+                        </div>
+                      )}
+                      <div className={`text-box ${hasError('subject') ? 'error-border' : ''}`}>
+                        <span><i className="fas fa-arrow-right"></i></span>
+                        <input
+                          type="text"
+                          name="subject"
+                          placeholder="Your Subject"
+                          value={formData.subject}
+                          onChange={handleChange}
+                          onBlur={() => {
+                            const errorMsg = validateField('subject', formData.subject);
+                            setErrors(prev => ({...prev, subject: errorMsg}));
+                          }}
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="col-xl-12 col-lg-12">
-                    <div className={`message-box ${hasError('message') ? 'error' : ''}`}>
-                      <span><i className="far fa-edit"></i></span>
-                      <textarea
-                        name="message"
-                        cols="30"
-                        rows="10"
-                        placeholder="Your Message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        onBlur={() => setErrors({...errors, message: validateField('message', formData.message)})}
-                      />
-                      {hasError('message') && <div className="error-message">{errors.message}</div>}
-                      <button className="thm-btn" type="submit" disabled={isSending}>
-                        <i className="far fa-paper-plane"></i> {isSending ? 'Sending...' : 'Send message'}
-                      </button>
+                    <div className="field-wrapper">
+                      {hasError('message') && (
+                        <div className="error-message-top">
+                          <i className="fas fa-exclamation-circle"></i> {errors.message}
+                        </div>
+                      )}
+                      <div className={`message-box ${hasError('message') ? 'error-border' : ''}`}>
+                        <span><i className="far fa-edit"></i></span>
+                        <textarea
+                          name="message"
+                          cols="30"
+                          rows="10"
+                          placeholder="Your Message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          onBlur={() => {
+                            const errorMsg = validateField('message', formData.message);
+                            setErrors(prev => ({...prev, message: errorMsg}));
+                          }}
+                        />
+                        <button className="thm-btn" type="submit" disabled={isSending}>
+                          <i className="far fa-paper-plane"></i> {isSending ? 'Sending...' : 'Send message'}
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -221,8 +267,36 @@ function ContactForm() {
           </div>
         </div>
       </div>
+      
+      {/* Add this CSS to your component */}
+      <style jsx>{`
+        .field-wrapper {
+          position: relative;
+          margin-bottom: 15px;
+        }
+        
+        .error-message-top {
+          color: #e74c3c;
+          font-size: 12px;
+          margin-bottom: 5px;
+          padding: 4px 8px;
+          background-color: rgba(231, 76, 60, 0.1);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+        
+        .error-border {
+          border-color: #e74c3c !important;
+        }
+        
+        .error-message-top i {
+          color: #e74c3c;
+        }
+      `}</style>
     </section>
   );
 }
 
-export default ContactForm;
+export default ContactForm;     
