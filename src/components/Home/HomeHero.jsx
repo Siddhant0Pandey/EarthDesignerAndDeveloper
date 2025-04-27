@@ -61,7 +61,7 @@ function HomeHero() {
                         {slide.subtitle} <span>.</span>
                       </h1>
                       <p>
-                        We are a dedicated team of civil engineers, designers, and developers with over 20 years of experience delivering high-quality construction projects. Whether you're building your dream home, an office, or an entire community, we handle every detail to ensure lasting results.
+                        We are a dedicated team of civil engineers, designers, and developers with over 10 years of experience delivering high-quality construction projects. Whether you're building your dream home, an office, or an entire community, we handle every detail to ensure lasting results.
                       </p>
                       <div className="slider-btn">
                         <Link to="/contact" className="thm-btn">

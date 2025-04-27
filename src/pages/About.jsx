@@ -4,6 +4,7 @@ import AboutNav from "../components/About/AboutNav";
 import AboutHero2 from "../components/About/AboutHero2";
 import AboutFeature from "../components/About/AboutFeature";
 import AboutServices from "../components/About/AboutServices";
+import ServicesCard from "../components/Service/ServicesCard";
 
 function About() {
   return (
@@ -11,7 +12,7 @@ function About() {
       <AboutNav />
       <AboutHero2 />
       <AboutFeature />
-      <AboutServices />
+      <ServicesCard />
     </>
   );
 }

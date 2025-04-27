@@ -1,53 +1,54 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
     id: 1,
-    title: "Why Integrated Design & Construction Saves You Time & Money",
+    title: "Building a Better Tomorrow with Smart Construction Solutions",
     date: "April 23, 2025",
     author: "Admin",
     image: "src/assets/img/blog/blog01.jpg",
-    link: "blog-details.html",
+    link: "/blog/blog01",
   },
   {
     id: 2,
-    title: "Top 5 Architectural Design Trends in 2025",
+    title: "Your Trusted Source for Construction News and Industry Trends",
     date: "April 10, 2025",
     author: "Admin",
     image: "src/assets/img/blog/blog02.jpg",
-    link: "blog-details.html",
+    link: "/blog/blog02",
   },
   {
     id: 3,
-    title: "How to Plan a Successful Construction Project",
+    title: "HExpert Insights on Modern Construction Methods and Innovation",
     date: "March 30, 2025",
     author: "Admin",
-    image: "src/assets/img/blog/blog03.jpg",
-    link: "blog-details.html",
+    image: "src/assets/img/blog/blog03.jpeg",
+    link: "/blog/blog03",
   },
   {
     id: 4,
-    title: "Sustainable Building: What You Need to Know",
+    title: "Discover the Latest Developments in Construction and Design",
     date: "March 15, 2025",
     author: "Admin",
     image: "src/assets/img/blog/blog04.jpg",
-    link: "blog-details.html",
+    link: "/blog/blog04",
   },
   {
     id: 5,
-    title: "Why Good Design Adds Real Value to Property",
+    title: "Guiding You Through Every Step of Your Construction Journey",
     date: "February 28, 2025",
     author: "Admin",
     image: "src/assets/img/blog/blog05.jpg",
-    link: "blog-details.html",
+    link: "/blog/blog05",
   },
   {
     id: 6,
-    title: "Commercial vs Residential Construction Explained",
+    title: "Where Construction Expertise Meets Real World Experience",
     date: "February 10, 2025",
     author: "Admin",
     image: "src/assets/img/blog/blog06.jpg",
-    link: "blog-details.html",
+    link: "/blog/blog06",
   },
 ];
 
@@ -60,30 +61,39 @@ function BlogContent() {
             <div className="col-xl-4 col-lg-4 col-md-6" key={post.id}>
               <div className="single-blog mb-30">
                 <div className="blog-thumb">
-                  <img src={post.image} alt={post.title} />
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="uniform-img"
+                  />
                 </div>
                 <div className="b-content">
                   <div className="b-meta mb-10">
                     <span>
-                      <a href="#">
-                        <i className="fas fa-user"></i> {post.author}
-                      </a>
+                      <Link to="#">
+                        <i className="fas fa-user"></i>
+                      </Link>
+                      {post.author}
                     </span>
                     <span>
-                      <a href="#">
-                        <i className="far fa-calendar-alt"></i> {post.date}
-                      </a>
+                      <Link to="#">
+                        <i
+                          className="far fa-calendar-alt"
+                          style={{ paddingLeft: "20px" }}
+                        ></i>{" "}
+                        {post.date}
+                      </Link>
                     </span>
                   </div>
                   <div className="b-text mb-15">
                     <h3>
-                      <a href={post.link}>{post.title}</a>
+                      <Link to={post.link}>{post.title}</Link>
                     </h3>
                   </div>
                   <div className="b-btn">
-                    <a href={post.link}>
+                    <Link to={post.link}>
                       Read More <i className="ti-angle-right"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -97,28 +107,28 @@ function BlogContent() {
             <div className="basic-pagination text-center mt-35">
               <ul>
                 <li>
-                  <a href="#">
+                  <Link to="#">
                     <i className="fas fa-angle-double-left"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li className="active">
-                  <a href="#">01</a>
+                  <Link to="#">01</Link>
                 </li>
                 <li>
-                  <a href="#">02</a>
+                  <Link to="#">02</Link>
                 </li>
                 <li>
-                  <a href="#">03</a>
+                  <Link to="#">03</Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link to="#">
                     <i className="fas fa-ellipsis-h"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link to="#">
                     <i className="fas fa-angle-double-right"></i>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

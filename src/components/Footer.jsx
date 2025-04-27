@@ -15,7 +15,7 @@ function Footer() {
                         <p>We are a dedicated team of civil engineers, designers, and developers with over 20 years of experience delivering high-quality construction projects.</p>
                         <div className="footer-social mt-40">
                             <Link to="#"><i className="fab fa-twitter"></i></Link>
-                            <Link to="#"><i className="fas fa-rss"></i></Link>
+                        
                             <Link to="#"><i className="fab fa-whatsapp"></i></Link>
                             <Link to="#"><i className="fab fa-facebook"></i></Link>
                             <Link to="#"><i className="fab fa-instagram"></i></Link>
@@ -29,14 +29,14 @@ function Footer() {
                             <li>
                                 <div className="footer-address mt-20">
                                     <span><i className="fas fa-map-marker-alt"></i></span>
-                                    <h5>786/Link Romada tower mall Brooklyn, NYC</h5>
+                                    <h5> M8P8+QW2, Lalitpur 44600</h5>
                                 </div>
                             </li>
                             <li>
                                 <div className="footer-address mt-20">
                                     <span><i className="fas fa-phone-alt"></i></span>
-                                    <h5>018- 375878-345</h5>
-                                    <h5>9373 93243 - 783</h5>
+                                    <h5> +977 985-1213859</h5>
+                                    <h5> +977 985-1213859</h5>
                                 </div>
                             </li>
                             <li>
@@ -56,8 +56,7 @@ function Footer() {
                             <li><Link to="/about">About us</Link></li>
                             <li><Link to="/process">Our process</Link></li>
                             <li><Link to="/contact">Contact us</Link></li>
-                            <li><Link to="/">Our Clients</Link></li>
-                            <li><Link to="#">Our Team</Link></li>
+                            <li><Link to="/project">Our Projects</Link></li>
                             <li><Link to="/blog">Latest News</Link></li>
                         </ul>
                     </div>
@@ -123,7 +122,7 @@ function Footer() {
             <div className="row">
                 <div className="col-12">
                     <div className="copyright-text text-center">
-                        <p>Copyright by @ Earth Designer and Builders - 2021.</p>
+                        <p>Developed by <a href='https://www.codesala.com' target='_blank' className='text-warning'>CodeSala</a>. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
