@@ -122,7 +122,7 @@ function Footer() {
             <div className="row">
                 <div className="col-12">
                     <div className="copyright-text text-center">
-                        <p>Developed by <a href='codesala.com' target='_blank' className='text-secondary'> @CodeSala</a>. All Rights Reserved.</p>
+                        <p>Developed by <a href='https://www.codesala.com' target='_blank' className='text-warning'>CodeSala</a>. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
