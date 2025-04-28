@@ -1,86 +1,143 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css"; // Importing Bootstrap
+import { IoMdEye } from "react-icons/io";
+import { FiTarget } from "react-icons/fi";
 
 const MissionAndGoals = () => {
   return (
-    <div style={{ paddingTop: "100px", maxWidth: "95%", margin: "auto" }}>
+    <>
       <h1
         style={{
-          marginBottom: "20px",
           textAlign: "center",
           color: "#005792",
           fontWeight: "bold",
+          paddingTop: "100px",
+          paddingBottom: "60px",
         }}
       >
-        Mission and Goals
+        Mission and Vision
       </h1>
+      <div
+        className="container d-flex justify-content-center align-items-center"
+        style={{ gap: "220px" }}
+      >
+        {/* Card 1 */}
+        <div
+          className="mission-card"
+          style={{
+            width: "28rem",
+            overflow: "hidden",
+            height: "18rem",
+            backgroundColor: "#F57C00",
+            borderTopLeftRadius: "20px",
+            borderBottomRightRadius: "20px",
+          }}
+        >
+          <div className="card-body position-relative">
+            {/* Image container */}
+            <div className="image-slide position-relative">
+              {/* <img
+                src={<IoMdEye />}
+                alt="card"
+                className="card-img-top slide-image"
+                style={{ height: "18rem" }}
+              /> */}
+              <div
+                className="mission-icon"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "18px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "18rem",
+                  color: "white",
+                }}
+              >
+                <FiTarget size={190} />
+                <h4 style={{ fontWeight: "bold", color: "white" }}>
+                  Our Mission
+                </h4>
+              </div>
 
-      {/* Mission Section */}
-      <div className="row" style={{ marginBottom: "30px" }}>
-        {/* Mission */}
-        <div className="col-md-6" style={{ paddingRight: "15px" }}>
-          <h2
-            style={{
-              marginBottom: "15px",
-              textTransform: "none",
-              letterSpacing: "normal",
-              fontWeight: "bold",
-              fontSize: "1.5rem",
-              color: "#F57C00",
-            }}
-          >
-            Mission
-          </h2>
-          <p
-            style={{
-              margin: 0,
-              lineHeight: "1.6",
-              fontFamily: "inherit",
-            }}
-          >
-            He as spoke avoid given downs money on we. Of properly carriage
-            shutters ye as wandered up repeated moreover. Article evident
-            arrived express highest men did boy. Mistress sensible entirely am
-            so. Quick can manor smart money hopes worth too. Comfort produce
-            husband boy her had hearing. Law others theirs passed but wishes.
-            You day real less till dear read. Considered use dispatched
-            melancholy sympathize discretion led.
-          </p>
+              <div className="overlay-content position-absolute top-0 left-0 w-100 h-100 d-flex justify-content-center align-items-center text-white p-2">
+                <div className="content-text">
+                  <h5 className="card-title" style={{ fontWeight: "bold" }}>
+                    Our Mission
+                  </h5>
+                  <p className="card-text" style={{ color: "white" }}>
+                    Our mission is to create lasting, high-quality structures
+                    that uplift communities and enhance lives. We focus on
+                    safety, sustainability, and innovation, using advanced
+                    technology and top materials to deliver resilient,
+                    future-ready projects that exceed expectations and support
+                    local economies.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Card 2 */}
+        <div
+          className="mission-card"
+          style={{
+            width: "28rem",
+            overflow: "hidden",
+            height: "18rem",
+            backgroundColor: "#F57C00",
+            color: "white",
+            borderTopRightRadius: "20px",
+            borderBottomLeftRadius: "20px",
+          }}
+        >
+          <div className="card-body position-relative">
+            {/* Image container */}
+            <div className="image-slide position-relative">
+              {/* <img
+                src="src/assets/img/feature/feature-01.jpg"
+                alt="card"
+                className="card-img-top slide-image"
+                style={{ height: "18 rem" }}
+              /> */}
+              <div
+                className="mission-icon"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "18rem",
+                  color: "white",
+                }}
+              >
+                <IoMdEye size={200} />
+                <h4 style={{ fontWeight: "bold", color: "white" }}>
+                  Our Vision
+                </h4>
+              </div>
+
+              <div className="overlay-content position-absolute top-0 left-0 w-100 h-100 d-flex justify-content-center align-items-center text-white p-2">
+                <div className="content">
+                  <h5 className="card-title" style={{ fontWeight: "bold" }}>
+                    Our Vision
+                  </h5>
+                  <p className="card-text" style={{ color: "white" }}>
+                    Our vision is to set new benchmarks in the global
+                    construction industry through excellence, integrity, and
+                    sustainable innovation. We aspire to transform skylines,
+                    build resilient communities, and create enduring spaces that
+                    foster growth and leave a lasting, positive impact
+                    worldwide.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="row">
-        {/* Goals */}
-        <div className="col-md-6 offset-md-6" style={{ paddingLeft: "15px" }}>
-          <h2
-            style={{
-              marginBottom: "15px",
-              textTransform: "none",
-              letterSpacing: "normal",
-              fontWeight: "bold",
-              fontSize: "1.5rem",
-              color: "#F57C00",
-            }}
-          >
-            Goals
-          </h2>
-          <p
-            style={{
-              margin: 0,
-              lineHeight: "1.6",
-              fontFamily: "inherit",
-            }}
-          >
-            Article evident arrived express highest men did boy. Mistress
-            sensible entirely am so. Quick can manor smart money hopes worth
-            too. Comfort produce husband boy her had hearing. Law others theirs
-            passed but wishes. You day real less till dear read. Considered use
-            dispatched melancholy sympathize discretion led. Oh feel if up to
-            till like.
-          </p>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 

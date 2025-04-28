@@ -22,12 +22,6 @@ const AboutOurCoreValues = () => {
     },
     {
       icon: "",
-      title: "Resilience",
-      description:
-        "Building infrastructure that stands the test of time and nature.",
-    },
-    {
-      icon: "",
       title: "Community Empowerment",
       description:
         "Investing in local talent and uplifting communities through our work.",
