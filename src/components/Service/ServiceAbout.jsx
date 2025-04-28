@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
 import aboutBg from "../../assets/img/bg/about-bg.jpeg";
 
 function ServiceAbout() {
@@ -8,20 +7,10 @@ function ServiceAbout() {
   const tabContent = {
     "nav-01": {
       paragraphs: [
-        `After the devastating 2015 earthquake, young civil engineer Nabin Gautam saw an opportunity not just to rebuild, but to transform Nepal’s future. He founded Earth Designers and Developers with a mission to strengthen the nation through essential infrastructure—roads, bridges, highways, hydropower, and mining projects. Nabin believed that true development would only come by creating a strong foundation that connected communities, boosted the economy, and supported growth across all sectors like education, healthcare, and commerce.`,
-        `Despite facing harsh terrain, resource limitations, and bureaucratic hurdles, Nabin pushed forward by adopting innovative construction technologies and empowering local talent. His company quickly grew into a symbol of progress, helping to bridge Nepal’s rural and urban divide. Today, Earth Designers and Developers stands as a leader in hard infrastructure development, and Nabin’s vision continues to inspire the next generation to see infrastructure as the backbone of a prosperous Nepal.`,
-      ],
-    },
-    "nav-02": {
-      paragraphs: [
-        `Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed doklyeiusm tempor incididunt ut labore etry of the siely.`,
-        `Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et Royality of the best sede..`,
-      ],
-    },
-    "nav-03": {
-      paragraphs: [
-        `Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed doklyeiusm tempor incididunt ut labore etry of the siely.`,
-        `Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et Royality of the best sede..`,
+        `At Earth Designers and Developers, we don’t just complete projects — we deliver long-term value. Our decade of experience in Nepal’s challenging construction landscape has made us a trusted name in infrastructure development.`,
+        `We combine local insight with cutting-edge construction technologies to deliver projects that are durable, sustainable, and tailored to the communities they serve. Our team of seasoned engineers and professionals is driven by a commitment to quality, safety, and innovation.`,
+        `What sets us apart is our deep understanding of Nepal’s geography and socio-economic needs. From remote mountainous villages to urban hubs, we have successfully implemented roadways, hydropower plants, bridges, and other critical infrastructure that connect people and empower regions.`,
+        `We also believe in inclusive development — hiring local labor, training young professionals, and engaging with communities to ensure our projects leave a lasting impact. Our clients choose us because we listen, we care, and we deliver beyond expectations.`,
       ],
     },
   };
@@ -39,54 +28,12 @@ function ServiceAbout() {
                 <div className="about-title mb-20">
                   <h5>About us !</h5>
                   <h2>
-                    Transforming Nepal Through Infrastructure <br /> and Nation
-                    Building<span>.</span>
+                    Why Choose Us?<span>.</span>
                   </h2>
                 </div>
                 {tabContent[activeTab].paragraphs.map((p, index) => (
                   <p key={index}>{p}</p>
                 ))}
-                {/* <ul className="about-info mt-30 mb-30">
-                  <li>
-                    <div className="about-info-title">
-                      <span>
-                        <i className="fas fa-check"></i>
-                      </span>
-                      <h5>
-                        End-to-end construction solutions tailored to your
-                        vision
-                      </h5>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="about-info-title">
-                      <span>
-                        <i className="fas fa-check"></i>
-                      </span>
-                      <h5>
-                        Timely project delivery with uncompromising quality
-                      </h5>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="about-info-title">
-                      <span>
-                        <i className="fas fa-check"></i>
-                      </span>
-                      <h5>
-                        Sustainable practices that support long-term growth
-                      </h5>
-                    </div>
-                  </li>
-                </ul> */}
-                {/* <div className="about-btn pt-20">
-                  <Link to="/service-details" className="thm-btn">
-                    Learn More
-                  </Link>
-                  <Link to="/about" className="about-l-btn">
-                    Learn More <i className="ti-arrow-right"></i>
-                  </Link>
-                </div> */}
               </div>
             </div>
 
