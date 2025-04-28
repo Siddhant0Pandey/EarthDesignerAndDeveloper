@@ -888,10 +888,9 @@ label {
   }
   
   .core-value-item:hover {
-	background-color: #F57C00; /* Red color on hover */
+	background-color: #F57C00;
 	transform: scale(1.05); /* Slightly increase the size on hover */
   }
-  
   .core-value-item:hover .core-value-title {
 	color: #fff; /* Change title color to white on hover */
   }
