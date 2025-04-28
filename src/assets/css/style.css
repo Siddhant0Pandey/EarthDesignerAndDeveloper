@@ -662,61 +662,6 @@ label {
 	color: #F57C00;
   }
   /* mobile nav */
-  /* Hamburger Button */
-/* Hamburger Button */
-.hamburger-btn {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	width: 30px;
-	height: 25px;
-	background: transparent;
-	border: none;
-	cursor: pointer;
-	padding: 0;
-	z-index: 1101;
-  }
-  
-  .hamburger-btn .bar {
-	width: 100%;
-	height: 3px;
-	background-color: #333;
-	border-radius: 10px;
-	transition: all 0.4s ease;
-  }
-  
-  .hamburger-btn.open .bar:nth-child(1) {
-	transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .hamburger-btn.open .bar:nth-child(2) {
-	opacity: 0;
-  }
-  
-  .hamburger-btn.open .bar:nth-child(3) {
-	transform: rotate(-45deg) translate(5px, -5px);
-  }
-  
-  /* Mobile Sidebar */
-  .mobile-sidebar-wrapper {
-	position: fixed;
-	top: 0;
-	right: -100%;
-	width: 400px;
-	height: 100vh;
-	background-color: #fff;
-	transition: right 0.4s ease;
-	z-index: 1100;
-	box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-	display: flex;
-	flex-direction: column;
-  }
-  
-  .mobile-sidebar-wrapper.open {
-	right: 0;
-  }
-  
-  /* Sidebar content */
  /* Hamburger Button Styles */
 .hamburger-btn {
 	background: transparent;
@@ -755,8 +700,8 @@ label {
   .mobile-menu-panel {
 	background-color: #fff;
 	box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-	height: 100vh;
-	max-width: 400px;
+	height: 100%; /* Changed from 100vh to 100% */
+	max-width: 300px;
 	overflow-y: auto;
 	position: fixed;
 	right: -320px;
@@ -764,6 +709,9 @@ label {
 	transition: right 0.3s ease;
 	width: 85%;
 	z-index: 1000;
+	/* Fix for iOS safari overflow issue */
+	-webkit-overflow-scrolling: touch;
+	box-sizing: border-box;
   }
   
   .mobile-menu-panel.active {
@@ -799,6 +747,8 @@ label {
   /* Mobile Menu Content */
   .mobile-menu-content {
 	padding: 15px;
+	/* Make sure content doesn't overflow */
+	box-sizing: border-box;
   }
   
   .mobile-navigation ul {
@@ -868,6 +818,7 @@ label {
   /* Mobile CTA */
   .mobile-cta {
 	margin-top: 20px;
+	margin-bottom: 20px; /* Added to ensure padding at bottom */
 	text-align: center;
   }
   
@@ -876,9 +827,17 @@ label {
 	width: 100%;
   }
   
+  /* Fix for page overflow */
+  html, body {
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+  }
+  
   /* Desktop Menu */
   @media (min-width: 992px) {
-	
+	/* Ensure mobile menu doesn't appear on large screens */
 	.mobile-menu-panel {
 	  display: none;
 	}
@@ -886,17 +845,13 @@ label {
   
   /* Mobile Menu */
   @media (max-width: 991px) {
-	
-	body {
-	  overflow-x: hidden;
-	}
-	
+	/* Fix for Y-axis overflow */
 	body.menu-open {
 	  overflow: hidden;
+	  position: fixed;
+	  width: 100%;
 	}
   }
-  
-  
 /* 4. about */
 .about-tab .nav-tabs {
 	border-bottom: none;
