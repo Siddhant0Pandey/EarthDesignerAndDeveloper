@@ -8,7 +8,7 @@ const servicesData = [
   {
     icon: (
       <ServiceIconImage
-        src="public/icon/s01.png"
+        src="/icon/s01.png"
         alt="Pre-Construction Design icon"
       />
     ),
