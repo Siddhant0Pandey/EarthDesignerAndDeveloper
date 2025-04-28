@@ -73,7 +73,10 @@ const Construction = () => {
                     <div className="row">
                       {[
                         { icon: "sh01.png", title: "Site Preparation" },
-                        { icon: "sh02.png", title: "Structural Engineering" },
+                        {
+                          icon: "sh02.png",
+                          title: "Structural Engineering",
+                        },
                         { icon: "sh03.png", title: "Quality Assurance" },
                         { icon: "sh04.png", title: "Project Management" },
                       ].map((item, index) => (
@@ -81,7 +84,7 @@ const Construction = () => {
                           <div className="s-details-box mb-45">
                             <div className="s-details-icon">
                               <img
-                                src={`../src/assets/img/icon/${item.icon}`}
+                                src={`/icon/${item.icon}`}
                                 alt={item.title}
                               />
                             </div>
@@ -154,7 +157,7 @@ const Construction = () => {
                             />
                           ) : (
                             <img
-                              src={`../src/assets/img/icon/sd0${index + 1}.png`}
+                              src={`/icon/sd0${index + 1}.png`}
                               alt={service}
                             />
                           )}

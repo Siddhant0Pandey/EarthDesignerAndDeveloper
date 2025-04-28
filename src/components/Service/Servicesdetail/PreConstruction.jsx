@@ -72,7 +72,7 @@ const PreConstruction = () => {
                           <div className="s-details-box mb-45">
                             <div className="s-details-icon">
                               <img
-                                src={`../src/assets/img/icon/${item.icon}`}
+                                src={`/icon/${item.icon}`}
                                 alt={item.title}
                               />
                             </div>
@@ -171,7 +171,7 @@ const PreConstruction = () => {
                             />
                           ) : (
                             <img
-                              src={`../src/assets/img/icon/sd0${index + 1}.png`}
+                              src={`/icon/sd0${index + 1}.png`}
                               alt={service}
                             />
                           )}

@@ -71,7 +71,7 @@ const Building = () => {
                     <div className="row">
                       {[
                         {
-                          icon: "/icon/sh01.png",
+                          icon: "sh01.png",
                           title: "conceptual Design Modeling",
                         },
                         {
@@ -82,13 +82,16 @@ const Building = () => {
                           icon: "sh03.png",
                           title: "Clash Detection & Coordination ",
                         },
-                        { icon: "sh04.png", title: "Construction Document" },
+                        {
+                          icon: "sh04.png",
+                          title: "Construction Document",
+                        },
                       ].map((item, index) => (
                         <div key={index} className="col-xl-6 col-lg-6 col-md-6">
                           <div className="s-details-box mb-45">
                             <div className="s-details-icon">
                               <img
-                                src={`../src/assets/img/icon/${item.icon}`}
+                                src={`/icon/${item.icon}`}
                                 alt={item.title}
                               />
                             </div>

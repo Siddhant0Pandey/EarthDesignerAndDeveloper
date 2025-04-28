@@ -76,14 +76,20 @@ const General = () => {
                           icon: "sh02.png",
                           title: "Foundation & Structural Work",
                         },
-                        { icon: "sh03.png", title: "Building Construction" },
-                        { icon: "sh04.png", title: "Finishing & Handover" },
+                        {
+                          icon: "sh03.png",
+                          title: "Building Construction",
+                        },
+                        {
+                          icon: "sh04.png",
+                          title: "Finishing & Handover",
+                        },
                       ].map((item, index) => (
                         <div key={index} className="col-xl-6 col-lg-6 col-md-6">
                           <div className="s-details-box mb-45">
                             <div className="s-details-icon">
                               <img
-                                src={`../src/assets/img/icon/${item.icon}`}
+                                src={`/icon/${item.icon}`}
                                 alt={item.title}
                               />
                             </div>
@@ -155,7 +161,7 @@ const General = () => {
                             />
                           ) : (
                             <img
-                              src={`../src/assets/img/icon/sd0${index + 1}.png`}
+                              src={`/icon/sd0${index + 1}.png`}
                               alt={service}
                             />
                           )}
