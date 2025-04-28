@@ -2,44 +2,84 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { BiBuildings } from "react-icons/bi";
+import ServiceIconImage, { ServiceIconBackground } from "../ServiceIconImage"; // Adjust the import path as needed
 
 const servicesData = [
   {
-    icon: "src/assets/img/icon/s01.png",
-    bgIcon: "src/assets/img/icon/sb01.png",
+    icon: (
+      <ServiceIconImage
+        src="src/assets/img/icon/s01.png"
+        alt="Pre-Construction Design icon"
+      />
+    ),
+    bgIcon: (
+      <ServiceIconBackground
+        src="src/assets/img/icon/sb01.png"
+        alt="Pre-Construction background"
+      />
+    ),
     title: "Pre-Construction Design",
     description:
       "Separated they live in Bookmarksgrove right at the coast of the Semantics",
-    isReactIcon: false,
+    isReactIcon: true,
     ReadMore: "services/pre-construction",
   },
   {
-    icon: "src/assets/img/icon/s02.png",
-    bgIcon: "src/assets/img/icon/sb02.png",
+    icon: (
+      <ServiceIconImage
+        src="src/assets/img/icon/s02.png"
+        alt="Construction Services icon"
+      />
+    ),
+    bgIcon: (
+      <ServiceIconBackground
+        src="src/assets/img/icon/sb02.png"
+        alt="Construction Services background"
+      />
+    ),
     title: "Construction Services",
     description:
       "Separated they live in Bookmarksgrove right at the coast of the Semantics",
-    isReactIcon: false,
+    isReactIcon: true,
     ReadMore: "services/construction",
   },
   {
-    icon: "src/assets/img/icon/s03.png",
-    bgIcon: "src/assets/img/icon/sb03.png",
+    icon: (
+      <ServiceIconImage
+        src="src/assets/img/icon/s03.png"
+        alt="Construction Management icon"
+      />
+    ),
+    bgIcon: (
+      <ServiceIconBackground
+        src="src/assets/img/icon/sb03.png"
+        alt="Construction Management background"
+      />
+    ),
     title: "Construction Management",
     description:
       "Separated they live in Bookmarksgrove right at the coast of the Semantics",
+    isReactIcon: true,
     ReadMore: "services/management",
-    isReactIcon: false,
   },
   {
-    icon: "src/assets/img/icon/s04.png",
-    bgIcon: "src/assets/img/icon/sb04.png",
+    icon: (
+      <ServiceIconImage
+        src="src/assets/img/icon/s04.png"
+        alt="General Constructing icon"
+      />
+    ),
+    bgIcon: (
+      <ServiceIconBackground
+        src="src/assets/img/icon/sb04.png"
+        alt="General Constructing background"
+      />
+    ),
     title: "General Constructing",
     description:
       "Separated they live in Bookmarks grove right at the coast of the Semantics",
-    ReadMore: "services/renovation",
+    isReactIcon: true,
     ReadMore: "services/general",
-    isReactIcon: false,
   },
   {
     icon: (
@@ -53,8 +93,8 @@ const servicesData = [
     title: "Building Modeling",
     description:
       "Separated they live in Bookmarksgrove right at the coast of the Semantics",
-    ReadMore: "services/building",
     isReactIcon: true,
+    ReadMore: "services/building",
   },
   {
     icon: <BiBuildings style={{ fontSize: "78px", color: "#FABB9E" }} />,
@@ -66,8 +106,8 @@ const servicesData = [
     title: "Design Build",
     description:
       "Separated they live in Bookmarksgrove right at the coast of the Semantics",
-    ReadMore: "services/design",
     isReactIcon: true,
+    ReadMore: "services/design",
   },
 ];
 
