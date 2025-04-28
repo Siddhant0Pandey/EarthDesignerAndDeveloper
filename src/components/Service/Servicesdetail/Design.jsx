@@ -72,15 +72,24 @@ const Design = () => {
                           icon: "sh01.png",
                           title: "Project Planning & Feasibility",
                         },
-                        { icon: "sh02.png", title: "Architectural Design" },
-                        { icon: "sh03.png", title: "Engineering & Permitting" },
-                        { icon: "sh04.png", title: "Construction & Delivery" },
+                        {
+                          icon: "sh02.png",
+                          title: "Architectural Design",
+                        },
+                        {
+                          icon: "sh03.png",
+                          title: "Engineering & Permitting",
+                        },
+                        {
+                          icon: "sh04.png",
+                          title: "Construction & Delivery",
+                        },
                       ].map((item, index) => (
                         <div key={index} className="col-xl-6 col-lg-6 col-md-6">
                           <div className="s-details-box mb-45">
                             <div className="s-details-icon">
                               <img
-                                src={`../src/assets/img/icon/${item.icon}`}
+                                src={`/icon/${item.icon}`}
                                 alt={item.title}
                               />
                             </div>
@@ -148,7 +157,7 @@ const Design = () => {
                             />
                           ) : (
                             <img
-                              src={`../src/assets/img/icon/sd0${index + 1}.png`}
+                              src={`/icon/sd0${index + 1}.png`}
                               alt={service}
                             />
                           )}
