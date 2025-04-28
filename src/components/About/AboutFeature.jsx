@@ -43,7 +43,7 @@ function AboutFeature() {
               <div class="feature-single mb-30">
                 <div class="feature-thumb">
                   <img
-                    src="src/assets/img/feature/feature-02.jpg"
+                    src="src/assets/img/feature/feature-01.jpg"
                     alt="image_not_found"
                   />
                 </div>
