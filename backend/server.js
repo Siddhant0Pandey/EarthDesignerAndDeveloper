@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-// Load environment variables
+
 dotenv.config();
 
 const app = express();
@@ -14,12 +14,12 @@ const port = 5000;
 app.use(cors());
 app.use(express.json());
 
-// Nodemailer transporter setup using environment variables
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp-relay.brevo.com',   
+  port: 587,                     
   auth: {
-    user: process.env.SMTP_USER,  
-    pass: process.env.SMTP_PASS,  
+    user: process.env.SMTP_USER,   
+    pass: process.env.SMTP_PASS,   
   },
 });
 
@@ -28,14 +28,17 @@ app.post('/send-email', (req, res) => {
   const { name, phone, subject, message } = req.body;
 
   const mailOptions = {
-    from: process.env.SMTP_USER,  
-    to: process.env.RECIPIENT_EMAIL,  
+    from: `"Website Contact" <${process.env.VERIFIED_SENDER_EMAIL}>`,
+    to: process.env.RECIPIENT_EMAIL,
     subject: `New message from ${name} - ${subject}`,
-    text: `You have received a new message:\n\nName: ${name}\nPhone: ${phone}\nMessage: ${message}`,
+    text: `Name: ${name}\nPhone: ${phone}\nMessage:\n${message}`, 
+    html: `<h2>New Message Received</h2><p><b>Name:</b> ${name}</p><p><b>Phone:</b> ${phone}</p><p><b>Message:</b><br>${message}</p>`,
   };
+  
 
   transporter.sendMail(mailOptions, (error) => {
     if (error) {
+      console.error('Error sending email:', error);
       return res.status(500).json({ message: 'Failed to send email', error });
     } else {
       return res.status(200).json({ message: 'Email sent successfully!' });
@@ -43,7 +46,6 @@ app.post('/send-email', (req, res) => {
   });
 });
 
-// Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
