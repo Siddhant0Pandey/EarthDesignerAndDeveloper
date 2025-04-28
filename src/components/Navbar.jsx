@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Close mobile menu when screen size increases to desktop
+  
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 991 && mobileMenuOpen) {
@@ -19,13 +19,13 @@ function Navbar() {
   // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.classList.add('menu-open');
     } else {
-      document.body.style.overflow = "auto";
+      document.body.classList.remove('menu-open');
     }
     
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.classList.remove('menu-open');
     };
   }, [mobileMenuOpen]);
 
@@ -95,7 +95,7 @@ function Navbar() {
               </div>
             </div>
             <div className="col-xl-10 col-lg-10 col-6">
-              {/* Desktop Menu - Only visible on lg screens and up */}
+            
               <div className="d-none d-lg-flex justify-content-end align-items-center">
                 <div className="main-menu me-4">
                   <nav>
@@ -128,7 +128,7 @@ function Navbar() {
                 </div>
               </div>
               
-              {/* Mobile Menu Toggle Button - Only visible below lg screens */}
+             
               <div className="d-lg-none text-end">
                 <button 
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -145,7 +145,7 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay - Only appears when menu is open */}
+      
       {mobileMenuOpen && (
         <div 
           className="mobile-menu-overlay"
