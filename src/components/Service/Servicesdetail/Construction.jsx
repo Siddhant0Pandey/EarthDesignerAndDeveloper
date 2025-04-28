@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { IoDocumentsOutline } from "react-icons/io5";
 
-import ArchitectureImg from "../../../assets/img/services/Architecture.jpg";
-import Meet from "../../../assets/img/services/meet.jpg";
+import ArchitectureImg from "../../../assets/img/services/const.jpg";
+import Meet from "../../../assets/img/services/const2.jpg";
 
 const Construction = () => {
-  const backgroundImage = "url(../src/assets/img/services/services02.jpg)"; // Consider importing this if needed
+  const backgroundImage = "url(../src/assets/img/services/services02.jpg)"; // Consider importing this image if you want to optimize bundling.
 
   return (
     <div>
@@ -44,20 +44,29 @@ const Construction = () => {
       <section className="services-details pt-120 pb-80">
         <div className="container">
           <div className="row">
+            {/* Left Side Content */}
             <div className="col-xl-8 col-lg-8 pr-25">
               <div className="s-details-single mb-40">
                 <div className="s-details-thumb">
                   <img src={ArchitectureImg} alt="Construction" />
                 </div>
                 <div className="s-details-text">
-                  <h2>Building Strong Foundations</h2>
+                  <h2>Building Excellence from the Ground Up</h2>
                   <p>
-                    At Earth Designer and Developer, we turn architectural
-                    visions into reality with expert construction services
-                    tailored for residential, commercial, and industrial
-                    projects. Our commitment is simple: deliver quality
-                    craftsmanship, ensure safety, and complete projects on time
-                    and within budget.
+                    At <strong>Earth Designer and Developer</strong>, we believe
+                    that construction is more than just building structures—it's
+                    about shaping lasting foundations for families, businesses,
+                    and communities. With a commitment to quality, safety, and
+                    innovation, we deliver customized construction solutions for
+                    residential, commercial, and industrial projects of all
+                    scales.
+                  </p>
+                  <p>
+                    Our experienced team of engineers, architects, and skilled
+                    craftsmen work collaboratively to bring your vision to life.
+                    From groundbreaking to final handover, we ensure that every
+                    detail is meticulously executed, using the finest materials
+                    and the latest construction technologies.
                   </p>
 
                   <div className="s-box-wrapper pt-30 pb-15">
@@ -65,7 +74,7 @@ const Construction = () => {
                       {[
                         { icon: "sh01.png", title: "Site Preparation" },
                         { icon: "sh02.png", title: "Structural Engineering" },
-                        { icon: "sh03.png", title: "Quality Control" },
+                        { icon: "sh03.png", title: "Quality Assurance" },
                         { icon: "sh04.png", title: "Project Management" },
                       ].map((item, index) => (
                         <div key={index} className="col-xl-6 col-lg-6 col-md-6">
@@ -81,10 +90,10 @@ const Construction = () => {
                             </div>
                             <div className="s-dtls-box-text">
                               <p>
-                                Our construction process is guided by precision
-                                planning, robust materials, and a highly skilled
-                                team to ensure every project stands the test of
-                                time.
+                                Every phase of our construction process—from
+                                land assessment to project delivery—is guided by
+                                precision planning, robust safety standards, and
+                                a commitment to excellence.
                               </p>
                             </div>
                           </div>
@@ -96,36 +105,39 @@ const Construction = () => {
                   <div className="s-details-thumb mb-30">
                     <img src={Meet} alt="Construction Teamwork" />
                   </div>
+
                   <p>
-                    At <strong>Earth Designer and Developer</strong>,
-                    construction is not just about assembling bricks and mortar
-                    — it's about building spaces where life thrives and
-                    businesses grow. We specialize in full-spectrum construction
-                    services including excavation, concrete work, steel
-                    framework, roofing, and finishing works. Our team adheres
-                    strictly to engineering standards and safety regulations,
-                    ensuring durability and peace of mind for our clients.
+                    Our core construction services include site excavation,
+                    concrete and steel works, structural framework, roofing, and
+                    interior finishing. We adhere to rigorous engineering
+                    standards, using modern machinery and eco-conscious
+                    practices to build spaces that are not only strong but also
+                    sustainable.
                   </p>
                   <p>
-                    We also prioritize the use of sustainable construction
-                    practices, leveraging energy-efficient materials and smart
-                    technologies to reduce environmental impact. Every project
-                    we undertake is a reflection of our passion for excellence,
-                    innovation, and craftsmanship. Whether it's constructing a
-                    family home, a corporate office, or an industrial warehouse,
-                    we are your trusted partner from groundbreaking to grand
-                    opening.
+                    Sustainability is at the heart of our construction
+                    philosophy. We prioritize energy-efficient designs,
+                    eco-friendly materials, and smart building technologies that
+                    reduce environmental impact while delivering maximum value
+                    for our clients.
+                  </p>
+                  <p>
+                    Whether you are planning to build a dream home, a thriving
+                    commercial space, or a robust industrial facility,{" "}
+                    <strong>Earth Designer and Developer</strong> is your
+                    trusted partner—delivering excellence, reliability, and
+                    innovation every step of the way.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* === Sidebar Section === */}
+            {/* Right Sidebar */}
             <div className="col-xl-4 col-lg-4">
               <div className="s-detls-right">
                 <div className="services-sidebar mb-40">
                   <div className="services-title">
-                    <h2>Construction Services</h2>
+                    <h2>Our Construction Services</h2>
                   </div>
                   <ul>
                     {[
@@ -157,35 +169,6 @@ const Construction = () => {
           </div>
         </div>
       </section>
-
-      {/* === Brand Section (Optional) === */}
-      {/* Uncomment if you want */}
-      {/* <section className="brand-area gray-bg pt-90 pb-90">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-12">
-              <div className="brand-active owl-carousel">
-                {[1, 2, 3, 4, 5].map((num) => (
-                  <div key={num} className="single-brand">
-                    <a className="partner-logo" href="#">
-                      <img
-                        className="before-image"
-                        src={`src/assets/img/brand/brand-0${num}.png`}
-                        alt={`Brand ${num}`}
-                      />
-                      <img
-                        className="after-image"
-                        src={`src/assets/img/brand/brand-0${num}.png`}
-                        alt={`Brand ${num}`}
-                      />
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 };
