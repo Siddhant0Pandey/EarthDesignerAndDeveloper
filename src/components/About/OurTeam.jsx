@@ -1,12 +1,12 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-const backgroundImage = "url(src/assets/img/bg/feature-bg.jpg)";
+const backgroundImage = "url(public/img/feature-bg.jpg)";
 
 const OurTeam = () => {
   return (
     <section
       className="py-5 bg-light"
-      data-background="src/assets/img/bg/feature-bg.jpg"
+      data-background="public/img/feature-bg.jpg"
       style={{ backgroundImage: backgroundImage, backgroundSize: "cover" }}
     >
       <div className="container">
@@ -25,10 +25,7 @@ const OurTeam = () => {
           {/* Team Member 1 */}
           <div className="col-md-4">
             <div className="card h-100 shadow-sm">
-              <img
-                src="src/assets/img/feature/feature-01.jpg"
-                alt="image_not_found"
-              />
+              <img src="public/img/feature-01.jpg" alt="image_not_found" />
               <div className="card-body text-center">
                 <h5
                   className="card-title1 text-primary"
@@ -48,10 +45,7 @@ const OurTeam = () => {
           {/* Team Member 2 */}
           <div className="col-md-4">
             <div className="card h-100 shadow-sm">
-              <img
-                src="src/assets/img/feature/feature-01.jpg"
-                alt="image_not_found"
-              />
+              <img src="public/img/feature-01.jpg" alt="image_not_found" />
               <div className="card-body text-center">
                 <h5
                   className="card-title1 text-primary"
@@ -71,10 +65,7 @@ const OurTeam = () => {
           {/* Team Member 3 */}
           <div className="col-md-4">
             <div className="card h-100 shadow-sm">
-              <img
-                src="src/assets/img/feature/feature-01.jpg"
-                alt="image_not_found"
-              />
+              <img src="public/img/feature-01.jpg" alt="image_not_found" />
               <div className="card-body text-center">
                 <h5
                   className="card-title1 text-primary"

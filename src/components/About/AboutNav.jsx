@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function AboutNav() {
-  const backgroundImage = "url(src/assets/img/bg/page-title-bg.jpg)";
+  const backgroundImage = "url( public/img/page-title-bg.jpg)";
   return (
     <>
       <section
         className="page-title-area pt-160 pb-160"
         data-overlay="8"
-        data-background="src/assets/img/bg/page-title-bg.jpg"
+        data-background=" public/img/page-title-bg.jpg"
         style={{ backgroundImage: backgroundImage, backgroundSize: "cover" }}
       >
         <div className="container">
