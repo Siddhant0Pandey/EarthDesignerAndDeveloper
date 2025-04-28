@@ -8,13 +8,13 @@ const servicesData = [
   {
     icon: (
       <ServiceIconImage
-        src="src/assets/img/icon/s01.png"
+        src="public/icon/s01.png"
         alt="Pre-Construction Design icon"
       />
     ),
     bgIcon: (
       <ServiceIconBackground
-        src="src/assets/img/icon/sb01.png"
+        src="public/icon/sb01.png"
         alt="Pre-Construction background"
       />
     ),
@@ -27,13 +27,13 @@ const servicesData = [
   {
     icon: (
       <ServiceIconImage
-        src="src/assets/img/icon/s02.png"
+        src="public/icon/s02.png"
         alt="Construction Services icon"
       />
     ),
     bgIcon: (
       <ServiceIconBackground
-        src="src/assets/img/icon/sb02.png"
+        src="public/icon/sb02.png"
         alt="Construction Services background"
       />
     ),
@@ -46,13 +46,13 @@ const servicesData = [
   {
     icon: (
       <ServiceIconImage
-        src="src/assets/img/icon/s03.png"
+        src="public/icon/s03.png"
         alt="Construction Management icon"
       />
     ),
     bgIcon: (
       <ServiceIconBackground
-        src="src/assets/img/icon/sb03.png"
+        src="public/icon/sb03.png"
         alt="Construction Management background"
       />
     ),
@@ -65,13 +65,13 @@ const servicesData = [
   {
     icon: (
       <ServiceIconImage
-        src="src/assets/img/icon/s04.png"
+        src="public/icon/s04.png"
         alt="General Constructing icon"
       />
     ),
     bgIcon: (
       <ServiceIconBackground
-        src="src/assets/img/icon/sb04.png"
+        src="public/icon/sb04.png"
         alt="General Constructing background"
       />
     ),
