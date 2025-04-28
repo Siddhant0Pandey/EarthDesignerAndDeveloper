@@ -3,12 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const MissionAndGoals = () => {
   return (
-    <div style={{ paddingTop: "80px", maxWidth: "95%", margin: "auto" }}>
+    <div style={{ paddingTop: "100px", maxWidth: "95%", margin: "auto" }}>
       <h1
         style={{
           marginBottom: "20px",
           textAlign: "center",
-          color: "black",
+          color: "#005792",
           fontWeight: "bold",
         }}
       >
@@ -24,8 +24,9 @@ const MissionAndGoals = () => {
               marginBottom: "15px",
               textTransform: "none",
               letterSpacing: "normal",
-              fontWeight: "normal",
+              fontWeight: "bold",
               fontSize: "1.5rem",
+              color: "#F57C00",
             }}
           >
             Mission
@@ -48,7 +49,6 @@ const MissionAndGoals = () => {
         </div>
       </div>
 
-      {/* Goals Section, below Mission but opposite side */}
       <div className="row">
         {/* Goals */}
         <div className="col-md-6 offset-md-6" style={{ paddingLeft: "15px" }}>
@@ -57,8 +57,9 @@ const MissionAndGoals = () => {
               marginBottom: "15px",
               textTransform: "none",
               letterSpacing: "normal",
-              fontWeight: "normal",
+              fontWeight: "bold",
               fontSize: "1.5rem",
+              color: "#F57C00",
             }}
           >
             Goals

@@ -1108,6 +1108,42 @@ label {
 .about-2 .about-title h5 {
 	font-size: 15px;
 }
+.core-value-item {
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .core-value-item:hover {
+	background-color: #F57C00; /* Red color on hover */
+	transform: scale(1.05); /* Slightly increase the size on hover */
+  }
+  
+  .core-value-item:hover .core-value-title {
+	color: #fff; /* Change title color to white on hover */
+  }
+  
+  .core-value-item:hover .core-value-description {
+	color: #fff; /* Change description color to white on hover */
+  }
+  
+  .core-value-title {
+	color: #F57C00; /* Title color */
+	font-size: 1.3rem;
+	margin-bottom: 10px;
+	font-weight: bold;
+  }
+  
+  .core-value-description {
+	color: #005792;
+	font-size: 1rem;
+	line-height: 1.6;
+  }
+  
+
 /* 5. services */
 .services-area {
 	position: relative;
