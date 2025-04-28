@@ -23,14 +23,14 @@ const PreConstruction = () => {
                 <div className="border-title">
                   <h1>Services</h1>
                 </div>
-                <h1>Construction</h1>
+                <h1> Pre-Construction Design</h1>
                 <nav aria-label="breadcrumb">
                   <ol className="breadcrumb justify-content-center">
                     <li className="breadcrumb-item">
                       <Link to="/">Home</Link>
                     </li>
                     <li className="breadcrumb-item active" aria-current="page">
-                      Construction
+                      Pre-Construction Design
                     </li>
                   </ol>
                 </nav>
@@ -117,6 +117,35 @@ const PreConstruction = () => {
                     opening.
                   </p>
                 </div>
+
+                {/* === Pre-Construction Design Section === */}
+                <div className="s-details-text pt-10">
+                  <h2>Pre-Construction Design</h2>
+                  <p>
+                    At <strong>Earth Designers and Developers</strong>, we
+                    believe that a successful project begins with a strong
+                    foundation — not just in structure, but in planning. Our
+                    Pre-Construction Design services lay the groundwork for
+                    efficient, cost-effective, and visionary builds.
+                  </p>
+                  <p>
+                    Our team collaborates closely with clients, architects, and
+                    engineers to turn ideas into detailed, actionable plans. We
+                    focus on understanding your vision, evaluating the site,
+                    anticipating challenges, and aligning all project elements
+                    before construction begins.
+                  </p>
+
+                  <p>
+                    Through thorough planning and expert foresight, we minimize
+                    risks, avoid costly changes during construction, and set the
+                    stage for outstanding results.
+                  </p>
+                  <p>
+                    With <strong>Earth Designers and Developers</strong>, you
+                    don’t just build — you build smarter from the very start.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -125,7 +154,7 @@ const PreConstruction = () => {
               <div className="s-detls-right">
                 <div className="services-sidebar mb-40">
                   <div className="services-title">
-                    <h2>Construction Services</h2>
+                    <h2>Our Construction Services</h2>
                   </div>
                   <ul>
                     {[
@@ -157,35 +186,6 @@ const PreConstruction = () => {
           </div>
         </div>
       </section>
-
-      {/* === Brand Section (Optional) === */}
-      {/* Uncomment if you want */}
-      {/* <section className="brand-area gray-bg pt-90 pb-90">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-12">
-              <div className="brand-active owl-carousel">
-                {[1, 2, 3, 4, 5].map((num) => (
-                  <div key={num} className="single-brand">
-                    <a className="partner-logo" href="#">
-                      <img
-                        className="before-image"
-                        src={`src/assets/img/brand/brand-0${num}.png`}
-                        alt={`Brand ${num}`}
-                      />
-                      <img
-                        className="after-image"
-                        src={`src/assets/img/brand/brand-0${num}.png`}
-                        alt={`Brand ${num}`}
-                      />
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 };

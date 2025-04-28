@@ -7,14 +7,14 @@ import Service from "./pages/Service";
 import Blog from "./pages/Blog";
 import Project from "./pages/Project";
 
-
-
 import BlogDetails from "./components/Blog/BlogDetails";
 
-
-import Construction from "./components/Service/Servicesdetail/construction";
 import PreConstruction from "./components/Service/Servicesdetail/PreConstruction";
-
+import Construction from "./components/Service/Servicesdetail/Construction";
+import Management from "./components/Service/Servicesdetail/Management";
+import General from "./components/Service/Servicesdetail/General";
+import Building from "./components/Service/Servicesdetail/Building";
+import Design from "./components/Service/Servicesdetail/Design";
 
 function App() {
   return (
@@ -32,11 +32,13 @@ function App() {
             path="services/pre-construction"
             element={<PreConstruction />}
           />
+          <Route path="services/construction" element={<Construction />} />
+          <Route path="services/management" element={<Management />} />
+          <Route path="services/general" element={<General />} />
+          <Route path="services/building" element={<Building />} />
+          <Route path="services/design" element={<Design />} />
 
           <Route path="/blog/:slug" element={<BlogDetails />} />
-          
-
-          <Route path="services/construction" element={<Construction />} />
         </Route>
       </Routes>
     </Router>

@@ -20,7 +20,7 @@ const servicesData = [
     description:
       "Separated they live in Bookmarksgrove right at the coast of the Semantics",
     isReactIcon: false,
-    ReadMore: "services/equipment",
+    ReadMore: "services/construction",
   },
   {
     icon: "src/assets/img/icon/s03.png",
@@ -28,7 +28,7 @@ const servicesData = [
     title: "Construction Management",
     description:
       "Separated they live in Bookmarksgrove right at the coast of the Semantics",
-    ReadMore: "services/equipment",
+    ReadMore: "services/management",
     isReactIcon: false,
   },
   {
@@ -38,12 +38,12 @@ const servicesData = [
     description:
       "Separated they live in Bookmarks grove right at the coast of the Semantics",
     ReadMore: "services/renovation",
-    ReadMore: "services/equipment",
+    ReadMore: "services/general",
     isReactIcon: false,
   },
   {
     icon: (
-      <MdOutlineDesignServices style={{ fontSize: "60px", color: "#FABB9E" }} />
+      <MdOutlineDesignServices style={{ fontSize: "78px", color: "#FABB9E" }} />
     ),
     bgIcon: (
       <MdOutlineDesignServices
@@ -53,11 +53,11 @@ const servicesData = [
     title: "Building Modeling",
     description:
       "Separated they live in Bookmarksgrove right at the coast of the Semantics",
-    ReadMore: "services/equipment",
+    ReadMore: "services/building",
     isReactIcon: true,
   },
   {
-    icon: <BiBuildings style={{ fontSize: "60px", color: "#FABB9E" }} />,
+    icon: <BiBuildings style={{ fontSize: "78px", color: "#FABB9E" }} />,
     bgIcon: (
       <BiBuildings
         style={{ fontSize: "150px", color: "#FFE5D0", opacity: 0.3 }}
@@ -66,7 +66,7 @@ const servicesData = [
     title: "Design Build",
     description:
       "Separated they live in Bookmarksgrove right at the coast of the Semantics",
-    ReadMore: "services/equipment",
+    ReadMore: "services/design",
     isReactIcon: true,
   },
 ];
