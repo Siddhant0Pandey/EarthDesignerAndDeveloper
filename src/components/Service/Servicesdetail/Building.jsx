@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { IoDocumentsOutline } from "react-icons/io5";
 
-import BuildingModelingImg from "../../../assets/img/services/building.jpg";
-import TeamImg from "../../../assets/img/services/building2.jpg";
+import BuildingModelingImg from "../../../../public/img/building.jpg";
+import TeamImg from "../../../../public/img/building2.jpg";
 
 const Building = () => {
   const backgroundImage = "url(../src/assets/img/services/services02.jpg)";

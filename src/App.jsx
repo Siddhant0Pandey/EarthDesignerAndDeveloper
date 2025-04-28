@@ -6,11 +6,9 @@ import Layout from "./Layout/Layout";
 import Service from "./pages/Service";
 import Blog from "./pages/Blog";
 
-import Project from "./pages/Project"
+import Project from "./pages/Project";
 
 import BlogDetails from "./components/Blog/BlogDetails";
-
-// import Construction from "./components/Service/Servicesdetail/construction";
 
 import PreConstruction from "./components/Service/Servicesdetail/PreConstruction";
 import Construction from "./components/Service/Servicesdetail/Construction";
@@ -42,7 +40,6 @@ function App() {
           <Route path="services/design" element={<Design />} />
 
           <Route path="/blog/:slug" element={<BlogDetails />} />
-
         </Route>
       </Routes>
     </Router>
