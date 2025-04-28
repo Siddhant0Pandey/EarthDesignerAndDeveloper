@@ -9,8 +9,8 @@ function AboutFounderMessage() {
     "nav-01": {
       paragraphs: [
         `"As a civil engineer with over a decade of experience, I founded Earth Designers and Developers with a clear mission: to build the future of Nepal through quality construction. Our focus is not just on designing structures, but on creating strong, lasting foundations that support communities, businesses, and growth. Over the past 10 years, we have committed ourselves to delivering excellence in every project—from roads and bridges to hydropower and mining developments. At Earth Designers and Developers, we believe that true progress begins with strong infrastructure. With passion, expertise, and a relentless drive for quality, we continue to build the pathways that will carry Nepal into a brighter future."`,
-        `– Nabin Gautam, Founder & Civil Engineer`,
       ],
+      owner: `– Nabin Gautam, Founder & Civil Engineer`,
     },
   };
 
