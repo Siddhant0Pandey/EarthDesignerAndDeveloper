@@ -268,7 +268,7 @@ function ContactForm() {
         </div>
       </div>
       
-      {/* Add this CSS to your component */}
+      
       <style jsx>{`
         .field-wrapper {
           position: relative;
