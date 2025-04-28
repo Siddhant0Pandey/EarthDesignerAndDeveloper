@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Close mobile menu when screen size increases to desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 991 && mobileMenuOpen) {
@@ -94,39 +95,41 @@ function Navbar() {
               </div>
             </div>
             <div className="col-xl-10 col-lg-10 col-6">
-              {/* Desktop Menu */}
-              <div className="header-button d-none d-lg-block f-right">
-                <Link className="thm-btn" to="/contact">
-                  Get a quote
-                </Link>
-              </div>
-              <div className="main-menu f-right d-none d-lg-block">
-                <nav>
-                  <ul>
-                    <li>
-                      <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                      <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                      <Link to="/services">Services</Link>
-                    </li>
-                    <li>
-                      <Link to="/project">Project</Link>
-                    </li>
-                    <li>
-                      <Link to="/blog">Blog</Link>
-                    </li>
-                    <li>
-                      <Link to="/contact">Contact</Link>
-                    </li>
-                  </ul>
-                </nav>
+              {/* Desktop Menu - Only visible on lg screens and up */}
+              <div className="d-none d-lg-flex justify-content-end align-items-center">
+                <div className="main-menu me-4">
+                  <nav>
+                    <ul>
+                      <li>
+                        <Link to="/">Home</Link>
+                      </li>
+                      <li>
+                        <Link to="/about">About</Link>
+                      </li>
+                      <li>
+                        <Link to="/services">Services</Link>
+                      </li>
+                      <li>
+                        <Link to="/project">Project</Link>
+                      </li>
+                      <li>
+                        <Link to="/blog">Blog</Link>
+                      </li>
+                      <li>
+                        <Link to="/contact">Contact</Link>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div className="header-button">
+                  <Link className="thm-btn" to="/contact">
+                    Get a quote
+                  </Link>
+                </div>
               </div>
               
-              {/* Mobile Menu Toggle Button */}
-              <div className="mobile-menu-toggle d-lg-none f-right">
+              {/* Mobile Menu Toggle Button - Only visible below lg screens */}
+              <div className="d-lg-none text-end">
                 <button 
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                   className="hamburger-btn"
@@ -142,11 +145,13 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      <div 
-        className={`mobile-menu-overlay ${mobileMenuOpen ? "active" : ""}`}
-        onClick={() => setMobileMenuOpen(false)}
-      ></div>
+      {/* Mobile Menu Overlay - Only appears when menu is open */}
+      {mobileMenuOpen && (
+        <div 
+          className="mobile-menu-overlay"
+          onClick={() => setMobileMenuOpen(false)}
+        ></div>
+      )}
 
       {/* Mobile Menu Sliding Panel */}
       <div className={`mobile-menu-panel ${mobileMenuOpen ? "active" : ""}`}>
