@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import aboutBg from "../../assets/img/bg/about-bg.jpeg";
 
 function AboutHero2() {
@@ -8,8 +8,8 @@ function AboutHero2() {
   const tabContent = {
     "nav-01": {
       paragraphs: [
-        `At Earth Builder & Designer, we don't just construct buildings—we create enduring landmarks. With innovation at our core and excellence in every detail, we’re committed to shaping skylines and strengthening communities.`,
-        `Whether it’s a residential complex, commercial infrastructure, or urban development, our team brings precision, passion, and purpose to every project. We believe great ideas, combined with great execution, build more than structures—they build futures.`,
+        `After the devastating 2015 earthquake, young civil engineer Nabin Gautam saw an opportunity not just to rebuild, but to transform Nepal’s future. He founded Earth Designers and Developers with a mission to strengthen the nation through essential infrastructure—roads, bridges, highways, hydropower, and mining projects. Nabin believed that true development would only come by creating a strong foundation that connected communities, boosted the economy, and supported growth across all sectors like education, healthcare, and commerce.`,
+        `Despite facing harsh terrain, resource limitations, and bureaucratic hurdles, Nabin pushed forward by adopting innovative construction technologies and empowering local talent. His company quickly grew into a symbol of progress, helping to bridge Nepal’s rural and urban divide. Today, Earth Designers and Developers stands as a leader in hard infrastructure development, and Nabin’s vision continues to inspire the next generation to see infrastructure as the backbone of a prosperous Nepal.`,
       ],
     },
     "nav-02": {
@@ -39,13 +39,14 @@ function AboutHero2() {
                 <div className="about-title mb-20">
                   <h5>About us !</h5>
                   <h2>
-                    We believe in the power of great ideas<span>.</span>
+                    Transforming Nepal Through Infrastructure <br /> and Nation
+                    Building<span>.</span>
                   </h2>
                 </div>
                 {tabContent[activeTab].paragraphs.map((p, index) => (
                   <p key={index}>{p}</p>
                 ))}
-                <ul className="about-info mt-30 mb-30">
+                {/* <ul className="about-info mt-30 mb-30">
                   <li>
                     <div className="about-info-title">
                       <span>
@@ -77,15 +78,15 @@ function AboutHero2() {
                       </h5>
                     </div>
                   </li>
-                </ul>
-                <div className="about-btn pt-20">
+                </ul> */}
+                {/* <div className="about-btn pt-20">
                   <Link to="/service-details" className="thm-btn">
                     Learn More
                   </Link>
                   <Link to="/about" className="about-l-btn">
                     Learn More <i className="ti-arrow-right"></i>
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -105,8 +106,9 @@ function AboutHero2() {
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     width: "100%",
-                    height: "400px",
+                    height: "450px",
                     borderRadius: "10px",
+                   
                   }}
                 ></div>
               </div>

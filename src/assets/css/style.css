@@ -843,6 +843,13 @@ label {
 }
 .about-right-thumb img {
 	width: 100%;
+
+	
+}
+.about-right-thumb{
+	
+	padding-top: 8rem;
+	background-color: #00173c;
 }
 .about-right {
 	margin-top: 75px;
