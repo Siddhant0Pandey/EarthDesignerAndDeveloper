@@ -14,7 +14,7 @@ const servicesData = [
     ),
     bgIcon: (
       <ServiceIconBackground
-        src="public/icon/sb01.png"
+        src="/icon/sb01.png"
         alt="Pre-Construction background"
       />
     ),
@@ -26,14 +26,11 @@ const servicesData = [
   },
   {
     icon: (
-      <ServiceIconImage
-        src="public/icon/s02.png"
-        alt="Construction Services icon"
-      />
+      <ServiceIconImage src="/icon/s02.png" alt="Construction Services icon" />
     ),
     bgIcon: (
       <ServiceIconBackground
-        src="public/icon/sb02.png"
+        src="/icon/sb02.png"
         alt="Construction Services background"
       />
     ),
@@ -46,13 +43,13 @@ const servicesData = [
   {
     icon: (
       <ServiceIconImage
-        src="public/icon/s03.png"
+        src="/icon/s03.png"
         alt="Construction Management icon"
       />
     ),
     bgIcon: (
       <ServiceIconBackground
-        src="public/icon/sb03.png"
+        src="/icon/sb03.png"
         alt="Construction Management background"
       />
     ),
@@ -64,14 +61,11 @@ const servicesData = [
   },
   {
     icon: (
-      <ServiceIconImage
-        src="public/icon/s04.png"
-        alt="General Constructing icon"
-      />
+      <ServiceIconImage src="/icon/s04.png" alt="General Constructing icon" />
     ),
     bgIcon: (
       <ServiceIconBackground
-        src="public/icon/sb04.png"
+        src="/icon/sb04.png"
         alt="General Constructing background"
       />
     ),
@@ -83,7 +77,9 @@ const servicesData = [
   },
   {
     icon: (
-      <MdOutlineDesignServices style={{ fontSize: "78px", color: "#FABB9E" }} />
+      <MdOutlineDesignServices
+        style={{ fontSize: "110px", color: "#FABB9E" }}
+      />
     ),
     bgIcon: (
       <MdOutlineDesignServices
@@ -97,7 +93,7 @@ const servicesData = [
     ReadMore: "services/building",
   },
   {
-    icon: <BiBuildings style={{ fontSize: "78px", color: "#FABB9E" }} />,
+    icon: <BiBuildings style={{ fontSize: "110px", color: "#FABB9E" }} />,
     bgIcon: (
       <BiBuildings
         style={{ fontSize: "150px", color: "#FFE5D0", opacity: 0.3 }}

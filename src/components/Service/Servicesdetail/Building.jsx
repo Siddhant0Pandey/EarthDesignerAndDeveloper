@@ -71,7 +71,7 @@ const Building = () => {
                     <div className="row">
                       {[
                         {
-                          icon: "sh01.png",
+                          icon: "/icon/sh01.png",
                           title: "conceptual Design Modeling",
                         },
                         {
@@ -157,7 +157,7 @@ const Building = () => {
                             />
                           ) : (
                             <img
-                              src={`../src/assets/img/icon/sd0${index + 1}.png`}
+                              src={`/icon/sd0${index + 1}.png`}
                               alt={service}
                             />
                           )}
