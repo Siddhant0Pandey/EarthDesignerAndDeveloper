@@ -140,12 +140,12 @@ const Building = () => {
               <div className="s-detls-right">
                 <div className="services-sidebar mb-40">
                   <div className="services-title">
-                    <h2>Modeling Services</h2>
+                    <h2>Our Construction Services</h2>
                   </div>
                   <ul>
                     {[
+                      "MEP Coordinating",
                       "3D Building Modeling",
-                      "MEP Coordination",
                       "Construction Drawings",
                       "As-Built Modeling",
                     ].map((service, index) => (
@@ -157,7 +157,7 @@ const Building = () => {
                             />
                           ) : (
                             <img
-                              src={`../src/assets/img/icon/bm0${index + 1}.png`}
+                              src={`../src/assets/img/icon/sd0${index + 1}.png`}
                               alt={service}
                             />
                           )}

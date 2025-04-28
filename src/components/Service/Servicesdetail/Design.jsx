@@ -131,14 +131,14 @@ const Design = () => {
               <div className="s-detls-right">
                 <div className="services-sidebar mb-40">
                   <div className="services-title">
-                    <h2>Design-Build Services</h2>
+                    <h2>Our Construction Services</h2>
                   </div>
                   <ul>
                     {[
-                      "Site Evaluation",
-                      "Design Development",
-                      "Permit Management",
                       "Turnkey Construction",
+                      "Design Development",
+                      "Site Evaluation",
+                      "Permit Management",
                     ].map((service, index) => (
                       <li key={index}>
                         <div className="services-link">
@@ -148,7 +148,7 @@ const Design = () => {
                             />
                           ) : (
                             <img
-                              src={`../src/assets/img/icon/db0${index + 1}.png`}
+                              src={`../src/assets/img/icon/sd0${index + 1}.png`}
                               alt={service}
                             />
                           )}
