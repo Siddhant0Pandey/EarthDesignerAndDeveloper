@@ -123,13 +123,6 @@ const ServicesCard = () => {
   return (
     <section className="services-area gray-bg pt-120 pb-90">
       <div className="container">
-        <div className="section-title text-center">
-          <div className="border-title">
-            <h1>Services</h1>
-          </div>
-          <h5>Our Services</h5>
-          <h2>We are experts in</h2>
-        </div>
         <div className="row">
           {servicesData.map((service, index) => (
             <div className="col-xl-4 col-lg-6 col-md-6" key={index}>
