@@ -7,7 +7,7 @@ const blogPosts = [
     title: "Building a Better Tomorrow with Smart Construction Solutions",
     date: "April 23, 2025",
     author: "Admin",
-    image: "src/assets/img/blog/blog01.jpg",
+    image: "/blog/blog01.jpg",
     link: "/blog/blog01",
   },
   {
@@ -15,7 +15,7 @@ const blogPosts = [
     title: "Your Trusted Source for Construction News and Industry Trends",
     date: "April 10, 2025",
     author: "Admin",
-    image: "src/assets/img/blog/blog02.jpg",
+    image: "/blog/blog02.jpg",
     link: "/blog/blog02",
   },
   {
@@ -23,7 +23,7 @@ const blogPosts = [
     title: "HExpert Insights on Modern Construction Methods and Innovation",
     date: "March 30, 2025",
     author: "Admin",
-    image: "src/assets/img/blog/blog03.jpeg",
+    image: "/blog/blog03.jpeg",
     link: "/blog/blog03",
   },
   {
@@ -31,7 +31,7 @@ const blogPosts = [
     title: "Discover the Latest Developments in Construction and Design",
     date: "March 15, 2025",
     author: "Admin",
-    image: "src/assets/img/blog/blog04.jpg",
+    image: "/blog/blog04.jpg",
     link: "/blog/blog04",
   },
   {
@@ -39,7 +39,7 @@ const blogPosts = [
     title: "Guiding You Through Every Step of Your Construction Journey",
     date: "February 28, 2025",
     author: "Admin",
-    image: "src/assets/img/blog/blog05.jpg",
+    image: "/blog/blog05.jpg",
     link: "/blog/blog05",
   },
   {
@@ -47,7 +47,7 @@ const blogPosts = [
     title: "Where Construction Expertise Meets Real World Experience",
     date: "February 10, 2025",
     author: "Admin",
-    image: "src/assets/img/blog/blog06.jpg",
+    image: "/blog/blog06.jpg",
     link: "/blog/blog06",
   },
 ];
