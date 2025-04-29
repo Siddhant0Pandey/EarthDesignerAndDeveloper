@@ -75,8 +75,7 @@ const OurTeam = () => {
                 </h5>
                 <p className="text-muted mb-2">Building Repair Specialist</p>
                 <p className="card-text1">
-                  David specializes in restoring buildings with care,
-                  efficiency, and attention to detail.
+                David specializes in restoring buildings with care, efficiency, and attention to detail.
                 </p>
               </div>
             </div>
