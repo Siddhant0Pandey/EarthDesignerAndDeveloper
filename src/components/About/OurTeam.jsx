@@ -6,7 +6,7 @@ const OurTeam = () => {
   return (
     <section
       className="py-5 bg-light"
-      data-background="public/img/feature-bg.jpg"
+      data-background="img/feature-bg.jpg"
       style={{ backgroundImage: backgroundImage, backgroundSize: "cover" }}
     >
       <div className="container">
@@ -25,7 +25,7 @@ const OurTeam = () => {
           {/* Team Member 1 */}
           <div className="col-md-4">
             <div className="card h-100 shadow-sm">
-              <img src="public/img/feature-01.jpg" alt="image_not_found" />
+              <img src="img/feature-01.jpg" alt="image_not_found" />
               <div className="card-body text-center">
                 <h5
                   className="card-title1 text-primary"
@@ -45,7 +45,7 @@ const OurTeam = () => {
           {/* Team Member 2 */}
           <div className="col-md-4">
             <div className="card h-100 shadow-sm">
-              <img src="public/img/feature-01.jpg" alt="image_not_found" />
+              <img src="img/feature-01.jpg" alt="image_not_found" />
               <div className="card-body text-center">
                 <h5
                   className="card-title1 text-primary"
