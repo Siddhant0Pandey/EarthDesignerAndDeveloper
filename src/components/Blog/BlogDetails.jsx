@@ -1,11 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import img1 from "../../assets/img/blog/blog01.jpg";
-import img2 from "../../assets/img/blog/blog02.jpg";
-import img3 from "../../assets/img/blog/blog03.jpeg";
-import img4 from "../../assets/img/blog/blog04.jpg";
-import img5 from "../../assets/img/blog/blog05.jpg";
-import img6 from "../../assets/img/blog/blog06.jpg";
+import img1 from "/blog/blog01.jpg";
+import img2 from "/blog/blog02.jpg";
+import img3 from "/blog/blog03.jpeg";
+import img4 from "/blog/blog04.jpg";
+import img5 from "/blog/blog05.jpg";
+import img6 from "/blog/blog06.jpg";
 
 const blogPosts = [
   // blog01 starts here
