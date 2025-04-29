@@ -1414,6 +1414,9 @@ label {
 	display: block;
 	position: relative;
 }
+/* .brand-area{
+	background-color: #ff7232;
+} */
 .brand-area .single-brand .partner-logo > img.before-image {
 	top: 50%;
 }
