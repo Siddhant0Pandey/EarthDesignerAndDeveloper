@@ -1139,7 +1139,9 @@ label {
 	opacity: 1;
 	visibility: visible;
   }
-  
+  .core-value-item:hover .core-value-icon {
+	color: white !important; /* Ensures the color is white on hover */
+  }
 
 /* 5. services */
 .services-area {

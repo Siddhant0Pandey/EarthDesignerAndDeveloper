@@ -6,6 +6,7 @@ import { FaTrophy } from "react-icons/fa";
 import { HiHandRaised } from "react-icons/hi2";
 import { FaLeaf } from "react-icons/fa6";
 import { FaRegHandshake } from "react-icons/fa";
+
 const AboutOurCoreValues = () => {
   const values = [
     {
@@ -64,6 +65,7 @@ const AboutOurCoreValues = () => {
                   marginBottom: "10px",
                   display: "block",
                   color: "#F57C00",
+                  transition: "color 0.3s ease", // Smooth color transition
                 }}
               >
                 {value.icon}

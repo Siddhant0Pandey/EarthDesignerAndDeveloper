@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
 import aboutBg from "../../assets/img/bg/about-bg.jpeg";
 
 function AboutHero2() {
@@ -31,7 +30,8 @@ function AboutHero2() {
       <div className="container">
         <div className="about-wrapper pt-120">
           <div className="row">
-            <div className="col-lg-6">
+            {/* Left Column (Text) */}
+            <div className="col-lg-6 order-2 order-md-1">
               <div className="about-left pos-rel">
                 <div className="border-title-2">
                   <h1>About</h1>
@@ -46,51 +46,11 @@ function AboutHero2() {
                 {tabContent[activeTab].paragraphs.map((p, index) => (
                   <p key={index}>{p}</p>
                 ))}
-                {/* <ul className="about-info mt-30 mb-30">
-                  <li>
-                    <div className="about-info-title">
-                      <span>
-                        <i className="fas fa-check"></i>
-                      </span>
-                      <h5>
-                        End-to-end construction solutions tailored to your
-                        vision
-                      </h5>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="about-info-title">
-                      <span>
-                        <i className="fas fa-check"></i>
-                      </span>
-                      <h5>
-                        Timely project delivery with uncompromising quality
-                      </h5>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="about-info-title">
-                      <span>
-                        <i className="fas fa-check"></i>
-                      </span>
-                      <h5>
-                        Sustainable practices that support long-term growth
-                      </h5>
-                    </div>
-                  </li>
-                </ul> */}
-                {/* <div className="about-btn pt-20">
-                  <Link to="/service-details" className="thm-btn">
-                    Learn More
-                  </Link>
-                  <Link to="/about" className="about-l-btn">
-                    Learn More <i className="ti-arrow-right"></i>
-                  </Link>
-                </div> */}
               </div>
             </div>
 
-            <div className="col-lg-6">
+            {/* Right Column (Image) */}
+            <div className="col-lg-6 order-1 order-md-2">
               <div className="about-right pos-rel">
                 <div className="about-right-content">
                   <h1>
@@ -108,7 +68,7 @@ function AboutHero2() {
                     width: "100%",
                     height: "450px",
                     borderRadius: "10px",
-                   
+                    marginBottom: "30px", // Gap between image and text
                   }}
                 ></div>
               </div>
