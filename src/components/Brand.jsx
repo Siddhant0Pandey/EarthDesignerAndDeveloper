@@ -49,7 +49,7 @@ function Brand() {
           <div className="border-title">
             {/* <h1>Associated Brands-Partner</h1> */}
           </div>
-          <h5 className='text-white'>Our Partners </h5>
+          <h5>Our Partners </h5>
           <h2>
           Associated Brands<span>.</span>
           </h2>

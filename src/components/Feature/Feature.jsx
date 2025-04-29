@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Feature() {
-    const backgroundImage = 'url(src/assets/img/bg/feature-bg.jpg)';
+    const backgroundImage = 'url(/img/feature-bg.jpg)';
   return (
-    <section className="feature-area pt-120 pb-90" data-background="src/assets/img/bg/feature-bg.jpg" style={{ backgroundImage: backgroundImage, backgroundSize: 'cover'}}>
+    <section className="feature-area pt-120 pb-90"  style={{ backgroundImage: backgroundImage, backgroundSize: 'cover'}}>
         {/* src\assets\img\bg\feature-bg.jpg */}
                 <div className="container">
                     <div className="section-title text-center">
