@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
 import aboutBg from "../../assets/img/about/owner.jpg";
 
 function AboutFounderMessage() {
@@ -16,49 +15,62 @@ function AboutFounderMessage() {
 
   return (
     <section className="about-area pb-90">
-      <h1
+      {/* <h1
         style={{
           textAlign: "center",
           color: "#005792",
           fontWeight: "bold",
+          paddingBottom: "70px",
         }}
+      >
+        Founder Message
+      </h1> */}
+      <h1
+        className="text-center fw-bold pb-lg-5 pb-3"
+        style={{ color: "#005792" }}
       >
         Founder Message
       </h1>
       <div className="container">
         <div className="about-wrapper pt-6">
-          <div className="row">
-            <div className="col-lg-6">
+          <div className="row align-items-stretch">
+            {/* Image column */}
+            {/* Image column */}
+            <div className="col-lg-6 order-1 order-lg-2 mb-4">
+              <div
+                className="about-right-thumb mb-100"
+                style={{
+                  backgroundImage: `url(${aboutBg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  width: "100%",
+                  height: "360px",
+                  borderRadius: "10px",
+                }}
+              ></div>
+            </div>
+
+            {/* Text column */}
+            <div className="col-lg-6 order-2 order-lg-1 d-flex">
               <div
                 className="about-left pos-rel"
-                style={{ paddingTop: "20px" }}
+                style={{
+                  padding: "30px",
+                  fontStyle: "italic",
+                  height: "360px",
+                  backgroundColor: "#f9f9f9",
+                  borderRadius: "10px",
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center", // center vertically
+                }}
               >
-                <div className="border-title-2">{/* <h1>About</h1> */}</div>
-                <div className="about-title mb-85">
-                  <h5></h5>
-                  {/* <h2>Transforming Nepal Through Infrastructure <br /> and Nation Building<span>.</span></h2> */}
-                </div>
                 {tabContent[activeTab].paragraphs.map((p, index) => (
-                  <p key={index} style={{ fontStyle: "italic" }}>
+                  <p key={index} style={{ marginBottom: "1rem" }}>
                     {p}
                   </p>
                 ))}
-              </div>
-            </div>
-
-            <div className="col-lg-6">
-              <div className="about-right pos-rel">
-                <div
-                  className="about-right-thumb"
-                  style={{
-                    backgroundImage: `url(${aboutBg})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    width: "100%",
-                    height: "360px",
-                    borderRadius: "10px",
-                  }}
-                ></div>
               </div>
             </div>
           </div>
