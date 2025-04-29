@@ -6,7 +6,7 @@ import ArchitectureImg from "../../../assets/img/services/Architecture.jpg";
 import Meet from "../../../assets/img/services/meet.jpg";
 
 const PreConstruction = () => {
-  const backgroundImage = "url(../src/assets/img/services/services02.jpg)"; // Consider importing this if needed
+  const backgroundImage = "url(/img/services02.jpg)"; // Consider importing this if needed
 
   return (
     <div>
