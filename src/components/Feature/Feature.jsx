@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Feature() {
-    const backgroundImage = 'url(/img/feature-bg.jpg)';
+    const backgroundImage = 'url(/img/feature/feature-bg.jpg)';
   return (
     <section className="feature-area pt-120 pb-90"  style={{ backgroundImage: backgroundImage, backgroundSize: 'cover'}}>
         {/* src\assets\img\bg\feature-bg.jpg */}
@@ -18,7 +18,7 @@ function Feature() {
                         <div className="col-xl-4 col-lg-4 col-md-6">
                             <div className="feature-single mb-30">
                                 <div className="feature-thumb">
-                                    <img src="src/assets/img/feature/feature-01.jpg" alt="image_not_found"/>
+                                    <img src="/img/feature/feature-01.jpg" alt="image_not_found"/>
                                 </div>
                                 <div className="feature-text">
                                     <h4>explore the features</h4>
@@ -30,7 +30,7 @@ function Feature() {
                         <div className="col-xl-4 col-lg-4 col-md-6">
                             <div className="feature-single mb-30">
                                 <div className="feature-thumb">
-                                    <img src="src/assets/img/feature/feature-02.jpg" alt="image_not_found"/>
+                                    <img src="img/feature/feature-02.jpg" alt="image_not_found"/>
                                 </div>
                                 <div className="feature-text">
                                     <h4>explore the features</h4>
@@ -42,7 +42,7 @@ function Feature() {
                         <div className="col-xl-4 col-lg-4 col-md-6">
                             <div className="feature-single mb-30">
                                 <div className="feature-thumb">
-                                    <img src="src/assets/img/feature/feature-03.jpg" alt="image_not_found"/>
+                                    <img src="/img/feature/feature-03.jpg" alt="image_not_found"/>
                                 </div>
                                 <div className="feature-text">
                                     <h4>explore the features</h4>
