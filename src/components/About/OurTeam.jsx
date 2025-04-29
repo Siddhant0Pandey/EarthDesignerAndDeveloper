@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-const backgroundImage = "url(public/img/feature-bg.jpg)";
+const backgroundImage = "url(img/feature-bg.jpg)";
 
 const OurTeam = () => {
   return (

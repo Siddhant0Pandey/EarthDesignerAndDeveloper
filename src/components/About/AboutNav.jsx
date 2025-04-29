@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function AboutNav() {
-  const backgroundImage = "url( public/img/page-title-bg.jpg)";
+  const backgroundImage = "url(img/page-title-bg.jpg)";
   return (
     <>
       <section
