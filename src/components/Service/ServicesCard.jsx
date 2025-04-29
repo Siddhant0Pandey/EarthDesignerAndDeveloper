@@ -10,12 +10,14 @@ const servicesData = [
       <ServiceIconImage
         src="/icon/s01.png"
         alt="Pre-Construction Design icon"
+        // style={{ height: "200px", width: "auto" }} // <-- Fix applied here
       />
     ),
     bgIcon: (
       <ServiceIconBackground
         src="/icon/sb01.png"
         alt="Pre-Construction background"
+        // style={{ height: "200px", width: "auto" }}
       />
     ),
     title: "Pre-Construction Design",
@@ -77,13 +79,15 @@ const servicesData = [
   },
   {
     icon: (
-      <MdOutlineDesignServices
-        style={{ fontSize: "110px", color: "#FABB9E" }}
+      <ServiceIconImage
+        src="/icon/s03.png"
+        alt="Construction Management icon"
       />
     ),
     bgIcon: (
-      <MdOutlineDesignServices
-        style={{ fontSize: "150px", color: "#FFE5D0", opacity: 0.3 }}
+      <ServiceIconBackground
+        src="/icon/sb03.png"
+        alt="Construction Management background"
       />
     ),
     title: "Building Modeling",
@@ -93,10 +97,18 @@ const servicesData = [
     ReadMore: "services/building",
   },
   {
-    icon: <BiBuildings style={{ fontSize: "110px", color: "#FABB9E" }} />,
+    icon: (
+      <ServiceIconImage
+        src="/icon/s01.png"
+        alt="Pre-Construction Design icon"
+        // style={{ height: "200px", width: "auto" }} // <-- Fix applied here
+      />
+    ),
     bgIcon: (
-      <BiBuildings
-        style={{ fontSize: "150px", color: "#FFE5D0", opacity: 0.3 }}
+      <ServiceIconBackground
+        src="/icon/sb01.png"
+        alt="Pre-Construction background"
+        // style={{ height: "200px", width: "auto" }}
       />
     ),
     title: "Design Build",
@@ -134,7 +146,12 @@ const ServicesCard = () => {
                     <img
                       src={service.icon}
                       alt={`${service.title} icon`}
-                      style={{ position: "relative", zIndex: 2 }}
+                      style={{
+                        position: "relative",
+                        zIndex: 2,
+                        fontSize: "40rem",
+                        width: "200px",
+                      }}
                     />
                   )}
                   <div
@@ -162,7 +179,7 @@ const ServicesCard = () => {
                   </div>
                 </div>
                 <div className="services-box-text">
-                  <h3>{service.title}</h3>
+                  <h3 style={{ height: "100px" }}>{service.title}</h3>
                   <p>{service.description}</p>
                   {service.ReadMore && (
                     <Link
