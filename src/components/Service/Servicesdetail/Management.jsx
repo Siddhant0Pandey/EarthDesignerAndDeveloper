@@ -6,7 +6,7 @@ import ArchitectureImg from "../../../assets/img/services/management.jpg";
 import Meet from "../../../assets/img/services/management2.jpg";
 
 const Management = () => {
-  const backgroundImage = "url(../src/assets/img/services/services02.jpg)";
+  const backgroundImage = "url(/img/services02.jpg)";
 
   return (
     <div>

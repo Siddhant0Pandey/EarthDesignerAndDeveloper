@@ -6,7 +6,7 @@ import ArchitectureImg from "../../../assets/img/services/const.jpg";
 import Meet from "../../../assets/img/services/const2.jpg";
 
 const Construction = () => {
-  const backgroundImage = "url(../src/assets/img/services/services02.jpg)"; // Consider importing this image if you want to optimize bundling.
+  const backgroundImage = "url(/img/services02.jpg)"; // Consider importing this image if you want to optimize bundling.
 
   return (
     <div>
