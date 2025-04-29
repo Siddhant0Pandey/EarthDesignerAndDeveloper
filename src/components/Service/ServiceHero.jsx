@@ -2,43 +2,43 @@ import React from "react";
 import { Link } from "react-router-dom";
 const servicesData = [
   {
-    icon: "src/assets/img/icon/s01.png",
-    bgIcon: "src/assets/img/icon/sb01.png",
+    icon: "/icon/s01.png",
+    bgIcon: "/icon/sb01.png",
     title: "Architecture",
     description:
       "Thoughtfully planned designs that combine modern aesthetics with practical space utilization—tailored to suit your lifestyle or business needs.",
   },
   {
-    icon: "src/assets/img/icon/s02.png",
-    bgIcon: "src/assets/img/icon/sb02.png",
+    icon: "/icon/s02.png",
+    bgIcon: "/icon/sb02.png",
     title: "Construction",
     description:
       "From the ground up, we deliver robust and enduring builds—executed with engineering precision and strict quality control.",
   },
   {
-    icon: "src/assets/img/icon/s03.png",
-    bgIcon: "src/assets/img/icon/sb03.png",
+    icon: "/icon/s03.png",
+    bgIcon: "/icon/sb03.png",
     title: "Equipment",
     description:
       "Equipped with modern tools and technology, we ensure speed, safety, and superior finish in every project.",
   },
   {
-    icon: "src/assets/img/icon/s04.png",
-    bgIcon: "src/assets/img/icon/sb04.png",
+    icon: "/icon/s04.png",
+    bgIcon: "/icon/sb04.png",
     title: "Renovation",
     description:
       "Give your space a second life. We manage everything from structural upgrades to style enhancements with a fresh, forward-thinking approach.",
   },
   {
-    icon: "src/assets/img/icon/s05.png",
-    bgIcon: "src/assets/img/icon/sb05.png",
+    icon: "/icon/s05.png",
+    bgIcon: "/icon/sb05.png",
     title: "Sanitary",
     description:
       "Our sanitary works combine functionality and hygiene—ensuring your plumbing and water systems meet the highest standards.",
   },
   {
-    icon: "src/assets/img/icon/s06.png",
-    bgIcon: "src/assets/img/icon/sb06.png",
+    icon: "/icon/s06.png",
+    bgIcon: "/icon/sb06.png",
     title: "Insulation",
     description:
       "Keep your spaces comfortable and energy-efficient with our high-performance insulation that protects against weather and reduces energy waste.",
