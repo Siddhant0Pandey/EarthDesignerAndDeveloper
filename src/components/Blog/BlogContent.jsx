@@ -105,7 +105,7 @@ function BlogContent() {
         <div className="row">
           <div className="col-12">
             <div className="basic-pagination text-center mt-35">
-              <ul>
+              {/* <ul>
                 <li>
                   <Link to="#">
                     <i className="fas fa-angle-double-left"></i>
@@ -130,7 +130,7 @@ function BlogContent() {
                     <i className="fas fa-angle-double-right"></i>
                   </Link>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
