@@ -1,14 +1,13 @@
-import React from 'react';
-import Slider from 'react-slick';
+import React from "react";
+import Slider from "react-slick";
 
 const brandLogos = [
-  { id: 1, src: "src/assets/img/brand/brand-01.png" },
-  { id: 2, src: "src/assets/img/brand/brand-02.png" },
-  { id: 3, src: "src/assets/img/brand/brand-03.png" },
-  { id: 4, src: "src/assets/img/brand/brand-04.png" },
-  { id: 5, src: "src/assets/img/brand/brand-05.png" },
+  { id: 1, src: "/img/brand/brand-01.png" },
+  { id: 2, src: "/img/brand/brand-02.png" },
+  { id: 3, src: "/img/brand/brand-03.png" },
+  { id: 4, src: "/img/brand/brand-04.png" },
+  { id: 5, src: "/img/brand/brand-05.png" },
 ];
-
 
 const slickSettings = {
   dots: false,
@@ -45,13 +44,13 @@ function Brand() {
   return (
     <section className="brand-area gray-bg pt-90 pb-90">
       <div className="container-fluid">
-      <div className="section-title text-center mb-100">
+        <div className="section-title text-center mb-100">
           <div className="border-title">
             {/* <h1>Associated Brands-Partner</h1> */}
           </div>
           <h5>Our Partners </h5>
           <h2>
-          Associated Brands<span>.</span>
+            Associated Brands<span>.</span>
           </h2>
         </div>
         <div className="row">
@@ -61,8 +60,16 @@ function Brand() {
                 {brandLogos.map((brand) => (
                   <div key={brand.id} className="single-brand">
                     <a className="partner-logo" href="#">
-                      <img className="before-image" src={brand.src} alt="Brand Logo" />
-                      <img className="after-image" src={brand.src} alt="Brand Logo" />
+                      <img
+                        className="before-image"
+                        src={brand.src}
+                        alt="Brand Logo"
+                      />
+                      <img
+                        className="after-image"
+                        src={brand.src}
+                        alt="Brand Logo"
+                      />
                     </a>
                   </div>
                 ))}
