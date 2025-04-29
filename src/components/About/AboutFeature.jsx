@@ -1,12 +1,12 @@
 import React from "react";
 
 function AboutFeature() {
-  const backgroundImage = "url(src/assets/img/bg/feature-bg.jpg)";
+  const backgroundImage = "url(/img/bg/feature-bg.jpg)";
   return (
     <>
       <section
         className="feature-area pt-120 pb-90"
-        data-background="src/assets/img/bg/feature-bg.jpg"
+        data-background="/img/bg/feature-bg.jpg"
         style={{ backgroundImage: backgroundImage, backgroundSize: "cover" }}
       >
         <div class="container">
@@ -22,7 +22,7 @@ function AboutFeature() {
               <div class="feature-single mb-30">
                 <div class="feature-thumb">
                   <img
-                    src="src/assets/img/feature/feature-01.jpg"
+                    src="/img/feature/feature-01.jpg"
                     alt="image_not_found"
                   />
                 </div>
@@ -43,7 +43,7 @@ function AboutFeature() {
               <div class="feature-single mb-30">
                 <div class="feature-thumb">
                   <img
-                    src="src/assets/img/feature/feature-01.jpg"
+                    src="/img/feature/feature-01.jpg"
                     alt="image_not_found"
                   />
                 </div>
@@ -64,7 +64,7 @@ function AboutFeature() {
               <div class="feature-single mb-30">
                 <div class="feature-thumb">
                   <img
-                    src="src/assets/img/feature/feature-03.jpg"
+                    src="/img/feature/feature-03.jpg"
                     alt="image_not_found"
                   />
                 </div>
