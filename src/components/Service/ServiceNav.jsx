@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const ServiceNav = () => {
-  const backgroundImage = "url(../src/assets/img/services/services02.jpg)";
+  const backgroundImage = "url(/img/services02.jpg)";
   return (
     <section
       className="page-title-area pt-160 pb-160"
