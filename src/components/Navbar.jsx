@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 991 && mobileMenuOpen) {
@@ -19,13 +18,13 @@ function Navbar() {
   // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
-      document.body.classList.add('menu-open');
+      document.body.classList.add("menu-open");
     } else {
-      document.body.classList.remove('menu-open');
+      document.body.classList.remove("menu-open");
     }
-    
+
     return () => {
-      document.body.classList.remove('menu-open');
+      document.body.classList.remove("menu-open");
     };
   }, [mobileMenuOpen]);
 
@@ -58,7 +57,7 @@ function Navbar() {
               <ul className="right">
                 <li>
                   <Link to="#">
-                    <i className="fab fa-facebook-messenger"></i>
+                    <i className="fab fa-brands fa-whatsapp"></i>
                   </Link>
                 </li>
                 <li>
@@ -95,7 +94,6 @@ function Navbar() {
               </div>
             </div>
             <div className="col-xl-10 col-lg-10 col-6">
-            
               <div className="d-none d-lg-flex justify-content-end align-items-center">
                 <div className="main-menu me-4">
                   <nav>
@@ -127,10 +125,9 @@ function Navbar() {
                   </Link>
                 </div>
               </div>
-              
-             
+
               <div className="d-lg-none text-end">
-                <button 
+                <button
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                   className="hamburger-btn"
                   aria-label="Toggle mobile menu"
@@ -145,9 +142,8 @@ function Navbar() {
         </div>
       </div>
 
-      
       {mobileMenuOpen && (
-        <div 
+        <div
           className="mobile-menu-overlay"
           onClick={() => setMobileMenuOpen(false)}
         ></div>
@@ -165,7 +161,7 @@ function Navbar() {
               />
             </Link>
           </div>
-          <button 
+          <button
             className="mobile-menu-close"
             onClick={() => setMobileMenuOpen(false)}
             aria-label="Close mobile menu"
@@ -173,31 +169,43 @@ function Navbar() {
             <i className="fas fa-times"></i>
           </button>
         </div>
-        
+
         <div className="mobile-menu-content">
           <nav className="mobile-navigation">
             <ul>
               <li>
-                <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+                <Link to="/" onClick={() => setMobileMenuOpen(false)}>
+                  Home
+                </Link>
               </li>
               <li>
-                <Link to="/about" onClick={() => setMobileMenuOpen(false)}>About</Link>
+                <Link to="/about" onClick={() => setMobileMenuOpen(false)}>
+                  About
+                </Link>
               </li>
               <li>
-                <Link to="/services" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+                <Link to="/services" onClick={() => setMobileMenuOpen(false)}>
+                  Services
+                </Link>
               </li>
               <li>
-                <Link to="/project" onClick={() => setMobileMenuOpen(false)}>Project</Link>
+                <Link to="/project" onClick={() => setMobileMenuOpen(false)}>
+                  Project
+                </Link>
               </li>
               <li>
-                <Link to="/blog" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+                <Link to="/blog" onClick={() => setMobileMenuOpen(false)}>
+                  Blog
+                </Link>
               </li>
               <li>
-                <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+                <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
+                  Contact
+                </Link>
               </li>
             </ul>
           </nav>
-          
+
           <div className="mobile-contact-info">
             <div className="info-item">
               <i className="far fa-clock"></i>
@@ -212,7 +220,7 @@ function Navbar() {
               <span>M8P8+QW2, Lalitpur 44600</span>
             </div>
           </div>
-          
+
           <div className="mobile-social-links">
             <Link to="#" className="social-icon">
               <i className="fab fa-facebook-messenger"></i>
@@ -227,9 +235,13 @@ function Navbar() {
               <i className="fab fa-instagram"></i>
             </Link>
           </div>
-          
+
           <div className="mobile-cta">
-            <Link className="thm-btn mobile-quote-btn" to="/contact" onClick={() => setMobileMenuOpen(false)}>
+            <Link
+              className="thm-btn mobile-quote-btn"
+              to="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               Get a quote
             </Link>
           </div>
