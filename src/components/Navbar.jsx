@@ -15,7 +15,6 @@ function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, [mobileMenuOpen]);
 
-  // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.classList.add("menu-open");
@@ -30,34 +29,27 @@ function Navbar() {
 
   return (
     <header>
+      {/* Header Top */}
       <div className="header-top d-none d-lg-block">
         <div className="container">
           <div className="row">
-            <div className="col-12">
-              <ul className="left">
+            <div className="col-12 d-flex justify-content-between">
+              <ul className="left list-unstyled d-flex gap-4 mb-0">
                 <li>
-                  <span>
-                    <i className="far fa-clock"></i>
-                  </span>{" "}
-                  9:30am - 6:30pm Mon - Sun
+                  <i className="far fa-clock me-2"></i>9:30am - 6:30pm Mon - Sun
                 </li>
                 <li>
-                  <span>
-                    <i className="fas fa-phone-alt"></i>
-                  </span>{" "}
-                  +977 985-1213859
+                  <i className="fas fa-phone-alt me-2"></i>+977 985-1213859
                 </li>
                 <li>
-                  <span>
-                    <i className="fas fa-map-marker-alt"></i>
-                  </span>{" "}
-                  M8P8+QW2, Lalitpur 44600
+                  <i className="fas fa-map-marker-alt me-2"></i>M8P8+QW2,
+                  Lalitpur 44600
                 </li>
               </ul>
-              <ul className="right">
+              <ul className="right list-unstyled d-flex gap-3 mb-0">
                 <li>
                   <Link to="#">
-                    <i className="fab fa-brands fa-whatsapp"></i>
+                    <i className="fab fa-whatsapp"></i>
                   </Link>
                 </li>
                 <li>
@@ -80,71 +72,92 @@ function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* Header Bottom */}
       <div className="header-bottom-area">
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-xl-2 col-lg-2 col-6">
-              <div className="logo logo-2">
-                <Link to="/">
-                  <img
-                    src="./src/assets/img/logo/logo4.png"
-                    alt="logo_not_found"
-                  />
-                </Link>
-              </div>
+          <div className="d-flex justify-content-between align-items-center py-2">
+            {/* Logo */}
+            <div className="logo">
+              <Link to="/">
+                <img
+                  src="./src/assets/img/logo/logo4.png"
+                  alt="logo_not_found"
+                />
+              </Link>
             </div>
-            <div className="col-xl-10 col-lg-10 col-6">
-              <div className="d-none d-lg-flex justify-content-end align-items-center">
-                <div className="main-menu me-4">
-                  <nav>
-                    <ul>
-                      <li>
-                        <Link to="/">Home</Link>
-                      </li>
-                      <li>
-                        <Link to="/about">About</Link>
-                      </li>
-                      <li>
-                        <Link to="/services">Services</Link>
-                      </li>
-                      <li>
-                        <Link to="/project">Project</Link>
-                      </li>
-                      <li>
-                        <Link to="/blog">Blog</Link>
-                      </li>
-                      <li>
-                        <Link to="/contact">Contact</Link>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-                <div className="header-button">
-                  <Link className="thm-btn" to="/contact">
-                    Get a quote
-                  </Link>
-                </div>
-              </div>
 
-              <div
-                className="d-lg-none text-end"
-                style={{ paddingLeft: "125px" }}
+            {/* Desktop Nav */}
+            <div className="d-none d-lg-flex align-items-center gap-4">
+              <nav className="main-menu">
+                <ul className="d-flex gap-4 m-0 list-unstyled">
+                  <li>
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/about">About</Link>
+                  </li>
+                  <li>
+                    <Link to="/services">Services</Link>
+                  </li>
+                  <li>
+                    <Link to="/project">Project</Link>
+                  </li>
+                  <li>
+                    <Link to="/blog">Blog</Link>
+                  </li>
+                  <li>
+                    <Link to="/contact">Contact</Link>
+                  </li>
+                </ul>
+              </nav>
+              <Link className="thm-btn" to="/contact">
+                Get a quote
+              </Link>
+            </div>
+
+            {/* Mobile Hamburger: always at far right */}
+            <div className="d-lg-none">
+              <button
+                className="hamburger-btn"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-label="Toggle menu"
+                style={{
+                  border: "none",
+                  background: "transparent",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "5px",
+                }}
               >
-                <button
-                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                  className="hamburger-btn"
-                  aria-label="Toggle mobile menu"
-                >
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </button>
-              </div>
+                <span
+                  style={{
+                    width: "25px",
+                    height: "3px",
+                    backgroundColor: "#000",
+                  }}
+                ></span>
+                <span
+                  style={{
+                    width: "25px",
+                    height: "3px",
+                    backgroundColor: "#000",
+                  }}
+                ></span>
+                <span
+                  style={{
+                    width: "25px",
+                    height: "3px",
+                    backgroundColor: "#000",
+                  }}
+                ></span>
+              </button>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
         <div
           className="mobile-menu-overlay"
@@ -152,96 +165,74 @@ function Navbar() {
         ></div>
       )}
 
-      {/* Mobile Menu Sliding Panel */}
+      {/* Mobile Menu Panel */}
       <div className={`mobile-menu-panel ${mobileMenuOpen ? "active" : ""}`}>
-        <div className="mobile-menu-header">
-          <div className="mobile-logo">
-            <Link to="/">
-              <img
-                src="./src/assets/img/logo/logo4.png"
-                alt="logo_not_found"
-                className="mobile-logo-img"
-              />
-            </Link>
-          </div>
+        <div className="mobile-menu-header d-flex justify-content-between align-items-center px-3 pt-3">
+          <Link to="/">
+            <img
+              src="./src/assets/img/logo/logo4.png"
+              alt="logo_not_found"
+              style={{ height: "40px" }}
+            />
+          </Link>
           <button
             className="mobile-menu-close"
             onClick={() => setMobileMenuOpen(false)}
-            aria-label="Close mobile menu"
+            aria-label="Close menu"
           >
             <i className="fas fa-times"></i>
           </button>
         </div>
 
-        <div className="mobile-menu-content">
-          <nav className="mobile-navigation">
-            <ul>
-              <li>
-                <Link to="/" onClick={() => setMobileMenuOpen(false)}>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" onClick={() => setMobileMenuOpen(false)}>
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" onClick={() => setMobileMenuOpen(false)}>
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/project" onClick={() => setMobileMenuOpen(false)}>
-                  Project
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog" onClick={() => setMobileMenuOpen(false)}>
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                  Contact
-                </Link>
-              </li>
+        <div className="mobile-menu-content px-3">
+          <nav>
+            <ul className="list-unstyled">
+              {["Home", "About", "Services", "Project", "Blog", "Contact"].map(
+                (text, idx) => (
+                  <li key={idx}>
+                    <Link
+                      to={`/${text.toLowerCase()}`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {text}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </nav>
 
-          <div className="mobile-contact-info">
-            <div className="info-item">
-              <i className="far fa-clock"></i>
-              <span>9:30am - 6:30pm Mon - Sun</span>
+          <div className="mt-3">
+            <div>
+              <i className="far fa-clock me-2"></i>9:30am - 6:30pm Mon - Sun
             </div>
-            <div className="info-item">
-              <i className="fas fa-phone-alt"></i>
-              <span>+977 985-1213859</span>
+            <div>
+              <i className="fas fa-phone-alt me-2"></i>+977 985-1213859
             </div>
-            <div className="info-item">
-              <i className="fas fa-map-marker-alt"></i>
-              <span>M8P8+QW2, Lalitpur 44600</span>
+            <div>
+              <i className="fas fa-map-marker-alt me-2"></i>M8P8+QW2, Lalitpur
+              44600
             </div>
           </div>
 
-          <div className="mobile-social-links">
-            <Link to="#" className="social-icon">
+          <div className="mt-3 d-flex gap-3">
+            <Link to="#">
               <i className="fab fa-facebook-messenger"></i>
             </Link>
-            <Link to="#" className="social-icon">
+            <Link to="#">
               <i className="fab fa-twitter"></i>
             </Link>
-            <Link to="#" className="social-icon">
+            <Link to="#">
               <i className="fab fa-facebook"></i>
             </Link>
-            <Link to="#" className="social-icon">
+            <Link to="#">
               <i className="fab fa-instagram"></i>
             </Link>
           </div>
 
-          <div className="mobile-cta">
+          <div className="mt-4">
             <Link
-              className="thm-btn mobile-quote-btn"
+              className="thm-btn"
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}
             >
