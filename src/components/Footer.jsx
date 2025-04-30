@@ -63,8 +63,8 @@ function Footer() {
                       <span>
                         <i className="fas fa-envelope-open-text"></i>
                       </span>
-                      <h5>info@yourmail.com</h5>
-                      <h5>jobsinfo@webmail.com</h5>
+                      <h5>earthdd2017@gmail.com</h5>
+                      <h5>earthdd2017@gmail.com</h5>
                     </div>
                   </li>
                 </ul>
@@ -78,10 +78,10 @@ function Footer() {
                     <Link to="/about">About us</Link>
                   </li>
                   <li>
-                    <Link to="/process">Our process</Link>
+                    <Link to="/services">Our Services</Link>
                   </li>
                   <li>
-                    <Link to="/contact">Contact us</Link>
+                    <Link to="/contact">Contact Us</Link>
                   </li>
                   <li>
                     <Link to="/project">Our Projects</Link>
