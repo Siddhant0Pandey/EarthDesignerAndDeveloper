@@ -126,7 +126,10 @@ function Navbar() {
                 </div>
               </div>
 
-              <div className="d-lg-none text-end">
+              <div
+                className="d-lg-none text-end"
+                style={{ paddingLeft: "125px" }}
+              >
                 <button
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                   className="hamburger-btn"
