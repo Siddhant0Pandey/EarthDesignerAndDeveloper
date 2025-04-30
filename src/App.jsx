@@ -17,10 +17,12 @@ import General from "./components/Service/Servicesdetail/General";
 import Building from "./components/Service/Servicesdetail/Building";
 import Design from "./components/Service/Servicesdetail/Design";
 import Project1 from "./components/Project/ProjectDetails/Project1";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
