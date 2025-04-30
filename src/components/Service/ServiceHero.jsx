@@ -1,85 +1,195 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { MdOutlineDesignServices } from "react-icons/md";
+import { BiBuildings } from "react-icons/bi";
+import ServiceIconImage, { ServiceIconBackground } from "../ServiceIconImage"; // Adjust the import path as needed
+
 const servicesData = [
   {
-    icon: "/icon/s01.png",
-    bgIcon: "/icon/sb01.png",
-    title: "Architecture",
+    icon: (
+      <ServiceIconImage
+        src="/icon/s01.png"
+        alt="Pre-Construction Design icon"
+        // style={{ height: "200px", width: "auto" }} // <-- Fix applied here
+      />
+    ),
+    bgIcon: (
+      <ServiceIconBackground
+        src="/icon/sb01.png"
+        alt="Pre-Construction background"
+        // style={{ height: "200px", width: "auto" }}
+      />
+    ),
+    title: "Pre-Construction Design",
     description:
-      "Thoughtfully planned designs that combine modern aesthetics with practical space utilization—tailored to suit your lifestyle or business needs.",
+      "Separated they live in Bookmarksgrove right at the coast of the Semantics",
+    isReactIcon: true,
+    ReadMore: "services/pre-construction",
   },
   {
-    icon: "/icon/s02.png",
-    bgIcon: "/icon/sb02.png",
-    title: "Construction",
+    icon: (
+      <ServiceIconImage src="/icon/s02.png" alt="Construction Services icon" />
+    ),
+    bgIcon: (
+      <ServiceIconBackground
+        src="/icon/sb02.png"
+        alt="Construction Services background"
+      />
+    ),
+    title: "Construction Services",
     description:
-      "From the ground up, we deliver robust and enduring builds—executed with engineering precision and strict quality control.",
+      "Separated they live in Bookmarksgrove right at the coast of the Semantics",
+    isReactIcon: true,
+    ReadMore: "services/construction",
   },
   {
-    icon: "/icon/s03.png",
-    bgIcon: "/icon/sb03.png",
-    title: "Equipment",
+    icon: (
+      <ServiceIconImage
+        src="/icon/s03.png"
+        alt="Construction Management icon"
+      />
+    ),
+    bgIcon: (
+      <ServiceIconBackground
+        src="/icon/sb03.png"
+        alt="Construction Management background"
+      />
+    ),
+    title: "Construction Management",
     description:
-      "Equipped with modern tools and technology, we ensure speed, safety, and superior finish in every project.",
+      "Separated they live in Bookmarksgrove right at the coast of the Semantics",
+    isReactIcon: true,
+    ReadMore: "services/management",
   },
   {
-    icon: "/icon/s04.png",
-    bgIcon: "/icon/sb04.png",
-    title: "Renovation",
+    icon: (
+      <ServiceIconImage src="/icon/s04.png" alt="General Constructing icon" />
+    ),
+    bgIcon: (
+      <ServiceIconBackground
+        src="/icon/sb04.png"
+        alt="General Constructing background"
+      />
+    ),
+    title: "General Constructing",
     description:
-      "Give your space a second life. We manage everything from structural upgrades to style enhancements with a fresh, forward-thinking approach.",
+      "Separated they live in Bookmarks grove right at the coast of the Semantics",
+    isReactIcon: true,
+    ReadMore: "services/general",
   },
   {
-    icon: "/icon/s05.png",
-    bgIcon: "/icon/sb05.png",
-    title: "Sanitary",
+    icon: (
+      <ServiceIconImage
+        src="/icon/s03.png"
+        alt="Construction Management icon"
+      />
+    ),
+    bgIcon: (
+      <ServiceIconBackground
+        src="/icon/sb03.png"
+        alt="Construction Management background"
+      />
+    ),
+    title: "Building Modeling",
     description:
-      "Our sanitary works combine functionality and hygiene—ensuring your plumbing and water systems meet the highest standards.",
+      "Separated they live in Bookmarksgrove right at the coast of the Semantics",
+    isReactIcon: true,
+    ReadMore: "services/building",
   },
   {
-    icon: "/icon/s06.png",
-    bgIcon: "/icon/sb06.png",
-    title: "Insulation",
+    icon: (
+      <ServiceIconImage
+        src="/icon/s01.png"
+        alt="Pre-Construction Design icon"
+        // style={{ height: "200px", width: "auto" }} // <-- Fix applied here
+      />
+    ),
+    bgIcon: (
+      <ServiceIconBackground
+        src="/icon/sb01.png"
+        alt="Pre-Construction background"
+        // style={{ height: "200px", width: "auto" }}
+      />
+    ),
+    title: "Design Build",
     description:
-      "Keep your spaces comfortable and energy-efficient with our high-performance insulation that protects against weather and reduces energy waste.",
+      "Separated they live in Bookmarksgrove right at the coast of the Semantics",
+    isReactIcon: true,
+    ReadMore: "services/design",
   },
 ];
-function ServiceHero() {
+
+const ServiceHero = () => {
   return (
-    <div>
-      <section className="services-area gray-bg pt-120 pb-90">
-        <div className="container">
-          <div className="section-title text-center">
-            <div className="border-title">
-              <h1>Services</h1>
-            </div>
-            <h5>Our Services</h5>
-            <h2>we are expert in</h2>
-          </div>
-          <div className="row">
-            {servicesData.map((service, index) => (
-              <div className="col-xl-4 col-lg-6 col-md-6" key={index}>
-                <div className="services-box text-center mb-30">
-                  <div className="services-box-thumb mb-25">
-                    <img src={service.icon} alt="icon" />
-                    <div className="box-thumb-bg">
-                      <img src={service.bgIcon} alt="background icon" />
+    <section className="services-area gray-bg pt-120 pb-90">
+      <div className="container">
+        <div className="row">
+          {servicesData.map((service, index) => (
+            <div className="col-xl-4 col-lg-6 col-md-6" key={index}>
+              <div className="services-box text-center mb-30">
+                <div
+                  className="services-box-thumb mb-25"
+                  style={{ position: "relative" }}
+                >
+                  {service.isReactIcon ? (
+                    <div style={{ position: "relative", zIndex: 2 }}>
+                      {service.icon}
                     </div>
-                  </div>
-                  <div className="services-box-text">
-                    <h2>{service.title}</h2>
-                    <p>{service.description}</p>
-                    <Link to={"architecture"}>Read More</Link>
+                  ) : (
+                    <img
+                      src={service.icon}
+                      alt={`${service.title} icon`}
+                      style={{
+                        position: "relative",
+                        zIndex: 2,
+                        fontSize: "40rem",
+                        width: "200px",
+                      }}
+                    />
+                  )}
+                  <div
+                    className="box-thumb-bg"
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      zIndex: 1,
+                    }}
+                  >
+                    {service.isReactIcon ? (
+                      service.bgIcon
+                    ) : (
+                      <img
+                        src={service.bgIcon}
+                        alt={`${service.title} background icon`}
+                      />
+                    )}
                   </div>
                 </div>
+                <div className="services-box-text">
+                  <h3 style={{ height: "100px" }}>{service.title}</h3>
+                  <p>{service.description}</p>
+                  {service.ReadMore && (
+                    <Link
+                      to={`/${service.ReadMore}`}
+                      className="read-more-link"
+                    >
+                      Read More
+                    </Link>
+                  )}
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
-      );
-    </div>
+      </div>
+    </section>
   );
-}
+};
 
 export default ServiceHero;
