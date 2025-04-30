@@ -25,7 +25,7 @@ function Testimonial() {
       position: "Marketing Director",
       image: "img/testimonial/testi-01.jpg",
       text: "We are truly grateful to Earth Designer and Developer for turning our vision into reality. Their expertise, careful planning, and commitment to quality were evident at every stage of the project. The team was approachable, flexible, and always ready to find solutions. Thanks to their hard work, we now have a space we are proud of. Highly recommended for anyone looking for reliable construction services in Nepal",
-    }
+    },
   ];
 
   // Slick Slider settings
@@ -48,7 +48,9 @@ function Testimonial() {
           <div className="col-xl-6">
             <div
               className="counter-left counter-height pt-125 pb-125"
-              style={{ backgroundImage: "url('./src/assets/img/bg/counter-bg.jpg')" }}
+              style={{
+                backgroundImage: "url('img/testimonial/testi-counter-bg.jpg')",
+              }}
             >
               <div className="counter-content">
                 <ul>
@@ -113,11 +115,16 @@ function Testimonial() {
           <div className="col-xl-6">
             <div
               className="testimonial-right testimonial-height"
-              style={{ backgroundImage: "url('./src/assets/img/bg/testimonial-bg.jpg')" }}
+              style={{
+                backgroundImage: "url('img/testimonial/contact-bg.jpg')",
+              }}
             >
               <Slider {...settings} className="testimonial-active">
                 {testimonials.map((testimonial) => (
-                  <div key={testimonial.id} className="testimonial-single text-center">
+                  <div
+                    key={testimonial.id}
+                    className="testimonial-single text-center"
+                  >
                     <div className="testimonial-thumb">
                       <img src={testimonial.image} alt="testimonial" />
                     </div>
