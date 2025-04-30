@@ -1,197 +1,110 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+const projectData = [
+  {
+    id: 1,
+    img: "img/project/p01.jpg",
+    title: "Interior Design",
+    description:
+      "Rorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incutey.",
+  },
+  {
+    id: 2,
+    img: "img/project/p02.jpg",
+    title: "Construction",
+    description:
+      "Rorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incutey.",
+  },
+  {
+    id: 3,
+    img: "img/project/p03.jpg",
+    title: "Building Repair",
+    description:
+      "Rorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incutey.",
+  },
+  // Add more project objects as needed...
+];
 
 const ProjectMain = () => {
   return (
     <div>
-      <section class="feature-area process-area gray-bg pt-120 pb-90">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="feature-single mb-30">
-                <div class="feature-thumb">
-                  <img src="img/project/p01.jpg" alt="image_not_found" />
-                </div>
-                <div class="feature-text">
-                  <h4>explore the features</h4>
-                  <h2>
-                    <a href="#">Interior Design</a>
-                  </h2>
-                  <p>
-                    Rorem ipsum dolor sit amet, consectetur adip isicing elit,
-                    sed do eiusmod tempor incutey.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="feature-single mb-30">
-                <div class="feature-thumb">
-                  <img src="img/project/p02.jpg" alt="image_not_found" />
-                </div>
-                <div class="feature-text">
-                  <h4>explore the features</h4>
-                  <h2>
-                    <a href="#">construction</a>
-                  </h2>
-                  <p>
-                    Rorem ipsum dolor sit amet, consectetur adip isicing elit,
-                    sed do eiusmod tempor incutey.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="feature-single mb-30">
-                <div class="feature-thumb">
-                  <img src="img/project/p03.jpg" alt="image_not_found" />
-                </div>
-                <div class="feature-text">
-                  <h4>explore the features</h4>
-                  <h2>
-                    <a href="#">building repair</a>
-                  </h2>
-                  <p>
-                    Rorem ipsum dolor sit amet, consectetur adip isicing elit,
-                    sed do eiusmod tempor incutey.
-                  </p>
+      <section className="feature-area process-area gray-bg pt-20 pb-20">
+        <div className="container">
+          <div className="row">
+            {projectData.map((project) => (
+              <div key={project.id} className="col-xl-4 col-lg-4 col-md-6 mb-4">
+                <div
+                  className="feature-single"
+                  style={{
+                    background: "#fff",
+                    borderRadius: "10px",
+                    boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+                    overflow: "hidden",
+                    transition: "transform 0.3s",
+                  }}
+                >
+                  <div className="feature-thumb">
+                    <img
+                      src={project.img}
+                      alt="project"
+                      style={{ width: "100%", height: "auto" }}
+                    />
+                  </div>
+                  <div className="feature-text p-3">
+                    <h4 style={{ textTransform: "uppercase", color: "#888" }}>
+                      Explore the Features
+                    </h4>
+                    <h2 style={{ fontSize: "1.5rem", marginBottom: "10px" }}>
+                      <Link to={`/project/${project.id}`}>{project.title}</Link>
+                    </h2>
+                    <p>{project.description}</p>
+                    <Link
+                      to={`/project/${project.id}`}
+                      className="btn btn-sm btn-primary mt-2"
+                    >
+                      Read More
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="feature-single mb-30">
-                <div class="feature-thumb">
-                  <img src="img/project/p04.jpg" alt="image_not_found" />
-                </div>
-                <div class="feature-text">
-                  <h4>explore the features</h4>
-                  <h2>
-                    <a href="#">Interior Design</a>
-                  </h2>
-                  <p>
-                    Rorem ipsum dolor sit amet, consectetur adip isicing elit,
-                    sed do eiusmod tempor incutey.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="feature-single mb-30">
-                <div class="feature-thumb">
-                  <img src="img/project/p05.jpg" alt="image_not_found" />
-                </div>
-                <div class="feature-text">
-                  <h4>explore the features</h4>
-                  <h2>
-                    <a href="#">construction</a>
-                  </h2>
-                  <p>
-                    Rorem ipsum dolor sit amet, consectetur adip isicing elit,
-                    sed do eiusmod tempor incutey.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="feature-single mb-30">
-                <div class="feature-thumb">
-                  <img src="img/project/p07.jpg" alt="image_not_found" />
-                </div>
-                <div class="feature-text">
-                  <h4>explore the features</h4>
-                  <h2>
-                    <a href="#">building repair</a>
-                  </h2>
-                  <p>
-                    Rorem ipsum dolor sit amet, consectetur adip isicing elit,
-                    sed do eiusmod tempor incutey.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="feature-single mb-30">
-                <div class="feature-thumb">
-                  <img src="img/project/p07.jpg" alt="image_not_found" />
-                </div>
-                <div class="feature-text">
-                  <h4>explore the features</h4>
-                  <h2>
-                    <a href="#">Interior Design</a>
-                  </h2>
-                  <p>
-                    Rorem ipsum dolor sit amet, consectetur adip isicing elit,
-                    sed do eiusmod tempor incutey.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="feature-single mb-30">
-                <div class="feature-thumb">
-                  <img src="img/project/p08.jpg" alt="image_not_found" />
-                </div>
-                <div class="feature-text">
-                  <h4>explore the features</h4>
-                  <h2>
-                    <a href="#">construction</a>
-                  </h2>
-                  <p>
-                    Rorem ipsum dolor sit amet, consectetur adip isicing elit,
-                    sed do eiusmod tempor incutey.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="feature-single mb-30">
-                <div class="feature-thumb">
-                  <img src="img/project/p04.jpg" alt="image_not_found" />
-                </div>
-                <div class="feature-text">
-                  <h4>explore the features</h4>
-                  <h2>
-                    <a href="#">building repair</a>
-                  </h2>
-                  <p>
-                    Rorem ipsum dolor sit amet, consectetur adip isicing elit,
-                    sed do eiusmod tempor incutey.
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="basic-pagination text-center mt-35">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <i class="fas fa-angle-double-left"></i>
+
+          {/* Pagination Placeholder */}
+          {/* <div className="row">
+            <div className="col-12 text-center mt-4">
+              <div className="basic-pagination">
+                <ul className="pagination justify-content-center">
+                  <li className="page-item">
+                    <a className="page-link" href="#">
+                      &laquo;
                     </a>
                   </li>
-                  <li>
-                    <a href="#">01</a>
-                  </li>
-                  <li class="active">
-                    <a href="#">02</a>
-                  </li>
-                  <li>
-                    <a href="#">03</a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fas fa-ellipsis-h"></i>
+                  <li className="page-item">
+                    <a className="page-link" href="#">
+                      1
                     </a>
                   </li>
-                  <li>
-                    <a href="#">
-                      <i class="fas fa-angle-double-right"></i>
+                  <li className="page-item active">
+                    <a className="page-link" href="#">
+                      2
+                    </a>
+                  </li>
+                  <li className="page-item">
+                    <a className="page-link" href="#">
+                      3
+                    </a>
+                  </li>
+                  <li className="page-item">
+                    <a className="page-link" href="#">
+                      &raquo;
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
