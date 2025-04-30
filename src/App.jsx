@@ -16,6 +16,7 @@ import Management from "./components/Service/Servicesdetail/Management";
 import General from "./components/Service/Servicesdetail/General";
 import Building from "./components/Service/Servicesdetail/Building";
 import Design from "./components/Service/Servicesdetail/Design";
+import Project1 from "./components/Project/ProjectDetails/Project1";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="services" element={<Service />} />
           <Route path="project" element={<Project />} />
+          <Route path="project/project1" element={<Project1 />} />
+
           <Route path="blog" element={<Blog />} />
 
           <Route
