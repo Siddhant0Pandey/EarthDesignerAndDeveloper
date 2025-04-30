@@ -315,6 +315,22 @@ label {
 	line-height: 53px;
 	box-shadow: 0px 3px 15px 1px rgba(255, 94, 21, 0.33);
 }
+.hamburger-btn {
+	background: none;
+	border: none;
+	padding: 8px;
+	cursor: pointer;
+	display: inline-flex;
+	flex-direction: column;
+	gap: 4px;
+  }
+  
+  .hamburger-btn span {
+	width: 25px;
+	height: 2px;
+	background-color: #000;
+  }
+  
 /* 2. header */
 .header-top {
 	background-color: #005792;
@@ -2177,7 +2193,7 @@ label {
 }
 .b-content {
 	padding: 30px 20px;
-	height: 25vh;
+	height: 28vh;
 }
 .b-content .b-meta span a {
 	font-size: 14px;

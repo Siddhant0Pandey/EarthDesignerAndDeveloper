@@ -60,7 +60,7 @@ const ProjectMain = () => {
                     </h2>
                     <p>{project.description}</p>
                     <Link
-                      to={`/project/${project.id}`}
+                      to={`project1`}
                       className="btn btn-sm btn-primary mt-2"
                     >
                       Read More
