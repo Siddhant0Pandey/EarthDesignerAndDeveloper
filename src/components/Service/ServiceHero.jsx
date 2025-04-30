@@ -10,19 +10,16 @@ const servicesData = [
       <ServiceIconImage
         src="/icon/s01.png"
         alt="Pre-Construction Design icon"
-        // style={{ height: "200px", width: "auto" }} // <-- Fix applied here
       />
     ),
     bgIcon: (
       <ServiceIconBackground
         src="/icon/sb01.png"
         alt="Pre-Construction background"
-        // style={{ height: "200px", width: "auto" }}
       />
     ),
     title: "Pre-Construction Design",
-    description:
-      "Separated they live in Bookmarksgrove right at the coast of the Semantics",
+    description: "Planning and design support before construction begins.",
     isReactIcon: true,
     ReadMore: "services/pre-construction",
   },
@@ -37,8 +34,7 @@ const servicesData = [
       />
     ),
     title: "Construction Services",
-    description:
-      "Separated they live in Bookmarksgrove right at the coast of the Semantics",
+    description: "Reliable execution of construction from start to finish.",
     isReactIcon: true,
     ReadMore: "services/construction",
   },
@@ -56,8 +52,7 @@ const servicesData = [
       />
     ),
     title: "Construction Management",
-    description:
-      "Separated they live in Bookmarksgrove right at the coast of the Semantics",
+    description: "Overseeing and coordinating every phase of construction.",
     isReactIcon: true,
     ReadMore: "services/management",
   },
@@ -72,8 +67,7 @@ const servicesData = [
       />
     ),
     title: "General Constructing",
-    description:
-      "Separated they live in Bookmarks grove right at the coast of the Semantics",
+    description: "Comprehensive building services tailored to your needs.",
     isReactIcon: true,
     ReadMore: "services/general",
   },
@@ -91,8 +85,7 @@ const servicesData = [
       />
     ),
     title: "Building Modeling",
-    description:
-      "Separated they live in Bookmarksgrove right at the coast of the Semantics",
+    description: "Digital models to visualize and plan building projects.",
     isReactIcon: true,
     ReadMore: "services/building",
   },
@@ -101,19 +94,16 @@ const servicesData = [
       <ServiceIconImage
         src="/icon/s01.png"
         alt="Pre-Construction Design icon"
-        // style={{ height: "200px", width: "auto" }} // <-- Fix applied here
       />
     ),
     bgIcon: (
       <ServiceIconBackground
         src="/icon/sb01.png"
         alt="Pre-Construction background"
-        // style={{ height: "200px", width: "auto" }}
       />
     ),
     title: "Design Build",
-    description:
-      "Separated they live in Bookmarksgrove right at the coast of the Semantics",
+    description: "Integrated design and construction under one roof.",
     isReactIcon: true,
     ReadMore: "services/design",
   },
