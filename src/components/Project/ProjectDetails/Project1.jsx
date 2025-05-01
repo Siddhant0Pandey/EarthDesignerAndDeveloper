@@ -44,10 +44,24 @@ const boqData = {
 function Project1() {
   return (
     <div className="container mt-4">
+      {/* Project Image */}
+
       <h1 className="text-primary">{boqData.projectName}</h1>
       <p>
         <strong>Client:</strong> {boqData.client}
       </p>
+
+      <img
+        src="/img/building.jpg"
+        alt="Modern Bus Park"
+        className="img-fluid mb-4"
+        style={{
+          borderRadius: "8px",
+          maxHeight: "400px",
+          objectFit: "cover",
+          width: "100%",
+        }}
+      />
 
       <h3 className="mt-4">Joint Venture Partners</h3>
       <ul className="list-group">
@@ -81,6 +95,7 @@ function Project1() {
           ))}
         </tbody>
       </table>
+
       <h3>Know More!</h3>
       <p>
         The Construction of Modern Bus Park in Itahari-9, Sunsari is a
