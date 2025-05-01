@@ -3,72 +3,64 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../assets/css/project-section.css";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
-    img: "src/assets/img/project/project-01.jpg",
-    tag: "construction",
-    title: "Baibhav Nepal Resort",
-    description:
-      "Rorem ipsum dolor sit amet, consectetur adipisic ing elit, sed do eiusmod tempor.",
+    img: "/img/building.jpg",
+    title: "Construction of Modern Bus Park",
+    link: "/project/project1",
   },
   {
-    img: "src/assets/img/project/project-02.jpg",
-    tag: "architecture",
+    img: "/assets/img/project/project-02.jpg",
     title: "Rasalina De Wily Resort",
-    description:
-      "Rorem ipsum dolor sit amet, consectetur adipisic ing elit, sed do eiusmod tempor.",
+    link: "/project/project1",
   },
   {
-    img: "src/assets/img/project/project-03.jpg",
-    tag: "renovation",
-    title: "Rasalina De Wily Resort",
-    description:
-      "Rorem ipsum dolor sit amet, consectetur adipisic ing elit, sed do eiusmod tempor.",
+    img: "/assets/img/project/project-03.jpg",
+    title: "City Center Plaza",
+    link: "/project/project1",
   },
   {
-    img: "src/assets/img/project/project-01.jpg",
-    tag: "renovation",
-    title: "Rasalina De Wily Resort",
-    description:
-      "Rorem ipsum dolor sit amet, consectetur adipisic ing elit, sed do eiusmod tempor.",
+    img: "/assets/img/project/project-04.jpg",
+    title: "Downtown Office Tower",
+    link: "/project/project1",
   },
 ];
 
+const NextArrow = ({ className, onClick }) => (
+  <button className={`${className} custom-next-arrow`} onClick={onClick}>
+    <i className="fas fa-chevron-right"></i>
+  </button>
+);
+
+const PrevArrow = ({ className, onClick }) => (
+  <button className={`${className} custom-prev-arrow`} onClick={onClick}>
+    <i className="fas fa-chevron-left"></i>
+  </button>
+);
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    { breakpoint: 1400, settings: { slidesToShow: 3 } },
+    { breakpoint: 1200, settings: { slidesToShow: 2 } },
+    { breakpoint: 768, settings: { slidesToShow: 1 } },
+  ],
+  arrows: true,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  pauseOnHover: true,
+  dotsClass: "slick-dots custom-dots",
+};
+
 const ProjectSection = () => {
-
-  const NextArrow = ({ className, onClick }) => (
-    <button className={`${className} custom-next-arrow`} onClick={onClick}>
-      <i className="fas fa-chevron-right"></i>
-    </button>
-  );
-
-  const PrevArrow = ({ className, onClick }) => (
-    <button className={`${className} custom-prev-arrow`} onClick={onClick}>
-      <i className="fas fa-chevron-left"></i>
-    </button>
-  );
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      { breakpoint: 1400, settings: { slidesToShow: 3 } },
-      { breakpoint: 1200, settings: { slidesToShow: 2 } },
-      { breakpoint: 768, settings: { slidesToShow: 1 } },
-    ],
-    arrows: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    pauseOnHover: true,
-    // nextArrow: <NextArrow />,
-    // prevArrow: <PrevArrow />,
-    dotsClass: "slick-dots custom-dots"
-  };
-
   return (
     <section className="project-area pos-rel pt-120 pb-120">
       <div className="container">
@@ -83,7 +75,8 @@ const ProjectSection = () => {
                 Projects That We Complete<span className="dot">.</span>
               </h2>
               <p className="section-desc mt-3">
-                Explore our portfolio of outstanding projects delivering excellence in construction, architecture, and renovation.
+                Explore our portfolio of outstanding projects delivering
+                excellence in construction, architecture, and renovation.
               </p>
             </div>
           </div>
@@ -93,27 +86,66 @@ const ProjectSection = () => {
           <Slider {...settings} className="project-carousel">
             {projects.map((project, index) => (
               <div className="project-item-wrapper" key={index}>
-                <div className="single-project">
-                  <div className="project-thumb">
-                    <img src={project.img} alt={project.title} className="img-fluid w-100" />
-                    <div className="project-overlay">
-                      <span className="project-category">{project.tag}</span>
-                      <a href="#" className="project-link">
-                        <i className="fas fa-external-link-alt"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="project-text">
-                    <div className="project-tag">
-                      <h4><a href="#">{project.tag}</a></h4>
-                    </div>
-                    <div className="project-text-box">
-                      <h3><a href="#">{project.title}</a></h3>
-                      <p>{project.description}</p>
-                      <a href="#" className="read-more-btn">
-                        View Details <i className="fas fa-long-arrow-alt-right ms-2"></i>
-                      </a>
-                    </div>
+                <div
+                  className="single-project"
+                  style={{
+                    position: "relative",
+                    overflow: "hidden",
+                    height: "300px",
+                    borderRadius: "10px",
+                  }}
+                >
+                  <img
+                    src={project.img}
+                    alt={project.title || "Project Image"}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      filter: "blur(3px)",
+                      transform: "scale(1.1)",
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      zIndex: 1,
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "50%",
+                      left: "50%",
+                      transform: "translate(-50%, -50%)",
+                      zIndex: 2,
+                      color: "#fff",
+                      textAlign: "center",
+                      textShadow: "0 2px 8px rgba(0,0,0,0.8)",
+                    }}
+                  >
+                    <h3
+                      style={{
+                        fontSize: "24px",
+                        marginBottom: "12px",
+
+                        fontWeight: "900",
+                      }}
+                    >
+                      {project.title}
+                    </h3>
+                    <Link
+                      to={project.link}
+                      href="#"
+                      style={{
+                        display: "inline-block",
+                        padding: "10px 20px",
+                        backgroundColor: "#007bff",
+                        color: "#fff",
+                        borderRadius: "4px",
+                        textDecoration: "none",
+                      }}
+                    >
+                      Know More <i className="fas fa-arrow-right ms-2"></i>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -44,6 +44,19 @@ const boqData = {
 function Project1() {
   return (
     <div className="container mt-4">
+      {/* Project Image */}
+      <img
+        src="/img/building.jpg"
+        alt="Modern Bus Park"
+        className="img-fluid mb-4"
+        style={{
+          borderRadius: "8px",
+          maxHeight: "400px",
+          objectFit: "cover",
+          width: "100%",
+        }}
+      />
+
       <h1 className="text-primary">{boqData.projectName}</h1>
       <p>
         <strong>Client:</strong> {boqData.client}
@@ -81,22 +94,11 @@ function Project1() {
           ))}
         </tbody>
       </table>
+
       <h3>Know More!</h3>
       <p>
         The Construction of Modern Bus Park in Itahari-9, Sunsari is a
-        comprehensive infrastructure development initiative undertaken by the
-        Itahari Sub Metropolitan City, funded by the Government of Nepal. The
-        project aims to establish a well-equipped, modern transportation hub
-        that can accommodate growing public mobility demands in the region. It
-        is being executed by a joint venture of three prominent firms—Earth
-        Designers and Developers Pvt. Ltd., Shreeman Construction, and Hamro
-        Katuwal Construction. The project scope includes advanced civil works,
-        sanitary and plumbing installations, electrical systems, CCTV
-        surveillance, and public amenities such as restrooms, seating, and
-        digital information systems. With an emphasis on safety, accessibility,
-        and modern design, the bus park is poised to become a key transportation
-        node that enhances both commuter experience and urban functionality in
-        Sunsari.
+        comprehensive infrastructure development initiative...
       </p>
     </div>
   );
