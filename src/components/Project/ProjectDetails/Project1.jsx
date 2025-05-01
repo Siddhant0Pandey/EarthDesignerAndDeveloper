@@ -45,6 +45,12 @@ function Project1() {
   return (
     <div className="container mt-4">
       {/* Project Image */}
+
+      <h1 className="text-primary">{boqData.projectName}</h1>
+      <p>
+        <strong>Client:</strong> {boqData.client}
+      </p>
+
       <img
         src="/img/building.jpg"
         alt="Modern Bus Park"
@@ -56,11 +62,6 @@ function Project1() {
           width: "100%",
         }}
       />
-
-      <h1 className="text-primary">{boqData.projectName}</h1>
-      <p>
-        <strong>Client:</strong> {boqData.client}
-      </p>
 
       <h3 className="mt-4">Joint Venture Partners</h3>
       <ul className="list-group">
