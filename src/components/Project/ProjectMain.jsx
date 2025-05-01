@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const projectData = [
   {
     id: 1,
-    img: "img/project/p01.jpg",
-    title: "Interior Design",
+    img: "/img/building.jpg",
+    title: "Construction of Modern Bus Park, Itahari-9, Sunsari",
     description:
-      "Rorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incutey.",
+      "The Construction of Modern Bus Park in Itahari-9, Sunsari is a comprehensive infrastructure development initiative undertaken by the Itahari Sub Metropolitan City...",
   },
   {
     id: 2,
