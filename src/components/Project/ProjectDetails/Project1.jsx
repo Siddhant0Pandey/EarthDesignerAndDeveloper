@@ -98,7 +98,19 @@ function Project1() {
       <h3>Know More!</h3>
       <p>
         The Construction of Modern Bus Park in Itahari-9, Sunsari is a
-        comprehensive infrastructure development initiative...
+        comprehensive infrastructure development initiative undertaken by the
+        Itahari Sub Metropolitan City, funded by the Government of Nepal. The
+        project aims to establish a well-equipped, modern transportation hub
+        that can accommodate growing public mobility demands in the region. It
+        is being executed by a joint venture of three prominent firms—Earth
+        Designers and Developers Pvt. Ltd., Shreeman Construction, and Hamro
+        Katuwal Construction. The project scope includes advanced civil works,
+        sanitary and plumbing installations, electrical systems, CCTV
+        surveillance, and public amenities such as restrooms, seating, and
+        digital information systems. With an emphasis on safety, accessibility,
+        and modern design, the bus park is poised to become a key transportation
+        node that enhances both commuter experience and urban functionality in
+        Sunsari.
       </p>
     </div>
   );
