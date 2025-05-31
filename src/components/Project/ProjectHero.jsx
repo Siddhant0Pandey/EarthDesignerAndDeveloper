@@ -12,19 +12,46 @@ const projects = [
     link: "/project/project1",
   },
   {
-    img: "/assets/img/project/project-02.jpg",
-    title: "Rasalina De Wily Resort",
-    link: "/project/project1",
+    img: "/img/building.jpg",
+    title: " Construction of Kachana-Building School",
+    link: "/project/project2",
   },
   {
-    img: "/assets/img/project/project-03.jpg",
-    title: "City Center Plaza",
-    link: "/project/project1",
+    img: "/img/building.jpg",
+    title: "Construction of Administrative Building",
+    link: "/project/project3",
   },
   {
-    img: "/assets/img/project/project-04.jpg",
-    title: "Downtown Office Tower",
-    link: "/project/project1",
+    img: "/img/building.jpg",
+    title: "Construction of Rajdhani Hetauda Sahari Sadak",
+    link: "/project/project4",
+  },
+  {
+    img: "/img/building.jpg",
+    title: "Baraudhoran Health Post, Old Age Home & Ward Office Construction",
+    link: "/project/project5",
+  },
+  {
+    img: "/img/building.jpg",
+    title:
+      "Construction of Additional Floor and Site Development Works of Research Centre",
+    link: "/project/project6",
+  },
+  {
+    img: "/img/building.jpg",
+    title: "Dasdhunga Narayani Integrated Development Project",
+    link: "/project/project7",
+  },
+  {
+    img: "/img/building.jpg",
+    title: "Construction of the Parliamentary Party Officet",
+    link: "/project/project8",
+  },
+  {
+    img: "/img/building.jpg",
+    title:
+      "Construction of Floor Extension of Two Buildings and Other Civil Works",
+    link: "/project/project9",
   },
 ];
 
