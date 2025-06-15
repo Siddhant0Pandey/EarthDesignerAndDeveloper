@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -44,7 +44,7 @@ const projects = [
   },
   {
     img: "/img/building.jpg",
-    title: "Construction of the Parliamentary Party Officet",
+    title: "Construction of the Parliamentary Party Office",
     link: "/project/project8",
   },
   {
@@ -56,22 +56,10 @@ const projects = [
   {
     img: "/img/building.jpg",
     title:
-      "Regional Office Building, Morang, including Sanitary, Electrical & Site Development Works",
+      "Regional Office Building, Morang, including Electrical & Site Development Works",
     link: "/project/project10",
   },
 ];
-
-const NextArrow = ({ className, onClick }) => (
-  <button className={`${className} custom-next-arrow`} onClick={onClick}>
-    <i className="fas fa-chevron-right"></i>
-  </button>
-);
-
-const PrevArrow = ({ className, onClick }) => (
-  <button className={`${className} custom-prev-arrow`} onClick={onClick}>
-    <i className="fas fa-chevron-left"></i>
-  </button>
-);
 
 const settings = {
   dots: true,
@@ -84,9 +72,7 @@ const settings = {
     { breakpoint: 1200, settings: { slidesToShow: 2 } },
     { breakpoint: 768, settings: { slidesToShow: 1 } },
   ],
-  arrows: true,
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />,
+  arrows: false, // Disable default arrows
   autoplay: true,
   autoplaySpeed: 5000,
   pauseOnHover: true,
@@ -94,6 +80,16 @@ const settings = {
 };
 
 const ProjectSection = () => {
+  const sliderRef = useRef(null);
+
+  const handlePrevClick = () => {
+    sliderRef.current?.slickPrev();
+  };
+
+  const handleNextClick = () => {
+    sliderRef.current?.slickNext();
+  };
+
   return (
     <section className="project-area pos-rel pt-120 pb-120">
       <div className="container">
@@ -115,8 +111,96 @@ const ProjectSection = () => {
           </div>
         </div>
 
-        <div className="project-carousel-wrapper">
-          <Slider {...settings} className="project-carousel">
+        {/* Project Carousel with Custom Navigation */}
+        <div
+          className="project-carousel-wrapper"
+          style={{ position: "relative" }}
+        >
+          {/* Custom Navigation Arrows */}
+          <div
+            className="carousel-navigation"
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "0",
+              right: "0",
+              zIndex: 10,
+              transform: "translateY(-50%)",
+              pointerEvents: "none",
+            }}
+          >
+            <button
+              className="custom-prev-arrow"
+              onClick={handlePrevClick}
+              style={{
+                position: "absolute",
+                left: "-20px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                background: "rgba(0, 0, 0, 0.7)",
+                color: "#fff",
+                border: "none",
+                borderRadius: "50%",
+                width: "50px",
+                height: "50px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+                fontSize: "16px",
+                pointerEvents: "auto",
+                boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.background = "#007bff";
+                e.target.style.transform = "translateY(-50%) scale(1.1)";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.background = "rgba(0, 0, 0, 0.7)";
+                e.target.style.transform = "translateY(-50%) scale(1)";
+              }}
+            >
+              <i className="fas fa-chevron-left"></i>
+            </button>
+
+            <button
+              className="custom-next-arrow"
+              onClick={handleNextClick}
+              style={{
+                position: "absolute",
+                right: "-20px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                background: "rgba(0, 0, 0, 0.7)",
+                color: "#fff",
+                border: "none",
+                borderRadius: "50%",
+                width: "50px",
+                height: "50px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+                fontSize: "16px",
+                pointerEvents: "auto",
+                boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.background = "#007bff";
+                e.target.style.transform = "translateY(-50%) scale(1.1)";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.background = "rgba(0, 0, 0, 0.7)";
+                e.target.style.transform = "translateY(-50%) scale(1)";
+              }}
+            >
+              <i className="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <Slider ref={sliderRef} {...settings} className="project-carousel">
             {projects.map((project, index) => (
               <div className="project-item-wrapper" key={index}>
                 <div
@@ -126,6 +210,7 @@ const ProjectSection = () => {
                     overflow: "hidden",
                     height: "300px",
                     borderRadius: "10px",
+                    margin: "0 10px",
                   }}
                 >
                   <img
@@ -153,28 +238,40 @@ const ProjectSection = () => {
                       color: "#fff",
                       textAlign: "center",
                       textShadow: "0 2px 8px rgba(0,0,0,0.8)",
+                      padding: "20px",
                     }}
                   >
                     <h3
                       style={{
                         fontSize: "24px",
                         marginBottom: "12px",
-
+                        color: "#fff",
                         fontWeight: "900",
+                        lineHeight: "1.2",
                       }}
                     >
                       {project.title}
                     </h3>
                     <Link
                       to={project.link}
-                      href="#"
                       style={{
                         display: "inline-block",
-                        padding: "10px 20px",
+                        padding: "12px 24px",
                         backgroundColor: "#007bff",
                         color: "#fff",
-                        borderRadius: "4px",
+                        borderRadius: "6px",
                         textDecoration: "none",
+                        transition: "all 0.3s ease",
+                        fontSize: "14px",
+                        fontWeight: "600",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.backgroundColor = "#0056b3";
+                        e.target.style.transform = "translateY(-2px)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.backgroundColor = "#007bff";
+                        e.target.style.transform = "translateY(0)";
                       }}
                     >
                       Know More <i className="fas fa-arrow-right ms-2"></i>
