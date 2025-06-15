@@ -42,8 +42,8 @@ function Navbar() {
                   <i className="fas fa-phone-alt me-2"></i>+977 985-1213859
                 </li>
                 <li>
-                  <i className="fas fa-map-marker-alt me-2"></i>M8P8+QW2,
-                  Lalitpur 44600
+                  <i className="fas fa-map-marker-alt me-2"></i>Hattilet 06,
+                  Hetauda
                 </li>
               </ul>
               <ul className="right list-unstyled d-flex gap-3 mb-0">
@@ -210,8 +210,7 @@ function Navbar() {
               <i className="fas fa-phone-alt me-2"></i>+977 985-1213859
             </div>
             <div>
-              <i className="fas fa-map-marker-alt me-2"></i>M8P8+QW2, Lalitpur
-              44600
+              <i className="fas fa-map-marker-alt me-2"></i>Hattilet 06, Hetauda
             </div>
           </div>
 

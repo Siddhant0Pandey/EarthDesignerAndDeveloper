@@ -46,7 +46,7 @@ function Footer() {
                       <span>
                         <i className="fas fa-map-marker-alt"></i>
                       </span>
-                      <h5> M8P8+QW2, Lalitpur 44600</h5>
+                      <h5> Hattilet 06, Hetauda</h5>
                     </div>
                   </li>
                   <li>
@@ -54,17 +54,15 @@ function Footer() {
                       <span>
                         <i className="fas fa-phone-alt"></i>
                       </span>
-                      <h5> +977 985-1213859</h5>
-                      <h5> +977 985-1213859</h5>
+                      <h5 className="pt-1"> +977 985-1213859</h5>
                     </div>
                   </li>
                   <li>
                     <div className="footer-address mt-20">
-                      <span>
+                      <span className="">
                         <i className="fas fa-envelope-open-text"></i>
                       </span>
-                      <h5>earthdd2017@gmail.com</h5>
-                      <h5>earthdd2017@gmail.com</h5>
+                      <h5 className="pt-1">info@earthdd.com.np</h5>
                     </div>
                   </li>
                 </ul>
