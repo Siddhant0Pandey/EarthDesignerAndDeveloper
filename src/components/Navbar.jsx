@@ -79,16 +79,19 @@ function Navbar() {
           <div className="d-flex justify-content-between align-items-center py-2">
             {/* Logo */}
             <div className="logo">
-              <Link to="/">
-                <img
-                  src="./src/assets/img/logo/logo4.png"
-                  alt="logo_not_found"
-                />
-              </Link>
-            </div>
+  <Link to="/">
+    <img
+      src="/img/logo/logo1.png"
+      style={{ "--custom-width": "150px", width: "var(--custom-width)" }}
+      className=" h-50"
+      alt="logo_not_found"
+    />
+  </Link>
+</div>
+
 
             {/* Desktop Nav */}
-            <div className="d-none d-lg-flex align-items-center gap-4">
+            <div className="d-none d-lg-flex align-items-center gap-5">
               <nav className="main-menu">
                 <ul className="d-flex gap-4 m-0 list-unstyled">
                   <li>
@@ -170,7 +173,7 @@ function Navbar() {
         <div className="mobile-menu-header d-flex justify-content-between align-items-center px-3 pt-3">
           <Link to="/">
             <img
-              src="./src/assets/img/logo/logo4.png"
+              src="/img/logo/logo1.png"
               alt="logo_not_found"
               style={{ height: "40px" }}
             />
