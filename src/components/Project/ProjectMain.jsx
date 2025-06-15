@@ -67,6 +67,14 @@ const projectData = [
     description:
       "This project involves the construction of floor extensions for two buildings and associated civil works at the Armed Police Force Headquarters in Halchowk...",
   },
+  {
+    id: "project10",
+    img: "/img/building.jpg",
+    title:
+      "Regional Office Building, Morang, including Sanitary, Electrical & Site Development Works",
+    description:
+      "The project involves the construction of a regional office building in Morang for the Armed Police Force of Nepal. It includes civil construction works, electrical installations, sanitary works, and site development...",
+  },
 ];
 
 const ProjectMain = () => {

@@ -26,6 +26,7 @@ import Project6 from "./components/Project/ProjectDetails/Project6";
 import Project7 from "./components/Project/ProjectDetails/Project7";
 import Project8 from "./components/Project/ProjectDetails/Project8";
 import Project9 from "./components/Project/ProjectDetails/Project9";
+import Project10 from "./components/Project/ProjectDetails/Project10";
 
 function App() {
   return (
@@ -46,7 +47,8 @@ function App() {
           <Route path="project/project6" element={<Project6 />} />
           <Route path="project/project7" element={<Project7 />} />
           <Route path="project/project8" element={<Project8 />} />
-          \ <Route path="project/project9" element={<Project9 />} />
+          <Route path="project/project9" element={<Project9 />} />
+          <Route path="project/project10" element={<Project10 />} />
           <Route path="blog" element={<Blog />} />
           <Route
             path="services/pre-construction"
