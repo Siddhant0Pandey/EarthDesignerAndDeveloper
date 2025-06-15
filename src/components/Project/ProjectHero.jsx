@@ -53,6 +53,12 @@ const projects = [
       "Construction of Floor Extension of Two Buildings and Other Civil Works",
     link: "/project/project9",
   },
+  {
+    img: "/img/building.jpg",
+    title:
+      "Regional Office Building, Morang, including Sanitary, Electrical & Site Development Works",
+    link: "/project/project10",
+  },
 ];
 
 const NextArrow = ({ className, onClick }) => (

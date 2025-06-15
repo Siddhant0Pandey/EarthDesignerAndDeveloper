@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ProjectHead = () => {
+  const backgroundImage = "url(img/project1.jpg)";
   return (
     <div>
       <section
         className="page-title-area pt-160 pb-160"
         data-overlay="8"
-        data-background="img/bg/page-title-bg.jpg"
+        style={{ backgroundImage, backgroundSize: "cover" }}
       >
         <div className="container">
           <div className="row">
