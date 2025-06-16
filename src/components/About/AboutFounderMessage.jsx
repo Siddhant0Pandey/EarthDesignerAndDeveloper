@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import aboutBg from "../../assets/img/about/owner.jpg";
+import aboutBg from "/img/founder.jpg";
 
 function AboutFounderMessage() {
   const [activeTab] = useState("nav-01");
@@ -42,10 +42,12 @@ function AboutFounderMessage() {
                 style={{
                   backgroundImage: `url(${aboutBg})`,
                   backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  backgroundPosition: "center center",
+                  backgroundRepeat: "no-repeat",
                   width: "100%",
-                  height: "360px",
+                  aspectRatio: "4 / 3", // Ensures proportional scaling
                   borderRadius: "10px",
+                  height: "390px",
                 }}
               ></div>
             </div>
