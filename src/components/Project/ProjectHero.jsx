@@ -158,7 +158,7 @@ const ProjectSection = () => {
         }
         
         .border-title::before {
-          content: 'Project';
+          content: '';
           position: absolute;
           top: -8px;
           left: 50%;
