@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
 const projects = [
   {
@@ -211,8 +211,9 @@ const ProjectSection = () => {
                   <span className="text-primary">.</span>
                 </h2>
                 <p className="text-muted fs-5 lh-lg">
-                  Explore our portfolio of outstanding projects delivering excellence in construction, 
-                  architecture, and renovation with innovative design solutions.
+                  Explore our portfolio of outstanding projects delivering
+                  excellence in construction, architecture, and renovation with
+                  innovative design solutions.
                 </p>
               </div>
             </div>
@@ -224,15 +225,15 @@ const ProjectSection = () => {
             <button
               onClick={prevSlide}
               className="nav-arrow btn btn-light shadow position-absolute start-0 top-50 translate-middle-y rounded-circle p-3 border-0"
-              style={{ marginLeft: '-20px', zIndex: 20 }}
+              style={{ marginLeft: "-20px", zIndex: 20 }}
             >
               <ChevronLeft className="text-primary" size={24} />
             </button>
-            
+
             <button
               onClick={nextSlide}
               className="nav-arrow btn btn-light shadow position-absolute end-0 top-50 translate-middle-y rounded-circle p-3 border-0"
-              style={{ marginRight: '-20px', zIndex: 20 }}
+              style={{ marginRight: "-20px", zIndex: 20 }}
             >
               <ChevronRight className="text-primary" size={24} />
             </button>
@@ -240,7 +241,10 @@ const ProjectSection = () => {
             {/* Projects Grid */}
             <div className="row g-4">
               {getVisibleProjects().map((project, index) => (
-                <div key={`${currentSlide}-${index}`} className="col-lg-4 col-md-6">
+                <div
+                  key={`${currentSlide}-${index}`}
+                  className="col-lg-4 col-md-6"
+                >
                   <div className="project-card card border-0 shadow rounded-3 overflow-hidden">
                     <div className="position-relative h-100">
                       <img
@@ -248,21 +252,21 @@ const ProjectSection = () => {
                         alt={project.title}
                         className="project-img card-img w-100"
                       />
-                      
+
                       {/* Gradient Overlay */}
                       <div className="project-overlay position-absolute top-0 start-0 w-100 h-100"></div>
-                      
+
                       {/* Content Overlay */}
                       <div className="position-absolute bottom-0 start-0 w-100 p-4 text-white">
                         <div className="project-content">
                           <h3 className="h4 fw-bold mb-2 text-white">
                             {project.title}
                           </h3>
-                          
+
                           <p className="project-description text-light mb-3 small">
                             {project.description}
                           </p>
-                          
+
                           <button className="project-btn btn btn-primary fw-semibold px-4 py-2 rounded d-inline-flex align-items-center gap-2">
                             Know More
                             <ArrowRight size={16} />
@@ -282,15 +286,15 @@ const ProjectSection = () => {
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`dot-indicator btn p-0 border-0 rounded-pill ${
-                    index === currentSlide ? 'bg-primary active' : 'bg-secondary'
+                    index === currentSlide
+                      ? "bg-primary active"
+                      : "bg-secondary"
                   }`}
-                  style={{ height: '12px' }}
+                  style={{ height: "12px" }}
                 />
               ))}
             </div>
           </div>
-
-         
         </div>
 
         {/* Background Decorations */}

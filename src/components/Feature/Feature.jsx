@@ -3,86 +3,68 @@ import { Link } from "react-router-dom";
 
 function Feature() {
   const backgroundImage = "url(/img/feature/feature-bg.jpg)";
-
   return (
     <section
       className="feature-area pt-120 pb-90"
-      style={{
-        backgroundImage: backgroundImage,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      style={{ backgroundImage: backgroundImage, backgroundSize: "cover" }}
     >
+      {/* src\assets\img\bg\feature-bg.jpg */}
       <div className="container">
         <div className="section-title text-center">
           <div className="border-title">
-            <h1>Featured</h1>
+            <h1>featured</h1>
           </div>
-          <h5>Core Services</h5>
-          <h2>Explore What We Offer</h2>
+          <h5>featured</h5>
+          <h2>explore the features</h2>
         </div>
         <div className="row">
-          {/* Feature 1 */}
           <div className="col-xl-4 col-lg-4 col-md-6">
             <div className="feature-single mb-30">
               <div className="feature-thumb">
-                <img
-                  src="/img/feature/feature-01.jpg"
-                  alt="Urban Infrastructure"
-                />
+                <img src="/img/feature/feature-01.jpg" alt="image_not_found" />
               </div>
               <div className="feature-text">
-                <h4>Committed to Urban Excellence</h4>
+                <h4>explore the features</h4>
                 <h2>
-                  <Link to="#">Urban Infrastructure</Link>
+                  <Link to="#">Interior Design</Link>
                 </h2>
                 <p>
-                  From smart road systems to public utilities, we build reliable
-                  infrastructure that enhances everyday urban life.
+                  Rorem ipsum dolor sit amet, consectetur adip isicing elit, sed
+                  do eiusmod tempor incutey.
                 </p>
               </div>
             </div>
           </div>
-
-          {/* Feature 2 */}
           <div className="col-xl-4 col-lg-4 col-md-6">
             <div className="feature-single mb-30">
               <div className="feature-thumb">
-                <img
-                  src="/img/feature/feature-02.jpg"
-                  alt="Architectural Design"
-                />
+                <img src="img/feature/feature-02.jpg" alt="image_not_found" />
               </div>
               <div className="feature-text">
-                <h4>Innovative and Sustainable</h4>
+                <h4>explore the features</h4>
                 <h2>
-                  <Link to="#">Architectural Design</Link>
+                  <Link to="#">construction</Link>
                 </h2>
                 <p>
-                  Our designs blend aesthetics and functionality, delivering
-                  efficient, eco-friendly, and modern spaces.
+                  Rorem ipsum dolor sit amet, consectetur adip isicing elit, sed
+                  do eiusmod tempor incutey.
                 </p>
               </div>
             </div>
           </div>
-
-          {/* Feature 3 */}
           <div className="col-xl-4 col-lg-4 col-md-6">
             <div className="feature-single mb-30">
               <div className="feature-thumb">
-                <img
-                  src="/img/feature/feature-03.jpg"
-                  alt="Building Repair & Renovation"
-                />
+                <img src="/img/feature/feature-03.jpg" alt="image_not_found" />
               </div>
               <div className="feature-text">
-                <h4>Preserving and Upgrading</h4>
+                <h4>explore the features</h4>
                 <h2>
-                  <Link to="#">Renovation & Restoration</Link>
+                  <Link to="#">building repair</Link>
                 </h2>
                 <p>
-                  We repair and restore old structures with modern techniques,
-                  enhancing their safety, value, and appearance.
+                  Rorem ipsum dolor sit amet, consectetur adip isicing elit, sed
+                  do eiusmod tempor incutey.
                 </p>
               </div>
             </div>
