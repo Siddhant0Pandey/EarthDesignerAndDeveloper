@@ -145,11 +145,11 @@ function ContactForm() {
           <div className="col-xl-5 col-lg-5 col-md-12">
             <div className="contact-left">
               <div className="contact-thumb-left">
-                <img src="src/assets/img/bg/contact-bg.jpg" alt="image_not_found" />
+                <img src="/img/bg/contact-bg.jpg" alt="image_not_found" />
                 <div className="contact-shape"></div>
               </div>
               <div className="contact-thumb-right">
-                <img src="src/assets/img/bg/contact-bg-02.jpg" alt="image_not_found" />
+                <img src="/img/bg/contact-bg-02.jpg" alt="image_not_found" />
               </div>
             </div>
           </div>

@@ -10,10 +10,12 @@ function Footer() {
             <div className="col-xl-4 col-lg-6 col-md-6">
               <div className="footer-left-widget mb-40">
                 <div className="footer-logo">
-                  <img
-                    src="src/assets/img/logo/logo-22.png"
-                    alt="logo_not_found"
-                  />
+                   <img
+      src="/img/logo/logo1.png"
+      style={{ "--custom-width": "150px", width: "var(--custom-width)" }}
+      className=" h-50"
+      alt="logo_not_found"
+    />
                 </div>
                 <p>
                   We are a dedicated team of civil engineers, designers, and
