@@ -36,18 +36,21 @@ function AboutFounderMessage() {
           <div className="row align-items-stretch">
             {/* Image column */}
             {/* Image column */}
-            <div className="col-lg-6 order-1 order-lg-2 mb-4">
+            <div className="col-lg-6 order-1 order-lg-2 mb-4 " style={{height:"320px"}}>
               <div
-                className="about-right-thumb mb-100"
+                className="about-right-thumb w-100"
                 style={{
+                  position: "relative",
+                  // paddingBottom: "66.66%", // 4:3 aspect ratio (390 / 585 = 0.666)
                   backgroundImage: `url(${aboutBg})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center center",
                   backgroundRepeat: "no-repeat",
-                  width: "100%",
-                  aspectRatio: "4 / 3", // Ensures proportional scaling
                   borderRadius: "10px",
-                  height: "390px",
+                  width: "100%",
+                  maxWidth: "500px", // limits width on larger screens
+                  height: "100%",
+                  objectFit: "cover",
                 }}
               ></div>
             </div>
