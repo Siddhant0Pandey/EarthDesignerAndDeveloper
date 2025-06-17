@@ -3045,3 +3045,9 @@ transition: all 1.4s ease;
 	  opacity: 0;
 	}
   }
+
+  .project-btn{
+	background-color: #005792;
+	color: white;
+	border: none;
+  }

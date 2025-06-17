@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
 const projects = [
   {
-    img: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop",
+    img: "https://ks.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop",
     title: "Construction of Modern Bus Park",
     description: "State-of-the-art transportation hub with modern amenities",
     link: "/project/project1",
@@ -202,15 +202,15 @@ const ProjectSection = () => {
             <div className="col-lg-8">
               <div className="text-center mb-5">
                 <div className="border-title d-inline-block position-relative mb-4">
-                  <h5 className="text-primary fw-semibold text-uppercase ls-1 bg-white px-3 mb-0 position-relative">
+                  <h5 className="text-[#1696e7] fw-semibold text-uppercase ls-1 bg-white px-3 mb-0 position-relative">
                     Our Projects
                   </h5>
                 </div>
-                <h2 className="display-4 fw-bold text-dark mb-4 lh-sm">
+                <h2 className="display-4 fw-bold text-[#1696e7] mb-4 lh-sm">
                   Projects That We Complete
-                  <span className="text-primary">.</span>
+                  <span className="text-[#1696e7]">.</span>
                 </h2>
-                <p className="text-muted fs-5 lh-lg">
+                <p className=" fs-5 lh-lg text-[#1696e7]">
                   Explore our portfolio of outstanding projects delivering excellence in construction, 
                   architecture, and renovation with innovative design solutions.
                 </p>
@@ -263,7 +263,7 @@ const ProjectSection = () => {
                             {project.description}
                           </p>
                           
-                          <button className="project-btn btn btn-primary fw-semibold px-4 py-2 rounded d-inline-flex align-items-center gap-2">
+                          <button className="project-btn  text-white fw-semibold px-4 py-2  d-inline-flex align-items-center gap-2">
                             Know More
                             <ArrowRight size={16} />
                           </button>
