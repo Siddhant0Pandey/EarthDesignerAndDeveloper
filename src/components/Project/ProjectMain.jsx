@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const projectData = [
   {
     id: "project1",
-    img: "/img/building.jpg",
+    img: "/img/construction1.jpg",
     title: "Construction of Modern Bus Park, Itahari-9, Sunsari",
     description:
       "The Construction of Modern Bus Park in Itahari-9, Sunsari is a comprehensive infrastructure development initiative undertaken by...",
@@ -25,21 +25,21 @@ const projectData = [
   },
   {
     id: "project4",
-    img: "/img/building.jpg",
+    img: "/img/construction2.jpg",
     title: "Construction of Rajdhani Hetauda Sahari Sadak",
     description:
       "This project involves the construction of Rajdhani Hetauda Sahari Sadak under the approved package. The work includes full execution and rectification of defects in accordance with contractual obligations.",
   },
   {
     id: "project5",
-    img: "/img/building.jpg",
+    img: "/img/construction3.jpg",
     title: "Baraudhoran Health Post, Old Age Home & Ward Office Construction",
     description:
       "This project involves the construction of the Baraudhoran Health Post, Old Age Home, and multiple ward office buildings in Bishnu Rural Municipality, ensuring proper...",
   },
   {
     id: "project6",
-    img: "/img/building.jpg",
+    img: "/img/construction4.jpg",
     title:
       "Construction of Additional Floor and Site Development Works of Research Centre",
     description:
@@ -47,21 +47,21 @@ const projectData = [
   },
   {
     id: "project7",
-    img: "/img/building.jpg",
+    img: "/img/construction5.jpg",
     title: "Dasdhunga Narayani Integrated Development Project ",
     description:
       "This project focuses on the execution and completion of the Dasdhunga Narayani Integrated Development Building, ensuring infrastructure...",
   },
   {
     id: "project8",
-    img: "/img/building.jpg",
+    img: "/img/construction6.jpg",
     title: "Construction of the Parliamentary Party Office ",
     description:
       "This project involves the construction of the Parliamentary Party Office in Hetauda, ensuring high-quality execution...",
   },
   {
     id: "project9",
-    img: "/img/building.jpg",
+    img: "/img/construction7.jpg",
     title:
       "Construction of Floor Extension of Two Buildings and Other Civil Works ",
     description:
@@ -69,7 +69,7 @@ const projectData = [
   },
   {
     id: "project10",
-    img: "/img/building.jpg",
+    img: "/img/construction8.jpg",
     title:
       "Regional Office Building, Morang, including Sanitary, Electrical & Site Development Works",
     description:
