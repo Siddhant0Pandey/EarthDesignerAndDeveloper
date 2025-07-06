@@ -33,7 +33,7 @@ const projectData = {
 function Project3() {
   return (
     <div className="container mt-4">
-      <h1 className="text-primary">{projectData.projectName}</h1>
+      <h1 className="text-[#005792]">{projectData.projectName}</h1>
       <p className="text-muted">
         <strong>Project Code:</strong> {projectData.projectCode}
       </p>

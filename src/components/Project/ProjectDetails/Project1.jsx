@@ -46,7 +46,7 @@ function Project1() {
     <div className="container mt-4">
       {/* Project Image */}
 
-      <h1 className="text-primary">{boqData.projectName}</h1>
+      <h1 className="text-[#005792]">{boqData.projectName}</h1>
       <p>
         <strong>Client:</strong> {boqData.client}
       </p>

@@ -23,19 +23,19 @@ function Footer() {
                   high-quality construction projects.
                 </p>
                 <div className="footer-social mt-40">
-                  <Link to="#">
+                  {/* <Link to="#">
                     <i className="fab fa-twitter"></i>
-                  </Link>
+                  </Link> */}
 
-                  <Link to="#">
+                  <Link to="tel:985-1213859">
                     <i className="fab fa-whatsapp"></i>
                   </Link>
-                  <Link to="#">
+                  {/* <Link to="#">
                     <i className="fab fa-facebook"></i>
                   </Link>
                   <Link to="#">
                     <i className="fab fa-instagram"></i>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
@@ -192,7 +192,7 @@ function Footer() {
                 <p>
                   Developed by{" "}
                   <a
-                    href="https://www.codesala.com"
+                    href="https://www.codesala.com" 
                     target="_blank"
                     className="text-warning"
                   >
