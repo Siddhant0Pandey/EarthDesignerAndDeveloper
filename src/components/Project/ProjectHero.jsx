@@ -1,30 +1,70 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
     img: "https://ks.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop",
     title: "Construction of Modern Bus Park",
-    description: "State-of-the-art transportation hub with modern amenities",
+    description: "Advanced transit hub with modern infrastructure and services",
     link: "/project/project1",
   },
   {
     img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
-    title: "Rasalina De Wily Resort",
-    description: "Luxury resort with stunning architectural design",
+    title: "Construction of Kachana-Building School",
+    description: "Well-equipped school facility promoting quality education",
     link: "/project/project2",
   },
   {
     img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
-    title: "City Center Plaza",
-    description: "Mixed-use development in the heart of the city",
+    title: "Construction of Administrative Building",
+    description: "Modern office complex with efficient and functional design",
     link: "/project/project3",
   },
   {
     img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
-    title: "Downtown Office Tower",
-    description: "Modern commercial space with sustainable features",
+    title: "Construction of Rajdhani Hetauda Sahari Sadak",
+    description: "Urban road project enhancing city connectivity and access",
     link: "/project/project4",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+    title: "Baraudhoran Health Post, Old Age Home & Ward Office Construction",
+    description: "Essential facilities built for health and community service",
+    link: "/project/project5",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+    title:
+      "Construction of Additional Floor and Site Development Works of Research Centre",
+    description: "Facility expansion to support scientific research and growth",
+    link: "/project/project6",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+    title: "Dasdhunga Narayani Integrated Development Project",
+    description: "Integrated civic project for regional growth and welfare",
+    link: "/project/project7",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+    title: "Construction of the Parliamentary Party Office",
+    description: "Dedicated office space for administrative political use",
+    link: "/project/project8",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+    title:
+      "Construction of Floor Extension of Two Buildings and Other Civil Works",
+    description: "Expansion and upgrades to existing government buildings",
+    link: "/project/project9",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+    title:
+      "Regional Office Building, Morang, including Sanitary, Electrical & Site Development Works",
+    description: "New regional office with full facility and site setup",
+    link: "/project/project10",
   },
 ];
 
@@ -53,147 +93,7 @@ const ProjectSection = () => {
 
   return (
     <>
-      <style>{`
-        .project-section {
-          background: linear-gradient(to bottom, #f8f9fa, #ffffff);
-        }
-        
-        .project-card {
-          height: 320px;
-          overflow: hidden;
-          transition: all 0.5s ease;
-          position: relative;
-        }
-        
-        .project-card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 1rem 3rem rgba(0,0,0,0.2) !important;
-        }
-        
-        .project-img {
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.7s ease;
-        }
-        
-        .project-card:hover .project-img {
-          transform: scale(1.1);
-        }
-        
-        .project-overlay {
-          background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2), transparent);
-          opacity: 0.7;
-          transition: opacity 0.3s ease;
-        }
-        
-        .project-card:hover .project-overlay {
-          opacity: 0.9;
-        }
-        
-        .project-content {
-          transform: translateY(16px);
-          transition: transform 0.3s ease;
-        }
-        
-        .project-card:hover .project-content {
-          transform: translateY(0);
-        }
-        
-        .project-description {
-          opacity: 0;
-          transition: all 0.3s ease 0.1s;
-        }
-        
-        .project-card:hover .project-description {
-          opacity: 1;
-        }
-        
-        .project-btn {
-          opacity: 0;
-          transform: translateY(16px);
-          transition: all 0.3s ease 0.1s;
-        }
-        
-        .project-card:hover .project-btn {
-          opacity: 1;
-          transform: translateY(0);
-        }
-        
-        .project-btn:hover {
-          transform: scale(1.05) !important;
-        }
-        
-        .nav-arrow {
-          transition: all 0.3s ease;
-          z-index: 20;
-        }
-        
-        .nav-arrow:hover {
-          transform: scale(1.1);
-          background-color: #e3f2fd !important;
-        }
-        
-        .dot-indicator {
-          width: 12px;
-          height: 12px;
-          transition: all 0.3s ease;
-        }
-        
-        .dot-indicator.active {
-          width: 32px;
-        }
-        
-        .stat-circle {
-          width: 80px;
-          height: 80px;
-          transition: background-color 0.3s ease;
-        }
-        
-        .stat-item:hover .stat-circle {
-          background-color: #e3f2fd !important;
-        }
-        
-        .border-title {
-          position: relative;
-        }
-        
-        .border-title::before {
-          content: '';
-          position: absolute;
-          top: -8px;
-          left: 50%;
-          transform: translateX(-50%);
-          font-size: 4rem;
-          font-weight: bold;
-          color: #f1f3f4;
-          z-index: -1;
-          user-select: none;
-        }
-        
-        .bg-decoration-1 {
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 256px;
-          height: 256px;
-          background-color: #e3f2fd;
-          border-radius: 50%;
-          transform: translate(128px, -128px);
-          opacity: 0.5;
-        }
-        
-        .bg-decoration-2 {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 192px;
-          height: 192px;
-          background-color: #bbdefb;
-          border-radius: 50%;
-          transform: translate(-96px, 96px);
-          opacity: 0.3;
-        }
-      `}</style>
+      {/* keep your existing styles here... */}
 
       <section className="project-section position-relative py-5">
         <div className="container">
@@ -210,9 +110,11 @@ const ProjectSection = () => {
                   Projects That We Complete
                   <span className="text-[#1696e7]">.</span>
                 </h2>
+
                 <p className=" fs-5 lh-lg text-[#1696e7]">
                   Explore our portfolio of outstanding projects delivering excellence in construction, 
                   architecture, and renovation with innovative design solutions.
+
                 </p>
               </div>
             </div>
@@ -224,15 +126,15 @@ const ProjectSection = () => {
             <button
               onClick={prevSlide}
               className="nav-arrow btn btn-light shadow position-absolute start-0 top-50 translate-middle-y rounded-circle p-3 border-0"
-              style={{ marginLeft: '-20px', zIndex: 20 }}
+              style={{ marginLeft: "-20px", zIndex: 20 }}
             >
               <ChevronLeft className="text-primary" size={24} />
             </button>
-            
+
             <button
               onClick={nextSlide}
               className="nav-arrow btn btn-light shadow position-absolute end-0 top-50 translate-middle-y rounded-circle p-3 border-0"
-              style={{ marginRight: '-20px', zIndex: 20 }}
+              style={{ marginRight: "-20px", zIndex: 20 }}
             >
               <ChevronRight className="text-primary" size={24} />
             </button>
@@ -240,7 +142,10 @@ const ProjectSection = () => {
             {/* Projects Grid */}
             <div className="row g-4">
               {getVisibleProjects().map((project, index) => (
-                <div key={`${currentSlide}-${index}`} className="col-lg-4 col-md-6">
+                <div
+                  key={`${currentSlide}-${index}`}
+                  className="col-lg-4 col-md-6"
+                >
                   <div className="project-card card border-0 shadow rounded-3 overflow-hidden">
                     <div className="position-relative h-100">
                       <img
@@ -248,25 +153,31 @@ const ProjectSection = () => {
                         alt={project.title}
                         className="project-img card-img w-100"
                       />
-                      
+
                       {/* Gradient Overlay */}
                       <div className="project-overlay position-absolute top-0 start-0 w-100 h-100"></div>
-                      
+
                       {/* Content Overlay */}
                       <div className="position-absolute bottom-0 start-0 w-100 p-4 text-white">
                         <div className="project-content">
                           <h3 className="h4 fw-bold mb-2 text-white">
                             {project.title}
                           </h3>
-                          
+
                           <p className="project-description text-light mb-3 small">
                             {project.description}
                           </p>
-                          
-                          <button className="project-btn  text-white fw-semibold px-4  py-2  d-inline-flex align-items-center gap-2">
+
+
+                  
+                          <Link
+                            to={project.link}
+                            className="project-btn btn btn-primary fw-semibold px-4 py-2 rounded d-inline-flex align-items-center gap-2 text-decoration-none"
+                          >
+
                             Know More
                             <ArrowRight size={16} />
-                          </button>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -282,15 +193,15 @@ const ProjectSection = () => {
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`dot-indicator btn p-0 border-0 rounded-pill ${
-                    index === currentSlide ? 'bg-primary active' : 'bg-secondary'
+                    index === currentSlide
+                      ? "bg-primary active"
+                      : "bg-secondary"
                   }`}
-                  style={{ height: '12px' }}
+                  style={{ height: "12px" }}
                 />
               ))}
             </div>
           </div>
-
-         
         </div>
 
         {/* Background Decorations */}

@@ -38,6 +38,15 @@ function Project3() {
         <strong>Project Code:</strong> {projectData.projectCode}
       </p>
 
+      {/* Responsive Image */}
+      <div className="my-4">
+        <img
+          src="/img/project3.jpg"
+          alt="Administrative Building Project"
+          className="img-fluid rounded shadow"
+        />
+      </div>
+
       <div className="row mb-3">
         <div className="col-md-6">
           <p>

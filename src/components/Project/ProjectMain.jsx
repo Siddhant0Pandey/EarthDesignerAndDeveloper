@@ -18,7 +18,7 @@ const projectData = [
   },
   {
     id: "project3",
-    img: "/img/building.jpg",
+    img: "/img/project3.jpg",
     title: "Construction of Administrative Building",
     description:
       "This project involves the full construction of the Administrative Building in Itahari-06, ensuring adherence to contractual obligations and quality standards.",
