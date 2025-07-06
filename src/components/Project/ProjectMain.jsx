@@ -122,7 +122,7 @@ const ProjectMain = () => {
                     <p className="flex-grow-1">{project.description}</p>
                     <Link
                       to={`/project/${project.id}`}
-                      className="btn btn-sm btn-primary mt-2 align-self-start"
+                      className="btn project-btn mt-2 align-self-start"
                     >
                       Read More
                     </Link>

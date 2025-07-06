@@ -76,7 +76,7 @@ a:hover,
 }
 a,
 button {
-	color: #1696e7;
+	color: #005792;
 	outline: medium none;
 }
 button:focus,input:focus,input:focus,textarea,textarea:focus{outline: 0}
@@ -181,7 +181,7 @@ label {
 	position: relative
 }
 .theme-overlay::before {
-	background: #1696e7 none repeat scroll 0 0;
+	background: #005792 none repeat scroll 0 0;
 	content: "";
 	height: 100%;
 	left: 0;

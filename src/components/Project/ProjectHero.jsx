@@ -263,7 +263,7 @@ const ProjectSection = () => {
                             {project.description}
                           </p>
                           
-                          <button className="project-btn  text-white fw-semibold px-4 py-2  d-inline-flex align-items-center gap-2">
+                          <button className="project-btn  text-white fw-semibold px-4  py-2  d-inline-flex align-items-center gap-2">
                             Know More
                             <ArrowRight size={16} />
                           </button>
