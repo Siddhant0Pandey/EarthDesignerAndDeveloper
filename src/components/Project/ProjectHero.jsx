@@ -99,15 +99,15 @@ const ProjectSection = () => {
           <div className="col-lg-8">
             <div className="text-center mb-5">
               <div className="border-title d-inline-block position-relative mb-4">
-                <h5 className="text-[#1696e7] fw-semibold text-uppercase ls-1 bg-white px-3 mb-0 position-relative">
+                <h5 className="text-[#F57C00] fw-semibold text-uppercase ls-1 bg-white px-3 mb-0 position-relative">
                   Our Projects
                 </h5>
               </div>
-              <h2 className="display-4 fw-bold text-[#1696e7] mb-4 lh-sm">
+              <h2 className="display-4 fw-bold text-[#F57C00] mb-4 lh-sm">
                 Projects That We Complete
-                <span className="text-[#1696e7]">.</span>
+                <span className="text-[#F57C00]">.</span>
               </h2>
-              <p className="fs-5 lh-lg text-[#1696e7]">
+              <p className="fs-5 lh-lg text-[#F57C00]">
                 Explore our portfolio of outstanding projects delivering
                 excellence in construction, architecture, and renovation with
                 innovative design solutions.
@@ -214,8 +214,8 @@ const ProjectSection = () => {
                         to={project.link}
                         className="btn btn-primary fw-semibold px-3 py-2 rounded d-inline-flex align-items-center gap-2 text-decoration-none"
                         style={{ 
-                          backgroundColor: "#1696e7", 
-                          borderColor: "#1696e7",
+                          backgroundColor: "#F57C00", 
+                          borderColor: "#F57C00",
                           fontSize: "0.85rem"
                         }}
                       >
