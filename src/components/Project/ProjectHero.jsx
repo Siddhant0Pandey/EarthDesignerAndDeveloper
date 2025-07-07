@@ -236,7 +236,7 @@ const ProjectSection = () => {
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`dot-indicator btn p-0 border-0 rounded-pill ${
-                  index === currentSlide ? "bg-primary" : "bg-secondary"
+                  index === currentSlide ? "bg-dots" : "bg-secondary"
                 }`}
                 style={{
                   height: "12px",

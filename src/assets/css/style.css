@@ -3051,3 +3051,7 @@ transition: all 1.4s ease;
 	color: white;
 	border: none;
   }
+
+  .bg-dots{
+	background-color: #F57C00;
+  }
