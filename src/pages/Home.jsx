@@ -11,7 +11,7 @@ import AboutHero2 from "../components/About/AboutHero2";
 
 const Home = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
    <HomeHero/>
    <AboutHero2/>
    <ServiceHero/>
@@ -20,7 +20,7 @@ const Home = () => {
    <Feature/>
    <Testimonial/>
 <ContactForm/>
-   </>
+   </div>
   );
 };
 
