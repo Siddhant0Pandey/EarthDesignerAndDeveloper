@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -70,13 +70,30 @@ const projects = [
 
 const ProjectSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [projectsPerSlide, setProjectsPerSlide] = useState(3); // 3 for desktop, 1 for mobile
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setProjectsPerSlide(1);
+      } else {
+        setProjectsPerSlide(3);
+      }
+    };
+
+    handleResize(); // set initial
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % projects.length);
+    setCurrentSlide((prev) => (prev + projectsPerSlide) % projects.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + projects.length) % projects.length);
+    setCurrentSlide(
+      (prev) => (prev - projectsPerSlide + projects.length) % projects.length
+    );
   };
 
   const goToSlide = (index) => {
@@ -85,7 +102,7 @@ const ProjectSection = () => {
 
   const getVisibleProjects = () => {
     const visible = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < projectsPerSlide; i++) {
       visible.push(projects[(currentSlide + i) % projects.length]);
     }
     return visible;
@@ -94,7 +111,7 @@ const ProjectSection = () => {
   return (
     <section className="project-section position-relative py-5">
       <div className="container">
-        {/* Header Section */}
+        {/* Header */}
         <div className="row justify-content-center">
           <div className="col-lg-8">
             <div className="text-center mb-5">
@@ -116,54 +133,46 @@ const ProjectSection = () => {
           </div>
         </div>
 
-        {/* Carousel Container */}
+        {/* Carousel */}
         <div className="position-relative">
-          {/* Navigation Arrows */}
+          {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="nav-arrow btn btn-light shadow position-absolute start-0 top-50 translate-middle-y rounded-circle p-3 border-0"
-            style={{ marginLeft: "-20px", zIndex: 20 }}
+            className="nav-arrow btn btn-light shadow position-absolute start-0 top-50 translate-middle-y rounded-circle p-2 p-md-3 border-0"
+            style={{ marginLeft: "-10px", zIndex: 20 }}
           >
-            <ChevronLeft className="text-primary" size={24} />
+            <ChevronLeft className="text-primary" size={20} />
           </button>
-
           <button
             onClick={nextSlide}
-            className="nav-arrow btn btn-light shadow position-absolute end-0 top-50 translate-middle-y rounded-circle p-3 border-0"
-            style={{ marginRight: "-20px", zIndex: 20 }}
+            className="nav-arrow btn btn-light shadow position-absolute end-0 top-50 translate-middle-y rounded-circle p-2 p-md-3 border-0"
+            style={{ marginRight: "-10px", zIndex: 20 }}
           >
-            <ChevronRight className="text-primary" size={24} />
+            <ChevronRight className="text-primary" size={20} />
           </button>
 
-          {/* Projects Grid */}
+          {/* Cards */}
           <div className="row g-4">
             {getVisibleProjects().map((project, index) => (
               <div
                 key={`${currentSlide}-${index}`}
-                className="col-lg-4 col-md-6"
+                className="col-12 col-md-6 col-lg-4"
               >
-                <div 
-                  className="project-card card border-0 shadow rounded-3 overflow-hidden" 
-                  style={{ 
-                    height: "450px", 
+                <div
+                  className="project-card card border-0 shadow rounded-3 overflow-hidden"
+                  style={{
+                    height: "450px",
                     width: "100%",
-                    position: "relative"
+                    position: "relative",
                   }}
                 >
-                  {/* Image Container */}
-                  <div 
-                    className="position-absolute top-0 start-0 w-100 h-100"
-                  >
+                  <div className="position-absolute top-0 start-0 w-100 h-100">
                     <img
                       src={project.img}
                       alt={project.title}
                       className="w-100 h-100"
-                      style={{
-                        objectFit: "cover",
-                      }}
+                      style={{ objectFit: "cover" }}
                     />
-
-                    {/* Dark Overlay */}
                     <div
                       className="position-absolute top-0 start-0 w-100 h-100"
                       style={{
@@ -173,50 +182,55 @@ const ProjectSection = () => {
                     ></div>
                   </div>
 
-                  {/* Content Section - Fixed Position */}
-                  <div 
-                    className="position-absolute bottom-0 start-0 w-100 p-4 text-white" 
-                    style={{ 
+                  <div
+                    className="position-absolute bottom-0 start-0 w-100 p-3 p-md-4 text-white"
+                    style={{
                       zIndex: 2,
                       height: "180px",
                       display: "flex",
                       flexDirection: "column",
-                      justifyContent: "flex-start"
+                      justifyContent: "flex-start",
                     }}
                   >
                     <div className="project-content">
-                      <h3 className="h5 fw-bold mb-2 text-white" style={{ 
-                        fontSize: "1.1rem", 
-                        lineHeight: "1.3",
-                        height: "2.6rem",
-                        overflow: "hidden",
-                        display: "-webkit-box",
-                        WebkitLineClamp: 2,
-                        WebkitBoxOrient: "vertical"
-                      }}>
+                      <h3
+                        className="h6 fw-bold mb-2 text-white"
+                        style={{
+                          fontSize: "1rem",
+                          lineHeight: "1.3",
+                          height: "2.6rem",
+                          overflow: "hidden",
+                          display: "-webkit-box",
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: "vertical",
+                        }}
+                      >
                         {project.title}
                       </h3>
-                      <p className="text-light mb-2 small opacity-90" style={{ 
-                        fontSize: "0.875rem", 
-                        lineHeight: "1.4",
-                        height: "2.8rem",
-                        overflow: "hidden",
-                        display: "-webkit-box",
-                        WebkitLineClamp: 2,
-                        WebkitBoxOrient: "vertical"
-                      }}>
+                      <p
+                        className="text-light mb-2 small opacity-90"
+                        style={{
+                          fontSize: "0.8rem",
+                          lineHeight: "1.4",
+                          height: "2.8rem",
+                          overflow: "hidden",
+                          display: "-webkit-box",
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: "vertical",
+                        }}
+                      >
                         {project.description}
                       </p>
                     </div>
-                    
+
                     <div style={{ marginTop: "8px" }}>
                       <Link
                         to={project.link}
                         className="btn btn-primary fw-semibold px-3 py-2 rounded d-inline-flex align-items-center gap-2 text-decoration-none"
-                        style={{ 
-                          backgroundColor: "#F57C00", 
+                        style={{
+                          backgroundColor: "#F57C00",
                           borderColor: "#F57C00",
-                          fontSize: "0.85rem"
+                          fontSize: "0.8rem",
                         }}
                       >
                         Know More
@@ -229,8 +243,8 @@ const ProjectSection = () => {
             ))}
           </div>
 
-          {/* Dots Indicator */}
-          <div className="d-flex justify-content-center mt-5 gap-2">
+          {/* Dot Indicators */}
+          <div className="d-flex justify-content-center mt-4 gap-2 flex-wrap">
             {projects.map((_, index) => (
               <button
                 key={index}
@@ -248,7 +262,7 @@ const ProjectSection = () => {
         </div>
       </div>
 
-      {/* Background Decorations (Optional) */}
+      {/* Background decorations (optional) */}
       <div className="bg-decoration-1"></div>
       <div className="bg-decoration-2"></div>
     </section>
