@@ -36,7 +36,10 @@ function AboutFounderMessage() {
           <div className="row align-items-stretch">
             {/* Image column */}
             {/* Image column */}
-            <div className="col-lg-6 order-1 order-lg-2 mb-4 " style={{height:"320px"}}>
+            <div
+              className="col-lg-6 order-1 order-lg-2 mb-4 "
+              style={{ height: "320px" }}
+            >
               <div
                 className="about-right-thumb w-100"
                 style={{
@@ -57,22 +60,9 @@ function AboutFounderMessage() {
 
             {/* Text column */}
             <div className="col-lg-6 order-2 order-lg-1 d-flex">
-              <div
-                className="about-left pos-rel"
-                style={{
-                  padding: "30px",
-                  fontStyle: "italic",
-                  height: "360px",
-                  backgroundColor: "#f9f9f9",
-                  borderRadius: "10px",
-                  width: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center", // center vertically
-                }}
-              >
+              <div className="about-left pos-rel p-6 italic h-[360px] bg-[#f9f9f9] rounded-[10px] w-full flex flex-col justify-center pt-[120px] lg:pt-0">
                 {tabContent[activeTab].paragraphs.map((p, index) => (
-                  <p key={index} style={{ marginBottom: "1rem" }}>
+                  <p key={index} className="mb-4">
                     {p}
                   </p>
                 ))}

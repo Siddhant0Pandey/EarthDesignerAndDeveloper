@@ -10,7 +10,6 @@ function Navbar() {
         setMobileMenuOpen(false);
       }
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [mobileMenuOpen]);
@@ -55,14 +54,15 @@ function Navbar() {
           position: fixed;
           top: 0;
           right: -100%;
-          width: 320px;
-          max-width: 85vw;
+          width: 100vw;
           height: 100vh;
           background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
           z-index: 1000;
-          transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: right 0.4s ease;
           box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
-          overflow-y: auto;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
         }
 
         .mobile-menu-panel.active {
@@ -70,16 +70,17 @@ function Navbar() {
         }
 
         .mobile-menu-header {
-          // background: linear-gradient(135deg, #2c3e50 0%, #005792 100%);
-          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           padding: 1rem 1.5rem;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .mobile-menu-close {
-          background: rgba(255, 255, 255, 0.1);
+          background: rgba(0, 0, 0, 0.05);
           border: none;
-          color: white;
+          color: #333;
           width: 40px;
           height: 40px;
           border-radius: 50%;
@@ -92,12 +93,17 @@ function Navbar() {
         }
 
         .mobile-menu-close:hover {
-          background: rgba(255, 255, 255, 0.2);
+          background: rgba(0, 0, 0, 0.1);
           transform: rotate(90deg);
         }
 
         .mobile-menu-content {
-          padding: 2rem 1.5rem;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 1rem;
+          overflow-y: auto;
         }
 
         .mobile-nav-links {
@@ -112,43 +118,26 @@ function Navbar() {
 
         .mobile-nav-links a {
           display: block;
-          padding: 1rem 1.5rem;
+          padding: 1rem;
           color: #2c3e50;
           text-decoration: none;
           font-weight: 500;
           font-size: 16px;
-          border-radius: 12px;
+          border-radius: 8px;
           transition: all 0.3s ease;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .mobile-nav-links a::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(135deg, #005792, #2980b9);
-          transition: left 0.3s ease;
-          z-index: -1;
+          background: #fff;
         }
 
         .mobile-nav-links a:hover {
+          background: #005792;
           color: white;
-          transform: translateX(5px);
-        }
-
-        .mobile-nav-links a:hover::before {
-          left: 0;
         }
 
         .mobile-contact-info {
+          margin-top: 1rem;
           background: #f8f9fa;
-          border-radius: 15px;
-          padding: 1.5rem;
-          margin: 2rem 0;
+          border-radius: 10px;
+          padding: 1rem;
           border: 1px solid #e9ecef;
         }
 
@@ -157,16 +146,14 @@ function Navbar() {
           font-weight: 600;
           margin-bottom: 1rem;
           font-size: 14px;
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
         }
 
         .mobile-contact-item {
           display: flex;
           align-items: center;
-          margin-bottom: 0.8rem;
-          color: #495057;
+          margin-bottom: 0.5rem;
           font-size: 14px;
+          color: #495057;
         }
 
         .mobile-contact-item i {
@@ -178,173 +165,85 @@ function Navbar() {
         .mobile-social-links {
           display: flex;
           gap: 1rem;
-          margin: 1.5rem 0;
+          margin-top: 1rem;
         }
 
         .mobile-social-links a {
-          width: 45px;
-          height: 45px;
+          width: 40px;
+          height: 40px;
           border-radius: 50%;
-          background: linear-gradient(135deg, #005792, #2980b9);
+          background: #005792;
           display: flex;
           align-items: center;
           justify-content: center;
           color: white;
           text-decoration: none;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
-        }
-
-        .mobile-social-links a:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
         }
 
         .mobile-cta-button {
-          background: #F57C00;
+          margin-top: 1rem;
+          background: #f57c00;
           color: white;
-          padding: 1rem 2rem;
+          padding: 0.75rem 1.25rem;
           border-radius: 25px;
-          text-decoration: none;
           font-weight: 600;
           text-align: center;
           display: block;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
+          text-decoration: none;
           font-size: 14px;
         }
 
-        .mobile-cta-button:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
-          color: white;
+        .hamburger-btn {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 24px;
+          width: 30px;
         }
 
-       /* Hamburger Button Styles */
-.hamburger-btn {
-	background: transparent;
-	border: none;
-	cursor: pointer;
-	display: flex;
-	flex-direction: column;
-	height: 24px;
-	justify-content: space-between;
-	padding: 0;
-	position: relative;
-	width: 30px;
-  }
-  
-  .hamburger-btn span {
-	background-color: #333;
-	border-radius: 2px;
-	display: block;
-	height: 3px;
-	transition: all 0.3s ease;
-	width: 100%;
-  }
+        .hamburger-btn span {
+          background: #333;
+          height: 3px;
+          width: 100%;
+          border-radius: 2px;
+          transition: all 0.3s ease;
+        }
 
-        @media (max-width: 576px) {
-          .mobile-menu-panel {
-            width: 100vw;
-            right: -100vw;
-          }
+        .hamburger-btn.active span:nth-child(1) {
+          transform: translateY(9px) rotate(45deg);
+        }
+
+        .hamburger-btn.active span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger-btn.active span:nth-child(3) {
+          transform: translateY(-9px) rotate(-45deg);
         }
       `}</style>
 
       <header>
-        {/* Header Top */}
-        <div className="header-top d-none d-lg-block">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 d-flex justify-content-between">
-                <ul className="left list-unstyled d-flex gap-4 mb-0">
-                  <li>
-                    <i className="far fa-clock me-2"></i>9:30am - 6:30pm Mon - Sun
-                  </li>
-                  <li>
-                    <i className="fas fa-phone-alt me-2"></i>+977 985-1213859
-                  </li>
-                  <li>
-                    <i className="fas fa-map-marker-alt me-2"></i>Hattilet 06,
-                    Hetauda
-                  </li>
-                </ul>
-                <ul className="right list-unstyled d-flex gap-3 mb-0">
-                  <li>
-                    <Link to="tel:985-1213859">
-                      <i className="fab fa-whatsapp"></i>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div className="d-lg-none px-3 py-2 d-flex justify-content-between align-items-center">
+          <Link to="/">
+            <img
+              src="/img/logo/logo1.png"
+              alt="logo"
+              style={{ height: "35px" }}
+            />
+          </Link>
+          <button
+            className={`hamburger-btn ${mobileMenuOpen ? "active" : ""}`}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
 
-        {/* Header Bottom */}
-        <div className="header-bottom-area">
-          <div className="container">
-            <div className="d-flex justify-content-between align-items-center py-2">
-              {/* Logo */}
-              <div className="logo">
-                <Link to="/">
-                  <img
-                    src="/img/logo/logo1.png"
-                    style={{ "--custom-width": "150px", width: "var(--custom-width)" }}
-                    className=" h-50"
-                    alt="logo_not_found"
-                  />
-                </Link>
-              </div>
-
-              {/* Desktop Nav */}
-              <div className="d-none d-lg-flex align-items-center gap-5">
-                <nav className="main-menu">
-                  <ul className="d-flex gap-4 m-0 list-unstyled">
-                    <li>
-                      <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                      <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                      <Link to="/services">Services</Link>
-                    </li>
-                    <li>
-                      <Link to="/project">Project</Link>
-                    </li>
-                    <li>
-                      <Link to="/blog">Blog</Link>
-                    </li>
-                    <li>
-                      <Link to="/contact">Contact</Link>
-                    </li>
-                  </ul>
-                </nav>
-                <Link className="thm-btn" to="/contact">
-                  Get a quote
-                </Link>
-              </div>
-
-              {/* Mobile Hamburger */}
-              <div className="d-lg-none">
-                <button
-                  className={`hamburger-btn ${mobileMenuOpen ? 'active' : ''}`}
-                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                  aria-label="Toggle menu"
-                >
-                  <span className="hamburger-line"></span>
-                  <span className="hamburger-line"></span>
-                  <span className="hamburger-line"></span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile Menu Overlay */}
         {mobileMenuOpen && (
           <div
             className="mobile-menu-overlay"
@@ -352,77 +251,69 @@ function Navbar() {
           ></div>
         )}
 
-        {/* Mobile Menu Panel */}
         <div className={`mobile-menu-panel ${mobileMenuOpen ? "active" : ""}`}>
           <div className="mobile-menu-header">
             <Link to="/" onClick={() => setMobileMenuOpen(false)}>
               <img
                 src="/img/logo/logo1.png"
-                alt="logo_not_found"
-                style={{ height: "35px" }}
+                alt="logo"
+                style={{ height: "30px" }}
               />
             </Link>
             <button
               className="mobile-menu-close"
               onClick={() => setMobileMenuOpen(false)}
-              aria-label="Close menu"
             >
               <i className="fas fa-times"></i>
             </button>
           </div>
 
           <div className="mobile-menu-content">
-            <nav>
+            <div>
               <ul className="mobile-nav-links">
                 {[
-                  { name: "Home", path: "/" },
-                  { name: "About", path: "/about" },
-                  { name: "Services", path: "/services" },
-                  { name: "Project", path: "/project" },
-                  { name: "Blog", path: "/blog" },
-                  { name: "Contact", path: "/contact" }
-                ].map((item, idx) => (
+                  "Home",
+                  "About",
+                  "Services",
+                  "Project",
+                  "Blog",
+                  "Contact",
+                ].map((name, idx) => (
                   <li key={idx}>
                     <Link
-                      to={item.path}
+                      to={`/${name === "Home" ? "" : name.toLowerCase()}`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      {item.name}
+                      {name}
                     </Link>
                   </li>
                 ))}
               </ul>
-            </nav>
-
-            <div className="mobile-contact-info">
-              <h6>Contact Information</h6>
-              <div className="mobile-contact-item">
-                <i className="far fa-clock"></i>
-                <span>9:30am - 6:30pm Mon - Sun</span>
+              <div className="mobile-contact-info">
+                <h6>Contact Info</h6>
+                <div className="mobile-contact-item">
+                  <i className="far fa-clock"></i> 9:30am - 6:30pm Mon - Sun
+                </div>
+                <div className="mobile-contact-item">
+                  <i className="fas fa-phone-alt"></i> +977 985-1213859
+                </div>
+                <div className="mobile-contact-item">
+                  <i className="fas fa-map-marker-alt"></i> Hattilet 06, Hetauda
+                </div>
               </div>
-              <div className="mobile-contact-item">
-                <i className="fas fa-phone-alt"></i>
-                <span>+977 985-1213859</span>
+              <div className="mobile-social-links">
+                <Link to="tel:985-1213859">
+                  <i className="fab fa-whatsapp"></i>
+                </Link>
               </div>
-              <div className="mobile-contact-item">
-                <i className="fas fa-map-marker-alt"></i>
-                <span>Hattilet 06, Hetauda</span>
-              </div>
-            </div>
-
-            <div className="mobile-social-links">
-              <Link to="tel:985-1213859">
-                <i className="fab fa-whatsapp"></i>
+              <Link
+                className="mobile-cta-button"
+                to="/contact"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Get a Quote
               </Link>
             </div>
-
-            <Link
-              className="mobile-cta-button"
-              to="/contact"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Get a quote
-            </Link>
           </div>
         </div>
       </header>
