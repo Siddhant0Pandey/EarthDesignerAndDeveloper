@@ -1,7 +1,7 @@
 /*
   Project Name: Mltipress - Construction HTML Template
   Author: ThemeFuntom -->> (https://themeforest.net/user/themefuntom)
-  Support: themefuntom.info@gmail.com
+  Support: themefuntom.info
   Description: Construction HTML Template
   Developer: Wasim Mia
   Version: 1.0
@@ -76,7 +76,7 @@ a:hover,
 }
 a,
 button {
-	color: #1696e7;
+	color: #005792;
 	outline: medium none;
 }
 button:focus,input:focus,input:focus,textarea,textarea:focus{outline: 0}
@@ -181,7 +181,7 @@ label {
 	position: relative
 }
 .theme-overlay::before {
-	background: #1696e7 none repeat scroll 0 0;
+	background: #005792 none repeat scroll 0 0;
 	content: "";
 	height: 100%;
 	left: 0;
@@ -3044,4 +3044,14 @@ transition: all 1.4s ease;
 	  -webkit-transform: scale(1, 1);
 	  opacity: 0;
 	}
+  }
+
+  .project-btn{
+	background-color: #005792;
+	color: white;
+	border: none;
+  }
+
+  .bg-dots{
+	background-color: #F57C00;
   }

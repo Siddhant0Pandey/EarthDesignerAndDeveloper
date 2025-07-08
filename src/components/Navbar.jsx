@@ -48,25 +48,21 @@ function Navbar() {
               </ul>
               <ul className="right list-unstyled d-flex gap-3 mb-0">
                 <li>
-                  <Link to="#">
+                  <Link to="tel:985-1213859">
                     <i className="fab fa-whatsapp"></i>
                   </Link>
                 </li>
-                <li>
-                  <Link to="#">
-                    <i className="fab fa-twitter"></i>
-                  </Link>
-                </li>
+{/*                
                 <li>
                   <Link to="#">
                     <i className="fab fa-facebook"></i>
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link to="#">
                     <i className="fab fa-instagram"></i>
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -218,7 +214,7 @@ function Navbar() {
           </div>
 
           <div className="mt-3 d-flex gap-3">
-            <Link to="#">
+            {/* <Link to="#">
               <i className="fab fa-facebook-messenger"></i>
             </Link>
             <Link to="#">
@@ -229,7 +225,7 @@ function Navbar() {
             </Link>
             <Link to="#">
               <i className="fab fa-instagram"></i>
-            </Link>
+            </Link> */}
           </div>
 
           <div className="mt-4">

@@ -23,19 +23,19 @@ function Footer() {
                   high-quality construction projects.
                 </p>
                 <div className="footer-social mt-40">
-                  <Link to="#">
+                  {/* <Link to="#">
                     <i className="fab fa-twitter"></i>
-                  </Link>
+                  </Link> */}
 
-                  <Link to="#">
+                  <Link to="tel:985-1213859">
                     <i className="fab fa-whatsapp"></i>
                   </Link>
-                  <Link to="#">
+                  {/* <Link to="#">
                     <i className="fab fa-facebook"></i>
                   </Link>
                   <Link to="#">
                     <i className="fab fa-instagram"></i>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
@@ -98,85 +98,67 @@ function Footer() {
                 <div className="footer-gallery-item">
                   <div className="footer-gallery-thumb">
                     <img
-                      src="src/assets/img/footer/footer-gallery/fg-01.jpg"
+                      src="/img/construction1.jpg"
                       alt="image_not_found"
                     />
                   </div>
                   <div className="link-img">
-                    <Link
-                      className="popup-image"
-                      to="src/assets/img/footer/footer-gallery/fg-big-01.jpg"
-                    ></Link>
+                   
                   </div>
                 </div>
                 <div className="footer-gallery-item">
                   <div className="footer-gallery-thumb">
                     <img
-                      src="src/assets/img/footer/footer-gallery/fg-02.jpg"
+                      src="/img/building.jpg"
                       alt="image_not_found"
                     />
                   </div>
                   <div className="link-img">
-                    <Link
-                      className="popup-image"
-                      to="src/assets/img/footer/footer-gallery/fg-big-02.jpg"
-                    ></Link>
+                   
                   </div>
                 </div>
                 <div className="footer-gallery-item">
                   <div className="footer-gallery-thumb">
                     <img
-                      src="src/assets/img/footer/footer-gallery/fg-03.jpg"
+                      src="/img/construction5.jpg"
                       alt="image_not_found"
                     />
                   </div>
                   <div className="link-img">
-                    <Link
-                      className="popup-image"
-                      to="src/assets/img/footer/footer-gallery/fg-big-03.jpg"
-                    ></Link>
+                   
                   </div>
                 </div>
                 <div className="footer-gallery-item">
                   <div className="footer-gallery-thumb">
                     <img
-                      src="src/assets/img/footer/footer-gallery/fg-04.jpg"
+                      src="/img/construction2.jpg"
                       alt="image_not_found"
                     />
                   </div>
                   <div className="link-img">
-                    <Link
-                      className="popup-image"
-                      to="src/assets/img/footer/footer-gallery/fg-big-04.jpg"
-                    ></Link>
+                   
                   </div>
                 </div>
                 <div className="footer-gallery-item">
                   <div className="footer-gallery-thumb">
                     <img
-                      src="src/assets/img/footer/footer-gallery/fg-05.jpg"
+                      src="/img/construction8.jpg"
                       alt="image_not_found"
                     />
                   </div>
                   <div className="link-img">
-                    <Link
-                      className="popup-image"
-                      to="src/assets/img/footer/footer-gallery/fg-big-05.jpg"
-                    ></Link>
+                   
                   </div>
                 </div>
                 <div className="footer-gallery-item">
                   <div className="footer-gallery-thumb">
                     <img
-                      src="src/assets/img/footer/footer-gallery/fg-06.jpg"
+                      src="/img/construction7.jpg"
                       alt="image_not_found"
                     />
                   </div>
                   <div className="link-img">
-                    <Link
-                      className="popup-image"
-                      to="src/assets/img/footer/footer-gallery/fg-big-06.jpg"
-                    ></Link>
+                   
                   </div>
                 </div>
               </div>
@@ -192,7 +174,7 @@ function Footer() {
                 <p>
                   Developed by{" "}
                   <a
-                    href="https://www.codesala.com"
+                    href="https://www.codesala.com" 
                     target="_blank"
                     className="text-warning"
                   >

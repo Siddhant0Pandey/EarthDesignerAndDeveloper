@@ -7,23 +7,23 @@ function Testimonial() {
   const testimonials = [
     {
       id: 1,
-      name: "Subarna Shah",
+      name: "Binod KC",
       position: "Founder & Co",
-      image: "img/testimonial/testi-01.jpg",
+      image: "img/profile/profile.png",
       text: "Working with Earth Designer and Developer was a great experience. The team was professional, timely, and detail-oriented. They managed the entire project smoothly, even during challenges. We’re beyond satisfied and highly recommend them for reliable construction work in Nepal.",
     },
     {
       id: 2,
-      name: "Muskan Khadka",
-      position: "CEO, Smily.co",
-      image: "img/testimonial/testi-01.jpg",
+      name: "Aarohi Khadka",
+      position: "CEO",
+      image: "img/profile/profile.png",
       text: "Choosing Earth Designer and Developer for our construction project was the right decision. Their team maintained excellent communication throughout, stayed on schedule, and delivered high-quality work. Even when challenges came up, they handled everything with professionalism and care. It’s not easy to find this level of dedication and reliability in the construction industry here in Nepal.",
     },
     {
       id: 3,
-      name: "Amit Thapa Magar",
+      name: "Sharandra Jung",
       position: "Marketing Director",
-      image: "img/testimonial/testi-01.jpg",
+      image: "img/profile/profile.png",
       text: "We are truly grateful to Earth Designer and Developer for turning our vision into reality. Their expertise, careful planning, and commitment to quality were evident at every stage of the project. The team was approachable, flexible, and always ready to find solutions. Thanks to their hard work, we now have a space we are proud of. Highly recommended for anyone looking for reliable construction services in Nepal",
     },
   ];
