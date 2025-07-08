@@ -678,6 +678,8 @@ label {
 	color: #F57C00;
   }
   /* mobile nav */
+
+  
  /* Hamburger Button Styles */
 .hamburger-btn {
 	background: transparent;
@@ -700,40 +702,98 @@ label {
 	transition: all 0.3s ease;
 	width: 100%;
   }
-  
   /* Mobile Menu Overlay */
-  .mobile-menu-overlay {
-	background-color: rgba(0, 0, 0, 0.7);
-	height: 100%;
-	left: 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 999;
-  }
-  
-  /* Mobile Menu Panel */
-  .mobile-menu-panel {
-	background-color: #fff;
-	box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-	height: 100%; /* Changed from 100vh to 100% */
-	max-width: 300px;
-	overflow-y: auto;
-	position: fixed;
-	right: -320px;
-	top: 0;
-	transition: right 0.3s ease;
-	width: 85%;
-	z-index: 1000;
-	/* Fix for iOS safari overflow issue */
-	-webkit-overflow-scrolling: touch;
-	box-sizing: border-box;
-  }
-  
-  .mobile-menu-panel.active {
-	right: 0;
-  }
-  
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+}
+
+/* Mobile Menu Panel */
+.mobile-menu-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100vh;
+  background: #fff;
+  z-index: 100;
+  transition: right 0.3s ease;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu-panel.active {
+  right: 0;
+}
+
+/* Mobile Header */
+.mobile-menu-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+/* Close Button */
+.mobile-menu-close {
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  color: #000;
+}
+
+/* Mobile Navigation Links */
+.mobile-menu-content nav ul li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-menu-content nav ul li a {
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: block;
+}
+
+/* Contact Info Section */
+.mobile-menu-content .mt-3 {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.mobile-menu-content .mt-3 div {
+  margin-bottom: 0.5rem;
+}
+
+/* Social Icons Row */
+.mobile-menu-content .social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.mobile-menu-content .social-icons a {
+  color: #333;
+}
+
+/* Button */
+.mobile-menu-content .thm-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  background-color: #ff6f00;
+  color: white;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-top: 2rem;
+  text-decoration: none;
+}
+
   /* Mobile Menu Header */
   .mobile-menu-header {
 	align-items: center;
